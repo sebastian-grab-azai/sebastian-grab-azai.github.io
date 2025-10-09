@@ -37,8 +37,6 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      # If App Router with next.config output:'export', keep just `npm run build`
-      # If Pages Router, set "build": "next build && next export" in package.json
       - name: Build (produces /out)
         run: npm run build
 
@@ -50,10 +48,6 @@ jobs:
 
       - name: Add .nojekyll (allow _next assets)
         run: touch out/.nojekyll
-
-      # If you use a custom domain, also add:
-      # - name: Add CNAME
-      #   run: echo 'dev.azai.ch' > out/CNAME
 
       - name: Setup Pages
         uses: actions/configure-pages@v5

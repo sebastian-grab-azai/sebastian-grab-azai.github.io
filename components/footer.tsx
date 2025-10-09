@@ -59,10 +59,10 @@ export function Footer() {
               <li className="flex items-start gap-2 text-white/70">
                 <MapPin className="h-4 w-4 mt-1 flex-shrink-0" />
                 <span>
-                  Azai AG
-                  <br />
-                  Bahnhofplatz 1<br />
-                  8001 Zürich
+                  Azai AG<br />
+                  Wiesentalstrasse 1<br />
+                  8185 Zürich<br />
+                  Switzerland
                 </span>
               </li>
             </ul>

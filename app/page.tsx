@@ -19,7 +19,7 @@ export default function HomePage() {
               <p className="inline-block text-[11px] font-semibold tracking-wide text-foreground/90 px-3 py-1 rounded-full bg-white ring-1 ring-black/5 shadow-sm mb-5">
                 Transform Your Project Management
               </p>
-              <h1 className="text-5xl lg:text-6xl xl:text-7xl font-bold mb-5 leading-[1.05] text-balance">
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold mb-5 leading-[1.05] text-balance">
                 The Future of Project Excellence
               </h1>
               <p className="text-base lg:text-lg text-foreground/70 mb-8 leading-relaxed">
@@ -72,7 +72,7 @@ export default function HomePage() {
           </div>
           <div className="container mx-auto px-4 lg:px-8">
           <Card className="bg-white border-0 shadow-xl rounded-3xl">
-            <CardContent className="p-10 lg:p-14">
+            <CardContent className="p-6 md:p-10 lg:p-14">
               <div className="grid lg:grid-cols-2 gap-10 mb-14">
                 <div>
                   <p className="inline-block text-[11px] font-semibold tracking-wide text-foreground/90 px-3 py-1 rounded-full bg-white ring-1 ring-black/5 shadow-sm mb-5">
@@ -148,15 +148,15 @@ export default function HomePage() {
             {/* Left Column - Two stacked stat cards */}
             <div className="flex flex-col gap-6">
               <Card className="bg-[#F3F4F6] border-0 shadow-sm rounded-2xl">
-                <CardContent className="p-10">
-                  <div className="text-6xl font-bold text-[#3B82F6] mb-3">95%</div>
+                <CardContent className="p-6 md:p-10">
+                  <div className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#3B82F6] mb-3">95%</div>
                   <p className="text-foreground text-base font-medium">Risk Prediction Accuracy</p>
                 </CardContent>
               </Card>
 
               <Card className="bg-[#F3F4F6] border-0 shadow-sm rounded-2xl">
-                <CardContent className="p-10">
-                  <div className="text-6xl font-bold text-[#3B82F6] mb-3">40%</div>
+                <CardContent className="p-6 md:p-10">
+                  <div className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#3B82F6] mb-3">40%</div>
                   <p className="text-foreground text-base font-medium">Faster Project Delivery</p>
                 </CardContent>
               </Card>
@@ -164,8 +164,8 @@ export default function HomePage() {
 
             {/* Right Column - Large card with chart */}
             <Card className="bg-[#F3F4F6] border-0 shadow-sm rounded-2xl">
-              <CardContent className="p-10">
-                <div className="text-6xl font-bold text-[#3B82F6] mb-3">$2.4M</div>
+              <CardContent className="p-6 md:p-10">
+                <div className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#3B82F6] mb-3">$2.4M</div>
                 <p className="text-foreground text-base font-medium mb-6">Average Cost Savings</p>
 
                 {/* Chart Container */}
@@ -243,7 +243,7 @@ export default function HomePage() {
         </section>
 
         {/* Features Section */}
-        <section id="features" className="py-16 bg-white">
+        <section id="features" className="py-16 bg-white scroll-mt-20">
           <div className="container mx-auto px-4 lg:px-8">
           <p className="inline-block text-[11px] font-semibold tracking-wide text-foreground/90 px-3 py-1 rounded-full bg-white ring-1 ring-black/5 shadow-sm mb-5">
             Features
@@ -343,7 +343,7 @@ export default function HomePage() {
             </div>
 
             <div className="relative">
-              <div className="bg-[#FEF7ED] rounded-2xl p-8">
+              <div className="bg-[#FEF7ED] rounded-2xl p-6 md:p-8">
                 <div className="bg-white rounded-xl overflow-hidden shadow-lg border border-border/30">
                   <Image
                     src="/RiskManagement.png"
@@ -524,10 +524,10 @@ export default function HomePage() {
             </Button>
           </div>
 
-          <div className="grid md:grid-cols-4 gap-8 mt-16 max-w-6xl mx-auto">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 mt-16 max-w-6xl mx-auto">
             <div className="relative">
               {/* Large background number */}
-              <div className="absolute -top-4 left-0 text-[120px] font-bold text-[#F3F4F6] leading-none select-none">
+              <div className="absolute -top-4 left-0 text-[120px] font-bold text-[#F3F4F6] leading-none select-none hidden sm:block">
                 1
               </div>
               <div className="relative pt-16">
@@ -540,7 +540,7 @@ export default function HomePage() {
 
             <div className="relative">
               {/* Large background number */}
-              <div className="absolute -top-4 left-0 text-[120px] font-bold text-[#F3F4F6] leading-none select-none">
+              <div className="absolute -top-4 left-0 text-[120px] font-bold text-[#F3F4F6] leading-none select-none hidden sm:block">
                 2
               </div>
               <div className="relative pt-16">
@@ -553,7 +553,7 @@ export default function HomePage() {
 
             <div className="relative">
               {/* Large background number */}
-              <div className="absolute -top-4 left-0 text-[120px] font-bold text-[#F3F4F6] leading-none select-none">
+              <div className="absolute -top-4 left-0 text-[120px] font-bold text-[#F3F4F6] leading-none select-none hidden sm:block">
                 3
               </div>
               <div className="relative pt-16">
@@ -566,7 +566,7 @@ export default function HomePage() {
 
             <div className="relative">
               {/* Large background number */}
-              <div className="absolute -top-4 left-0 text-[120px] font-bold text-[#F3F4F6] leading-none select-none">
+              <div className="absolute -top-4 left-0 text-[120px] font-bold text-[#F3F4F6] leading-none select-none hidden sm:block">
                 4
               </div>
               <div className="relative pt-16">
@@ -581,6 +581,7 @@ export default function HomePage() {
         </section>
 
         {/* Final CTA Section */}
+        <div id="book" className="relative -mt-20 pt-20" aria-hidden="true" />
         <section className="bg-[#0A1628] text-white py-20 lg:py-24">
           <div className="container mx-auto px-4 lg:px-8 text-center">
             <h2 className="text-4xl lg:text-5xl font-bold mb-5">Ready to Transform Your Projects?</h2>

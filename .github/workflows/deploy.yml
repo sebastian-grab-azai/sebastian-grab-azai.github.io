@@ -40,8 +40,8 @@ jobs:
       - name: Build (static export to /out)
         run: npm run build
 
-      - name: Add .nojekyll (allow _next assets)
-        run: touch out/.nojekyll
+      # - name: Add .nojekyll (allow _next assets)
+      #   run: touch out/.nojekyll
 
       - name: Setup Pages
         uses: actions/configure-pages@v5

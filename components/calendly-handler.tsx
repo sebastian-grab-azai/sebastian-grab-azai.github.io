@@ -11,14 +11,27 @@ declare global {
   }
 }
 
-export function CalendlyHandler() {
+type Props = {
+  /** Optionaler Override – falls du den Link gezielt per Prop setzen willst */
+  url?: string
+}
+
+export function CalendlyHandler({ url }: Props) {
   const pendingOpenRef = useRef(false)
 
+  // ENV lesen (Client: build-time inlined). Prop > ENV > ""
+  const calendlyUrl =
+    (url ?? process.env.NEXT_PUBLIC_CALENDLY_URL ?? "").trim()
+
   const open = () => {
+    if (!calendlyUrl) {
+      console.warn(
+        "Calendly: Kein Link gesetzt. Lege NEXT_PUBLIC_CALENDLY_URL in deiner .env fest oder übergib <CalendlyHandler url='...'>."
+      )
+      return
+    }
     if (window.Calendly?.initPopupWidget) {
-      window.Calendly.initPopupWidget({
-        url: "https://calendly.com/sebastian-grab-smiit/60min",
-      })
+      window.Calendly.initPopupWidget({ url: calendlyUrl })
     }
   }
 
@@ -36,9 +49,7 @@ export function CalendlyHandler() {
   }
 
   useEffect(() => {
-    // Beim ersten Laden prüfen
     handleHash()
-    // Auf spätere Hash-Änderungen reagieren
     window.addEventListener("hashchange", handleHash)
     return () => window.removeEventListener("hashchange", handleHash)
   }, [])

@@ -430,7 +430,7 @@ export default function HomePage() {
             <p className="inline-block text-[11px] font-semibold tracking-wide text-foreground/90 px-3 py-1 rounded-full bg-white ring-1 ring-black/5 shadow-sm mb-5">
               Testimonials
             </p>
-            <h2 className="text-3xl lg:text-4xl font-bold mb-4">Loved by Project Leaders Worldwide</h2>
+            <h2 className="text-3xl lg:text-4xl font-bold mb-4">Loved by Project Leaders</h2>
             <p className="text-foreground/70 max-w-2xl mx-auto leading-relaxed">
               See how Azai Elevate is transforming project management across industries
             </p>
@@ -526,7 +526,7 @@ export default function HomePage() {
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 mt-16 max-w-6xl mx-auto">
             <div className="relative">
               {/* Large background number */}
-              <div className="absolute -top-4 left-0 text-[120px] font-bold text-[#F3F4F6] leading-none select-none hidden sm:block">
+              <div className="absolute -top-4 left-0 text-[72px] sm:text-[120px] font-bold text-[#F3F4F6] leading-none select-none block">
                 1
               </div>
               <div className="relative pt-16">
@@ -539,7 +539,7 @@ export default function HomePage() {
 
             <div className="relative">
               {/* Large background number */}
-              <div className="absolute -top-4 left-0 text-[120px] font-bold text-[#F3F4F6] leading-none select-none hidden sm:block">
+              <div className="absolute -top-4 left-0 text-[72px] sm:text-[120px] font-bold text-[#F3F4F6] leading-none select-none block">
                 2
               </div>
               <div className="relative pt-16">
@@ -552,7 +552,7 @@ export default function HomePage() {
 
             <div className="relative">
               {/* Large background number */}
-              <div className="absolute -top-4 left-0 text-[120px] font-bold text-[#F3F4F6] leading-none select-none hidden sm:block">
+              <div className="absolute -top-4 left-0 text-[72px] sm:text-[120px] font-bold text-[#F3F4F6] leading-none select-none block">
                 3
               </div>
               <div className="relative pt-16">
@@ -565,7 +565,7 @@ export default function HomePage() {
 
             <div className="relative">
               {/* Large background number */}
-              <div className="absolute -top-4 left-0 text-[120px] font-bold text-[#F3F4F6] leading-none select-none hidden sm:block">
+              <div className="absolute -top-4 left-0 text-[72px] sm:text-[120px] font-bold text-[#F3F4F6] leading-none select-none block">
                 4
               </div>
               <div className="relative pt-16">
@@ -580,7 +580,7 @@ export default function HomePage() {
         </section>
 
         {/* Final CTA Section */}
-        <div id="book" className="relative -mt-20 pt-20" aria-hidden="true" />
+        <div className="relative -mt-20 pt-20" aria-hidden="true" />
         <section className="bg-[#0A1628] text-white py-20 lg:py-24">
           <div className="container mx-auto px-4 lg:px-8 text-center">
             <h2 className="text-4xl lg:text-5xl font-bold mb-5">Ready to Transform Your Projects?</h2>

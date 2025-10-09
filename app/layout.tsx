@@ -8,7 +8,7 @@ import "./globals.css"
 import { CalendlyHandler } from "@/components/calendly-handler"
 
 export const metadata: Metadata = {
-  title: "Azai AG",
+  title: "Azai AG - Elevate",
   description:
     "Revolutionary project management platform engineered for enterprise teams who demand precision, intelligence, and results at scale.",
 }

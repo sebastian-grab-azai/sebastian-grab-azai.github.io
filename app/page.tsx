@@ -131,9 +131,9 @@ export default function HomePage() {
             <p className="inline-block text-[11px] font-semibold tracking-wide text-foreground/90 px-3 py-1 rounded-full bg-white ring-1 ring-black/5 shadow-sm mb-5">
               Facts and Figures
             </p>
-            <h2 className="text-3xl lg:text-4xl font-bold mb-4">Trusted by Project Leaders Worldwide</h2>
+            <h2 className="text-3xl lg:text-4xl font-bold mb-4">Returning Value through Transparency</h2>
             <p className="text-foreground/70 max-w-2xl mx-auto mb-6">
-              Join thousands of teams delivering exceptional results
+              Join us and experience your projects becoming more efficient
             </p>
             <Button
               variant="outline"
@@ -164,12 +164,12 @@ export default function HomePage() {
 
             {/* Right Column - Large card with chart */}
             <Card className="bg-[#F3F4F6] border-0 shadow-sm rounded-2xl">
-              <CardContent className="p-6 md:p-10">
+              <CardContent className="p-6 md:p-8">
                 <div className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#3B82F6] mb-3">$2.4M</div>
-                <p className="text-foreground text-base font-medium mb-6">Average Cost Savings</p>
+                <p className="text-foreground text-base font-medium mb-4">Average Cost Savings</p>
 
                 {/* Chart Container */}
-                <div className="bg-white rounded-xl p-6 mt-6">
+                <div className="bg-white rounded-xl p-5 md:p-6 mt-4">
                   <div className="flex items-center justify-between mb-4">
                     <h4 className="text-sm font-semibold text-foreground">Risk Level Comparison Over Time</h4>
                     <button className="text-foreground/40 hover:text-foreground/60">
@@ -201,7 +201,7 @@ export default function HomePage() {
                   </div>
 
                   {/* Chart Area */}
-                  <div className="relative h-40">
+                  <div className="relative h-32 md:h-32">
                     {/* Y-axis labels */}
                     <div className="absolute left-0 top-0 bottom-0 flex flex-col justify-between text-[10px] text-foreground/50 pr-2">
                       <span>50</span>
@@ -307,7 +307,7 @@ export default function HomePage() {
                         </span>
                       </div>
                       <p className="text-sm text-foreground/70 leading-relaxed">
-                        Advanced budget management with predictive financial modeling and real-time cost optimization.
+                        Advanced budget management with predictive financial modeling and real-time cost analysis.
                       </p>
                     </div>
                   </div>
@@ -369,7 +369,7 @@ export default function HomePage() {
               </p>
               <h2 className="text-3xl lg:text-4xl font-bold mb-5">Built for Enterprise Scale</h2>
               <p className="text-white/80 max-w-3xl mx-auto leading-relaxed">
-                Modern React architecture engineered for mission-critical performance, bulletproof security, and
+                Modern software architecture engineered for mission-critical performance, bulletproof security, and
                 seamless scalability
               </p>
             </div>
@@ -383,7 +383,7 @@ export default function HomePage() {
                   <h3 className="text-xl font-bold mb-5 text-white">Modern Technology Stack</h3>
                   <div className="space-y-2.5 text-white/80 text-sm leading-relaxed text-center">
                     <p>React 20 with TypeScript</p>
-                    <p>Tailwind CSS & Modern ES6+</p>
+                    <p>.NET 9 Backend Applications</p>
                     <p>PWA Ready & Mobile Optimized</p>
                     <p>Micro-service Architecture</p>
                   </div>
@@ -399,7 +399,7 @@ export default function HomePage() {
                   <div className="space-y-2.5 text-white/80 text-sm leading-relaxed text-center">
                     <p>Sub-second Load Times</p>
                     <p>Real-time Data Sync</p>
-                    <p>Offline-first Capabilities</p>
+                    <p>Message Queue Communication</p>
                     <p>Edge Computing Optimized</p>
                   </div>
                 </CardContent>
@@ -412,9 +412,9 @@ export default function HomePage() {
                   </div>
                   <h3 className="text-xl font-bold mb-5 text-white">Enterprise Security</h3>
                   <div className="space-y-2.5 text-white/80 text-sm leading-relaxed text-center">
-                    <p>Enterprise SSO & RBAC</p>
+                    <p>Enterprise RBAC</p>
                     <p>End-to-end Encryption</p>
-                    <p>GDPR & SOC 2 Compliant</p>
+                    <p>GDPR Compliant</p>
                     <p>Zero-trust Architecture</p>
                   </div>
                 </CardContent>

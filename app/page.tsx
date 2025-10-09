@@ -413,7 +413,6 @@ export default function HomePage() {
                   <h3 className="text-xl font-bold mb-5 text-white">Enterprise Security</h3>
                   <div className="space-y-2.5 text-white/80 text-sm leading-relaxed text-center">
                     <p>Enterprise RBAC</p>
-                    <p>End-to-end Encryption</p>
                     <p>GDPR Compliant</p>
                     <p>Zero-trust Architecture</p>
                   </div>
@@ -586,7 +585,7 @@ export default function HomePage() {
           <div className="container mx-auto px-4 lg:px-8 text-center">
             <h2 className="text-4xl lg:text-5xl font-bold mb-5">Ready to Transform Your Projects?</h2>
             <p className="text-white/80 max-w-2xl mx-auto mb-10 text-lg leading-relaxed">
-              Join the thousands of project leaders who've already discovered the power of AI-driven project management.
+              Join the numerous project leaders who've already discovered the power of AI-driven project management.
             </p>
 
             <div className="flex flex-wrap gap-4 justify-center mb-10">

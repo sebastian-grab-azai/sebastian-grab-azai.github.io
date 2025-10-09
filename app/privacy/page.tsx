@@ -104,7 +104,7 @@ export default function PrivacyPage() {
                   <strong>Email:</strong> info@azai.ch
                 </p>
                 <p>
-                  <strong>Address:</strong> Azai AG, Bahnhofplatz 1, 8001 Zürich, Switzerland
+                  <strong>Address:</strong> Azai AG, Wiesentalstrasse 1, 8185 Zürich, Switzerland
                 </p>
               </div>
             </section>

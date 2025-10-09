@@ -46,7 +46,7 @@ export function Header() {
               </SheetTrigger>
               <SheetContent side="right" className="w-[280px] sm:w-[320px]">
                 <SheetHeader>
-                  <SheetTitle className="sr-only text-primary">Navigation</SheetTitle>
+                  <SheetTitle className="text-foreground font-semibold">Navigation</SheetTitle>
                 </SheetHeader>
                 <nav className="mt-4 grid gap-2">
                   <Link href="/" className="py-2 text-base font-medium text-foreground hover:text-foreground/70 ml-4">

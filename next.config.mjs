@@ -3,7 +3,7 @@
 const isProd = process.env.NODE_ENV === 'production'
 // If deploying to a project page: https://<user>.github.io/<repo>
 // set basePath to '/<repo-name>' for production.
-const basePath = isProd ? '/' : ''
+const basePath = ''
 
 export default {
   output: 'export',           // writes to /out on build

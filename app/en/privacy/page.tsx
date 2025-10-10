@@ -1,7 +1,34 @@
+import type { Metadata } from "next"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 
-export default function PrivacyPage() {
+export const metadata: Metadata = {
+  title: "Privacy Policy | Azai AG – Elevate",
+  description:
+    "Learn how Azai AG collects, uses, and protects your personal data when using our platform and services.",
+  alternates: {
+    canonical: "/en/privacy/",
+    languages: {
+      "de-CH": "/de/privacy/",
+      en: "/en/privacy/",
+      "x-default": "/de/privacy/",
+    },
+  },
+  openGraph: {
+    title: "Privacy Policy | Azai AG – Elevate",
+    description:
+      "Learn how Azai AG collects, uses, and protects your personal data when using our platform and services.",
+    url: "/en/privacy/",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Privacy Policy | Azai AG – Elevate",
+    description:
+      "Learn how Azai AG collects, uses, and protects your personal data when using our platform and services.",
+  },
+}
+
+export default function PrivacyPageEN() {
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
@@ -104,7 +131,7 @@ export default function PrivacyPage() {
                   <strong>Email:</strong> info@azai.ch
                 </p>
                 <p>
-                  <strong>Address:</strong> Azai AG, Wiesentalstrasse 1, 8185 Zürich, Switzerland
+                  <strong>Address:</strong> Azai AG, Wisentalstrasse 7a, 8185 Winkel, Switzerland
                 </p>
               </div>
             </section>

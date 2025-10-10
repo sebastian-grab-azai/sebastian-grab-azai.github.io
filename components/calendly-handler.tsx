@@ -12,14 +12,12 @@ declare global {
 }
 
 type Props = {
-  /** Optionaler Override – falls du den Link gezielt per Prop setzen willst */
   url?: string
 }
 
 export function CalendlyHandler({ url }: Props) {
   const pendingOpenRef = useRef(false)
 
-  // ENV lesen (Client: build-time inlined). Prop > ENV > ""
   const calendlyUrl =
     (url ?? process.env.NEXT_PUBLIC_CALENDLY_URL ?? "").trim()
 
@@ -43,7 +41,6 @@ export function CalendlyHandler({ url }: Props) {
       } else {
         pendingOpenRef.current = true
       }
-      // Hash entfernen, damit kein doppeltes Auslösen passiert
       history.replaceState(null, "", window.location.pathname + window.location.search)
     }
   }
@@ -52,6 +49,46 @@ export function CalendlyHandler({ url }: Props) {
     handleHash()
     window.addEventListener("hashchange", handleHash)
     return () => window.removeEventListener("hashchange", handleHash)
+  }, [])
+
+  useEffect(() => {
+    const onOpen = () => open()
+    window.addEventListener("open-calendly" as any, onOpen as any)
+    return () => window.removeEventListener("open-calendly" as any, onOpen as any)
+  }, [])
+
+  useEffect(() => {
+    const onClick = (e: MouseEvent) => {
+      const target = e.target as HTMLElement | null
+      if (!target) return
+      const anchor = target.closest("a") as HTMLAnchorElement | null
+      if (!anchor) return
+
+      const href = anchor.getAttribute("href") || ""
+      const wantsCalendly =
+        anchor.dataset.openCalendly === "true" || href.includes("#book")
+
+      if (!wantsCalendly) return
+
+      e.preventDefault()
+
+      if (window.Calendly?.initPopupWidget) {
+        open()
+      } else {
+        ;(pendingOpenRef as React.MutableRefObject<boolean>).current = true
+      }
+
+      try {
+        const url = new URL(window.location.href)
+        if (url.hash) {
+          history.replaceState(null, "", url.pathname + url.search)
+        }
+      } catch {
+      }
+    }
+
+    document.addEventListener("click", onClick, true)
+    return () => document.removeEventListener("click", onClick, true)
   }, [])
 
   return (
@@ -69,3 +106,4 @@ export function CalendlyHandler({ url }: Props) {
     </>
   )
 }
+

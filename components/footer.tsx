@@ -1,48 +1,84 @@
+"use client"
+
 import Link from "next/link"
 import Image from "next/image"
+import { usePathname } from "next/navigation"
 import { Mail, Phone, MapPin } from "lucide-react"
 
 export function Footer() {
+  const pathname = usePathname() || "/"
+  const lang = pathname.startsWith("/en") ? "en" : "de"
+  const base = `/${lang}`
+
+  const L = {
+    links: lang === "de" ? "Links" : "Links",
+    home: lang === "de" ? "Startseite" : "Home",
+    contact: lang === "de" ? "Kontakt" : "Contact Us",
+    booking: lang === "de" ? "Termin buchen" : "Calendar Booking",
+    contactSection: lang === "de" ? "Kontakt" : "Contact",
+    email: lang === "de" ? "E‑Mail:" : "Email:",
+    phone: lang === "de" ? "Telefon:" : "Phone:",
+    phoneNumber: lang === "de" ? "+41 79 687 50 82" : "+41 79 218 77 48",
+    phoneNumberHref: lang === "de" ? "tel:+41796875082" : "tel:+41792187748",
+    address: lang === "de" ? "Adresse:" : "Address:",
+    companyBlurb:
+      lang === "de"
+        ? "Azai ist die KI-gestützte Projektmanagement-Plattform, mit der Enterprise-Teams Projekte termingerecht, im Budget und mit voller Sicherheit liefern."
+        : "Azai is the AI-powered project management platform that helps enterprise teams deliver projects on time, on budget, and with complete confidence.",
+    rights: lang === "de" ? "Alle Rechte vorbehalten." : "All rights reserved.",
+    privacy: lang === "de" ? "Datenschutzerklärung" : "Privacy Policy",
+    terms: lang === "de" ? "Nutzungsbedingungen" : "Terms of Service",
+    companyName: "Azai AG",
+    street: "Wisentalstrasse 7a",
+    city: "8185 Winkel",
+    country: lang === "de" ? "Schweiz" : "Switzerland",
+  }
+
+  const homeHref = `${base}/`
+  const contactHref = `${base}/contact`
+  const privacyHref = `${base}/privacy`
+  const termsHref = `${base}/terms`
+  const bookingHref = `${base}/#book`
+
   return (
     <footer className="bg-[#0A1628] text-white">
       <div className="container mx-auto px-4 lg:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
           <div>
-            <Link href="/" aria-label="Azai home" className="flex items-center mb-6">
+            <Link href={homeHref} aria-label="Azai home" className="flex items-center mb-6">
               <Image src="/logo.png" alt="Azai Logo" width={55} height={12} priority />
             </Link>
             <p className="text-white/70 leading-relaxed">
-              Azai is the AI-powered project management platform that helps enterprise teams deliver projects on time,
-              on budget, and with complete confidence.
+              {L.companyBlurb}
             </p>
           </div>
 
           <div>
-            <h4 className="text-sm font-semibold mb-4 text-white/90">Links</h4>
+            <h4 className="text-sm font-semibold mb-4 text-white/90">{L.links}</h4>
             <ul className="space-y-3">
               <li>
-                <Link href="/" className="text-white/70 hover:text-white transition-colors">
-                  Home
+                <Link href={homeHref} className="text-white/70 hover:text-white transition-colors">
+                  {L.home}
                 </Link>
               </li>
               <li>
-                <Link href="/contact" className="text-white/70 hover:text-white transition-colors">
-                  Contact Us
+                <Link href={contactHref} className="text-white/70 hover:text-white transition-colors">
+                  {L.contact}
                 </Link>
               </li>
               <li>
                 <a
-                  href="#book"
+                  href={bookingHref}
                   className="text-white/70 hover:text-white transition-colors"
                 >
-                  Calendar Booking
+                  {L.booking}
                 </a>
               </li>
             </ul>
           </div>
 
           <div>
-            <h4 className="text-sm font-semibold mb-4 text-white/90">Contact</h4>
+            <h4 className="text-sm font-semibold mb-4 text-white/90">{L.contactSection}</h4>
             <ul className="space-y-3">
               <li className="flex items-center gap-2 text-white/70">
                 <Mail className="h-4 w-4 flex-shrink-0" />
@@ -52,17 +88,20 @@ export function Footer() {
               </li>
               <li className="flex items-center gap-2 text-white/70">
                 <Phone className="h-4 w-4 flex-shrink-0" />
-                <a href="tel:+123456789" className="hover:text-white transition-colors">
-                  +123 456 789
+                <a href={L.phoneNumberHref} className="hover:text-white transition-colors">
+                  {L.phoneNumber}
                 </a>
               </li>
               <li className="flex items-start gap-2 text-white/70">
                 <MapPin className="h-4 w-4 mt-1 flex-shrink-0" />
                 <span>
-                  Azai AG<br />
-                  Wiesentalstrasse 1<br />
-                  8185 Zürich<br />
-                  Switzerland
+                  {L.companyName}
+                  <br />
+                  {L.street}
+                  <br />
+                  {L.city}
+                  <br />
+                  {L.country}
                 </span>
               </li>
             </ul>
@@ -70,13 +109,13 @@ export function Footer() {
         </div>
 
         <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-white/60 text-sm">© 2025 Azai AG. All rights reserved.</p>
+          <p className="text-white/60 text-sm">© 2025 {L.companyName}. {L.rights}</p>
           <div className="flex gap-6">
-            <Link href="/privacy" className="text-white/60 hover:text-white text-sm transition-colors">
-              Privacy Policy
+            <Link href={privacyHref} className="text-white/60 hover:text-white text-sm transition-colors">
+              {L.privacy}
             </Link>
-            <Link href="/terms" className="text-white/60 hover:text-white text-sm transition-colors">
-              Terms of Service
+            <Link href={termsHref} className="text-white/60 hover:text-white text-sm transition-colors">
+              {L.terms}
             </Link>
           </div>
         </div>

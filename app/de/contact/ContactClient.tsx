@@ -1,6 +1,5 @@
 "use client"
 
-import type React from "react"
 import { useState, useEffect } from "react"
 import emailjs from "@emailjs/browser"
 
@@ -17,7 +16,7 @@ const SERVICE_ID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID as string
 const TEMPLATE_ID = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID as string
 const PUBLIC_KEY  = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY as string
 
-export default function ContactPage() {
+export default function ContactPageDEClient() {
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -29,11 +28,9 @@ export default function ContactPage() {
   const [sent, setSent] = useState(false)
   const [error, setError] = useState<string | null>(null)
 
-  // simple honeypot (hidden field) to reduce bot spam
   const [trap, setTrap] = useState("")
 
   useEffect(() => {
-    // optional: init once; you can also pass { publicKey } directly to send()
     emailjs.init({ publicKey: PUBLIC_KEY })
   }, [])
 
@@ -42,12 +39,10 @@ export default function ContactPage() {
     setError(null)
     setSent(false)
 
-    // abort if honeypot filled (bot)
     if (trap.trim()) return
 
-    // basic client-side guard
     if (!formData.firstName || !formData.lastName || !formData.email || !formData.message) {
-      setError("Please fill in all required fields.")
+      setError("Bitte füllen Sie alle Pflichtfelder aus.")
       return
     }
 
@@ -59,15 +54,15 @@ export default function ContactPage() {
         {
           ...formData,
           from_name: `${formData.firstName} ${formData.lastName}`,
-          reply_to: formData.email, // maps to Reply-To in your template
+          reply_to: formData.email,
         },
-        { publicKey: PUBLIC_KEY } // not needed if you called emailjs.init
+        { publicKey: PUBLIC_KEY }
       )
 
       setSent(true)
       setFormData({ firstName: "", lastName: "", email: "", phone: "", message: "" })
     } catch (err) {
-      setError("Sorry, something went wrong while sending. Please try again.")
+      setError("Entschuldigung, beim Senden ist ein Fehler aufgetreten. Bitte versuchen Sie es erneut.")
     } finally {
       setIsSubmitting(false)
     }
@@ -84,51 +79,51 @@ export default function ContactPage() {
     <div className="min-h-screen flex flex-col bg-sand">
       <Header />
 
-      <main className="flex-1 py-22 lg:py-25 bg-white">
+      <main className="flex-1 py-22 lg:py-20 bg-white">
         <div className="container mx-auto px-4 lg:px-8 max-w-7xl">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-start">
-            {/* Left Column - Contact Info */}
+            {/* Linke Spalte – Kontaktinfos */}
             <div className="lg:pr-8">
               <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold mb-6 text-balance leading-tight">
-                Get In Touch With Azai
+                Kontakt aufnehmen mit Azai
               </h1>
               <p className="text-base lg:text-lg text-gray-700 mb-12 leading-relaxed">
-                Have questions, feedback, or need support? We're here to help. Reach out to our team and we'll respond
-                as quickly as possible.
+                Haben Sie Fragen, Feedback oder benötigen Sie Unterstützung? Wir helfen Ihnen gerne weiter. Kontaktieren
+                Sie unser Team – wir melden uns so schnell wie möglich.
               </p>
 
               <div className="space-y-8">
                 <div>
-                  <p className="text-sm text-gray-600 mb-1">Email:</p>
+                  <p className="text-sm text-gray-600 mb-1">E‑Mail:</p>
                   <a href="mailto:info@azai.ch" className="text-lg font-bold text-foreground hover:text-accent transition-colors">
                     info@azai.ch
                   </a>
                 </div>
 
                 <div>
-                  <p className="text-sm text-gray-600 mb-1">Phone:</p>
-                  <a href="tel:+123456789" className="text-lg font-bold text-foreground hover:text-accent transition-colors">
-                    +123 456 789
+                  <p className="text-sm text-gray-600 mb-1">Telefon:</p>
+                  <a href="tel:+41796875082" className="text-lg font-bold text-foreground hover:text-accent transition-colors">
+                    +41 79 687 50 82
                   </a>
                 </div>
 
                 <div className="pt-2">
-                  <p className="text-sm text-gray-600 mb-2">Want to talk right away?</p>
-                  <a href="#book" className="text-foreground font-semibold underline hover:text-accent transition-colors inline-block">
-                    Book a Meeting
+                  <p className="text-sm text-gray-600 mb-2">Möchten Sie sofort sprechen?</p>
+                  <a href="/de/#book" className="text-foreground font-semibold underline hover:text-accent transition-colors inline-block">
+                    Termin buchen
                   </a>
                 </div>
               </div>
             </div>
 
-            {/* Right Column - Contact Form */}
+            {/* Rechte Spalte – Formular */}
             <Card className="bg-black/5 backdrop-blur-sm border-gray-200 shadow-xl">
               <CardContent className="p-8 lg:p-10">
                 <form onSubmit={handleSubmit} className="space-y-6">
-                  {/* honeypot field (hidden) */}
+                  {/* Honeypot-Feld (hidden) */}
                   <input
                     type="text"
-                    name="company" // a field real users won't fill
+                    name="company"
                     className="hidden"
                     autoComplete="off"
                     tabIndex={-1}
@@ -139,12 +134,12 @@ export default function ContactPage() {
                   <div className="grid md:grid-cols-2 gap-4">
                     <div className="space-y-2">
                       <Label htmlFor="firstName" className="text-sm font-semibold text-foreground">
-                        First name <span className="text-red-500">*</span>
+                        Vorname <span className="text-red-500">*</span>
                       </Label>
                       <Input
                         id="firstName"
                         name="firstName"
-                        placeholder="First name"
+                        placeholder="Vorname"
                         value={formData.firstName}
                         onChange={handleChange}
                         required
@@ -153,12 +148,12 @@ export default function ContactPage() {
                     </div>
                     <div className="space-y-2">
                       <Label htmlFor="lastName" className="text-sm font-semibold text-foreground">
-                        Last name <span className="text-red-500">*</span>
+                        Nachname <span className="text-red-500">*</span>
                       </Label>
                       <Input
                         id="lastName"
                         name="lastName"
-                        placeholder="Last name"
+                        placeholder="Nachname"
                         value={formData.lastName}
                         onChange={handleChange}
                         required
@@ -169,13 +164,13 @@ export default function ContactPage() {
 
                   <div className="space-y-2">
                     <Label htmlFor="email" className="text-sm font-semibold text-foreground">
-                      Email <span className="text-red-500">*</span>
+                      E‑Mail <span className="text-red-500">*</span>
                     </Label>
                     <Input
                       id="email"
                       name="email"
                       type="email"
-                      placeholder="example@email.com"
+                      placeholder="beispiel@email.com"
                       value={formData.email}
                       onChange={handleChange}
                       required
@@ -185,7 +180,7 @@ export default function ContactPage() {
 
                   <div className="space-y-2">
                     <Label htmlFor="phone" className="text-sm font-semibold text-foreground">
-                      Phone <span className="text-gray-500 font-normal">(optional)</span>
+                      Telefon <span className="text-gray-500 font-normal">(optional)</span>
                     </Label>
                     <Input
                       id="phone"
@@ -200,12 +195,12 @@ export default function ContactPage() {
 
                   <div className="space-y-2">
                     <Label htmlFor="message" className="text-sm font-semibold text-foreground">
-                      How can we help you? <span className="text-red-500">*</span>
+                      Wie können wir Ihnen helfen? <span className="text-red-500">*</span>
                     </Label>
                     <Textarea
                       id="message"
                       name="message"
-                      placeholder="Start typing..."
+                      placeholder="Bitte schreiben Sie Ihre Nachricht"
                       value={formData.message}
                       onChange={handleChange}
                       required
@@ -215,7 +210,7 @@ export default function ContactPage() {
                   </div>
 
                   {error && <p className="text-sm text-red-600">{error}</p>}
-                  {sent && <p className="text-sm text-green-700">Thanks! Your message has been sent.</p>}
+                  {sent && <p className="text-sm text-green-700">Vielen Dank! Ihre Nachricht wurde gesendet.</p>}
 
                   <div className="flex justify-end pt-2">
                     <Button
@@ -224,14 +219,14 @@ export default function ContactPage() {
                       disabled={isSubmitting}
                       className="bg-primary text-white hover:bg-primary/90 font-semibold disabled:opacity-70"
                     >
-                      {isSubmitting ? "Sending..." : "Submit Inquiry"}
+                      {isSubmitting ? "Wird gesendet..." : "Anfrage absenden"}
                       <ArrowRight className="ml-2 h-4 w-4" />
                     </Button>
                   </div>
 
-                  {/* tiny GDPR hint */}
+                  {/* kleiner DSGVO-Hinweis */}
                   <p className="text-xs text-gray-500 pt-2">
-                    By submitting, you agree that we process your data to handle your request.
+                    Mit dem Absenden stimmen Sie der Verarbeitung Ihrer Daten zur Bearbeitung zu.
                   </p>
                 </form>
               </CardContent>

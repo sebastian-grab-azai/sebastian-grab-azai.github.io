@@ -1,7 +1,34 @@
+import type { Metadata } from "next"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 
-export default function TermsPage() {
+export const metadata: Metadata = {
+  title: "Terms of Service | Azai AG – Elevate",
+  description:
+    "Review the terms and conditions for using Azai AG's project management platform and services.",
+  alternates: {
+    canonical: "/en/terms/",
+    languages: {
+      "de-CH": "/de/terms/",
+      en: "/en/terms/",
+      "x-default": "/de/terms/",
+    },
+  },
+  openGraph: {
+    title: "Terms of Service | Azai AG – Elevate",
+    description:
+      "Review the terms and conditions for using Azai AG's project management platform and services.",
+    url: "/en/terms/",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Terms of Service | Azai AG – Elevate",
+    description:
+      "Review the terms and conditions for using Azai AG's project management platform and services.",
+  },
+}
+
+export default function TermsPageEN() {
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
@@ -128,7 +155,7 @@ export default function TermsPage() {
                   <strong>Email:</strong> info@azai.ch
                 </p>
                 <p>
-                  <strong>Address:</strong> Azai AG, Wiesentalstrasse 1, 8185 Zürich, Switzerland
+                  <strong>Address:</strong> Azai AG, Wisentalstrasse 7a, 8185 Winkel, Switzerland
                 </p>
               </div>
             </section>

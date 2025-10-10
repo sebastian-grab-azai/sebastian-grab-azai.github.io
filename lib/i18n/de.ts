@@ -107,7 +107,7 @@ export const de: HomeDict = {
   },
   solutions: {
     badge: "Lösungen",
-    title: "Erweitertes Risikomanagement‑Modul",
+    title: "Erweitertes Risikomanagement-Modul",
     lead:
       "Nutzen Sie KI‑gestützte Risikoanalyse und ‑minderung. Unser Flaggschiffmodul verändert, wie Sie Risiken identifizieren, analysieren und adressieren, bevor sie Ihren Zeitplan beeinflussen.",
     items: {

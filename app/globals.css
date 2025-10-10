@@ -80,3 +80,23 @@
     @apply bg-background text-foreground;
   }
 }
+
+/* Mobile: Abstand über dem ersten Bereich minimieren, Desktop unverändert lassen */
+@layer base {
+  @media (max-width: 1023px) {
+    /* Gilt für alle Seiten: erstes Section-Element direkt in main */
+    main > section:first-of-type {
+      padding-top: 1rem !important; /* entspricht Tailwind pt-4 */
+    }
+
+    /* Seiten ohne section (Contact): main mit py-22 */
+    main.py-22 {
+      padding-top: 1rem !important;
+    }
+
+    /* Seiten mit Container als erstem Bereich (Terms/Privacy) */
+    main > .container:first-child {
+      padding-top: 1rem !important;
+    }
+  }
+}

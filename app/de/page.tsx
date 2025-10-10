@@ -108,10 +108,10 @@ export default function HomePageDE() {
                     <p className="inline-block text-[11px] font-semibold tracking-wide text-foreground/90 px-3 py-1 rounded-full bg-white ring-1 ring-black/5 shadow-sm mb-5">
                       {L.solutions.badge}
                     </p>
-                    <h2 className="text-3xl lg:text-4xl font-bold leading-tight">{L.solutions.title}</h2>
+                    <h2 className="text-3xl lg:text-4xl font-bold leading-tight break-words">{L.solutions.title}</h2>
                   </div>
                   <div className="flex items-center">
-                    <p className="text-foreground/70 leading-relaxed">
+                    <p className="text-foreground/70 leading-relaxed break-words">
                       {L.solutions.lead}
                     </p>
                   </div>

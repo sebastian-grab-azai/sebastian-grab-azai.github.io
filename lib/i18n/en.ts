@@ -3,7 +3,8 @@ import type { HomeDict } from "./de"
 export const en: HomeDict = {
   hero: {
     badge: "Transform Your Project Management",
-    title: "The Future of Project Excellence",
+    title: "Azai Elevate",
+    tagline: "smart control – lead with intelligence",
     lead1:
       "Revolutionary project management platform engineered for enterprise teams who demand",
     lead2a: "precision, intelligence,",
@@ -69,6 +70,19 @@ export const en: HomeDict = {
         "Revolutionary time tracking and resource allocation powered by machine learning algorithms.",
     },
     imageAlt: "Project management dashboard with Gantt chart",
+  },
+  earlyAccess: {
+    badge: "Early Access",
+    title: "Pilot Program Benefits",
+    lead: "Join our pilot and help shape Azai Elevate — with prioritized onboarding and exclusive conditions.",
+    bullets: [
+      "Priority onboarding support",
+      "Direct influence on roadmap & features",
+      "Preferential pilot pricing",
+      "Guaranteed migration assistance"
+    ],
+    ctaPrimary: "Request Early Access",
+    ctaSecondary: "Book a Call"
   },
   benefits: {
     badge: "Benefits",

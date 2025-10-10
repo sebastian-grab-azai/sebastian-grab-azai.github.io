@@ -7,6 +7,7 @@ import { FeatureCarousel } from "@/components/feature-carousel"
 import { Shield, BarChart3, Zap, Gauge, Lock, Star, Check, ArrowRight } from "lucide-react"
 import Link from "next/link"
 import Image from "next/image"
+import { en as L } from "@/lib/i18n/en"
 
 export const metadata: Metadata = {
   title: "Azai – Elevate | The Future of Project Excellence",
@@ -45,15 +46,18 @@ export default function HomePageEN() {
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
             <div>
               <p className="inline-block text-[11px] font-semibold tracking-wide text-foreground/90 px-3 py-1 rounded-full bg-white ring-1 ring-black/5 shadow-sm mb-5">
-                Transform Your Project Management
+                {L.hero.badge}
               </p>
               <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold mb-5 leading-[1.05] text-balance">
-                The Future of Project Excellence
+                {L.hero.title}
               </h1>
+              <p className="text-[11px] sm:text-xl uppercase tracking-[0.2em] text-foreground/70 mb-4">
+                {L.hero.tagline}
+              </p>
               <p className="text-base lg:text-lg text-foreground/70 mb-8 leading-relaxed">
-                Revolutionary project management platform engineered for enterprise teams who demand{" "}
-                <span className="font-semibold text-foreground">precision, intelligence,</span> and{" "}
-                <span className="font-semibold text-foreground">results at scale.</span>
+                {L.hero.lead1}{" "}
+                <span className="font-semibold text-foreground">{L.hero.lead2a}</span>{" "}
+                <span className="font-semibold text-foreground">{L.hero.lead2b}</span>.
               </p>
               <div className="flex flex-wrap gap-4">
                 <Button
@@ -65,16 +69,16 @@ export default function HomePageEN() {
                     href="#book"
                     className="text-foreground font-semibold inline-block"
                   >
-                    Calendar Booking
+                    {L.hero.ctaBook}
                   </a>
                 </Button>
                 <Button
                   size="lg"
                   variant="outline"
                   asChild
-                  className="border-2 border-foreground/20 bg-transparent h-11 px-6 hover:bg-foreground/5"
+                  className="border-2 border-foreground/20 bg-transparent h-11 px-6 hover:bg-foreground/5 hover:text-foreground"
                 >
-                  <Link href="/en/contact">Contact Us</Link>
+                  <Link href="/en/contact">{L.hero.ctaContact}</Link>
                 </Button>
               </div>
             </div>
@@ -83,7 +87,7 @@ export default function HomePageEN() {
                 <Image
                   // src="/modern-office-meeting-room-with-team-collaboration.jpg"
                   src="/assets/office.png"
-                  alt="Team collaboration in modern office"
+                  alt={L.hero.imageAlt}
                   width={800}
                   height={600}
                   className="w-full h-auto object-cover"
@@ -376,6 +380,62 @@ export default function HomePageEN() {
               </div>
             </div>
           </div>
+          </div>
+        </section>
+
+        {/* Early Access / Pilot */}
+        <section id="early-access" className="py-16 bg-white scroll-mt-20">
+          <div className="container mx-auto px-4 lg:px-8">
+            <div className="grid lg:grid-cols-2 gap-10 items-start">
+              {/* Copy side */}
+              <div>
+                <p className="inline-block text-[11px] font-semibold tracking-wide text-foreground/90 px-3 py-1 rounded-full bg-white ring-1 ring-black/5 shadow-sm mb-5">
+                  {L.earlyAccess.badge}
+                </p>
+                <h2 className="text-3xl lg:text-4xl font-bold mb-4">{L.earlyAccess.title}</h2>
+                <p className="text-foreground/70 mb-6 leading-relaxed">
+                  {L.earlyAccess.lead}
+                </p>
+
+                <div className="flex flex-wrap gap-4">
+                  <Button
+                    size="lg"
+                    asChild
+                    className="bg-primary text-primary-foreground hover:bg-primary/90 h-11 px-6"
+                  >
+                    <Link href="/en/contact">{L.earlyAccess.ctaPrimary}</Link>
+                  </Button>
+                  <Button
+                    size="lg"
+                    variant="outline"
+                    asChild
+                    className="border-2 border-foreground/20 bg-transparent h-11 px-6 hover:bg-foreground/5 hover:text-foreground"
+                  >
+                    <a href="#book" className="text-foreground font-semibold inline-block">
+                      {L.earlyAccess.ctaSecondary}
+                    </a>
+                  </Button>
+                </div>
+              </div>
+
+              {/* Bullets side */}
+              <div>
+                <Card className="bg-white border-0 shadow-xl rounded-2xl">
+                  <CardContent className="p-6 md:p-8">
+                    <div className="space-y-4">
+                      {L.earlyAccess.bullets.map((b, i) => (
+                        <div key={i} className="flex items-start gap-3">
+                          <div className="w-5 h-5 rounded-full bg-[#0A1628]/10 flex items-center justify-center flex-shrink-0">
+                            <Check className="h-3.5 w-3.5 text-[#0A1628]" strokeWidth={3} />
+                          </div>
+                          <p className="text-sm text-foreground/80">{b}</p>
+                        </div>
+                      ))}
+                    </div>
+                  </CardContent>
+                </Card>
+              </div>
+            </div>
           </div>
         </section>
 

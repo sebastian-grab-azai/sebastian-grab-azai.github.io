@@ -15,6 +15,7 @@ export function Header() {
   const L = {
     home: lang === "de" ? "Startseite" : "Home",
     features: lang === "de" ? "Funktionen" : "Features",
+    earlyAccess: lang === "de" ? "Frühzugang" : "Early Access",
     booking: lang === "de" ? "Termin buchen" : "Calendar Booking",
     clientLogin: lang === "de" ? "Kunden-Login" : "Client Login",
     contact: lang === "de" ? "Vertrieb kontaktieren" : "Contact Sales",
@@ -24,6 +25,7 @@ export function Header() {
   const base = `/${lang}`
   const homeHref = `${base}/`
   const featuresHref = `${base}/#features`
+  const earlyHref = `${base}/#early-access`
   const bookHref = `${base}/#book`
   const contactHref = `${base}/contact`
 
@@ -44,6 +46,12 @@ export function Header() {
               className="text-sm font-medium text-foreground hover:text-foreground/70 transition-colors"
             >
               {L.features}
+            </Link>
+            <Link
+              href={earlyHref}
+              className="text-sm font-medium text-foreground hover:text-foreground/70 transition-colors"
+            >
+              {L.earlyAccess}
             </Link>
             <Link href={bookHref} data-open-calendly="true" className="text-sm font-medium text-foreground hover:text-foreground/70 transition-colors">
               {L.booking}
@@ -77,6 +85,9 @@ export function Header() {
                   </Link>
                   <Link href={featuresHref} className="py-2 text-base font-medium text-foreground hover:text-foreground/70 ml-4">
                     {L.features}
+                  </Link>
+                  <Link href={earlyHref} className="py-2 text-base font-medium text-foreground hover:text-foreground/70 ml-4">
+                    {L.earlyAccess}
                   </Link>
                   <Link href={bookHref} data-open-calendly="true" className="py-2 text-base font-medium text-foreground hover:text-foreground/70 ml-4">
                     {L.booking}

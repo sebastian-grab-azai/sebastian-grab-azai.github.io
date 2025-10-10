@@ -2,6 +2,7 @@ export type HomeDict = {
   hero: {
     badge: string
     title: string
+    tagline: string
     lead1: string
     lead2a: string
     lead2b: string
@@ -54,6 +55,15 @@ export type HomeDict = {
     }
     imageAlt: string
   }
+  earlyAccess: {
+    badge: string
+    title: string
+    lead: string
+    bullets: string[]
+    ctaPrimary: string
+    ctaSecondary: string
+    footnote?: string
+  }
   benefits: {
     badge: string
     title: string
@@ -86,7 +96,8 @@ export type HomeDict = {
 export const de: HomeDict = {
   hero: {
     badge: "Projektmanagement neu denken",
-    title: "Die Zukunft exzellenter Projekte",
+    title: "Azai Elevate",
+    tagline: "smart steuern – lead with intelligence",
     lead1: "Revolutionäre Projektmanagement‑Plattform, entwickelt für Enterprise‑Teams, die",
     lead2a: "Präzision, Intelligenz",
     lead2b: "und Ergebnisse im grossen Massstab",
@@ -151,6 +162,19 @@ export const de: HomeDict = {
         "Revolutionäres Zeiterfassen und Ressourcenallokation, unterstützt durch Machine‑Learning‑Algorithmen.",
     },
     imageAlt: "Projektmanagement‑Dashboard mit Gantt‑Diagramm",
+  },
+  earlyAccess: {
+    badge: "Early Access",
+    title: "Pilotkunden: Vorteile im Frühzugang",
+    lead: "Werden Sie Teil unseres Pilotprogramms und gestalten Sie Azai Elevate aktiv mit – mit priorisiertem Support und exklusiven Konditionen.",
+    bullets: [
+      "Priorisierter Onboarding‑Support",
+      "Direkter Einfluss auf Roadmap & Features",
+      "Bevorzugte Konditionen während der Pilotphase",
+      "Garantierte Migrationsunterstützung"
+    ],
+    ctaPrimary: "Frühzugang anfragen",
+    ctaSecondary: "Termin buchen"
   },
   benefits: {
     badge: "Vorteile",

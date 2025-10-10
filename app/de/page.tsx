@@ -51,6 +51,9 @@ export default function HomePageDE() {
               <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold mb-5 leading-[1.05] text-balance">
                 {L.hero.title}
               </h1>
+              <p className="text-[11px] sm:text-xl uppercase tracking-[0.2em] text-foreground/70 mb-4">
+                {L.hero.tagline}
+              </p>
               <p className="text-base lg:text-lg text-foreground/70 mb-8 leading-relaxed">
                 {L.hero.lead1}{" "}
                 <span className="font-semibold text-foreground">{L.hero.lead2a}</span>{" "}
@@ -70,7 +73,7 @@ export default function HomePageDE() {
                   size="lg"
                   variant="outline"
                   asChild
-                  className="border-2 border-foreground/20 bg-transparent h-11 px-6 hover:bg-foreground/5"
+                  className="border-2 border-foreground/20 bg-transparent h-11 px-6 hover:bg-foreground/5 hover:text-foreground"
                 >
                   <LocalizedLink href="/contact">{L.hero.ctaContact}</LocalizedLink>
                 </Button>
@@ -369,6 +372,66 @@ export default function HomePageDE() {
                     />
                   </div>
                 </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Early Access / Pilot */}
+        <section id="early-access" className="py-16 bg-white scroll-mt-20">
+          <div className="container mx-auto px-4 lg:px-8">
+            <div className="grid lg:grid-cols-2 gap-10 items-start">
+              {/* Copy side */}
+              <div>
+                <p className="inline-block text-[11px] font-semibold tracking-wide text-foreground/90 px-3 py-1 rounded-full bg-white ring-1 ring-black/5 shadow-sm mb-5">
+                  {L.earlyAccess.badge}
+                </p>
+                <h2 className="text-3xl lg:text-4xl font-bold mb-4">{L.earlyAccess.title}</h2>
+                <p className="text-foreground/70 mb-6 leading-relaxed">
+                  {L.earlyAccess.lead}
+                </p>
+
+                <div className="flex flex-wrap gap-4">
+                  <Button
+                    size="lg"
+                    asChild
+                    className="bg-primary text-primary-foreground hover:bg-primary/90 h-11 px-6"
+                  >
+                    <LocalizedLink href="/contact">{L.earlyAccess.ctaPrimary}</LocalizedLink>
+                  </Button>
+                  <Button
+                    size="lg"
+                    variant="outline"
+                    asChild
+                    className="border-2 border-foreground/20 bg-transparent h-11 px-6 hover:bg-foreground/5 hover:text-foreground"
+                  >
+                    <a href="#book" className="text-foreground font-semibold inline-block">
+                      {L.earlyAccess.ctaSecondary}
+                    </a>
+                  </Button>
+                </div>
+
+                {L.earlyAccess.footnote ? (
+                  <p className="mt-4 text-xs text-foreground/50">{L.earlyAccess.footnote}</p>
+                ) : null}
+              </div>
+
+              {/* Bullets side */}
+              <div>
+                <Card className="bg-white border-0 shadow-xl rounded-2xl">
+                  <CardContent className="p-6 md:p-8">
+                    <div className="space-y-4">
+                      {L.earlyAccess.bullets.map((b, i) => (
+                        <div key={i} className="flex items-start gap-3">
+                          <div className="w-5 h-5 rounded-full bg-[#0A1628]/10 flex items-center justify-center flex-shrink-0">
+                            <Check className="h-3.5 w-3.5 text-[#0A1628]" strokeWidth={3} />
+                          </div>
+                          <p className="text-sm text-foreground/80">{b}</p>
+                        </div>
+                      ))}
+                    </div>
+                  </CardContent>
+                </Card>
               </div>
             </div>
           </div>

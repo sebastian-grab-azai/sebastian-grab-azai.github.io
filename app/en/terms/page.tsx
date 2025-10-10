@@ -1,6 +1,7 @@
 import type { Metadata } from "next"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
+import { en as L } from "@/lib/i18n/en"
 
 export const metadata: Metadata = {
   title: "Terms of Service | Azai – Elevate",
@@ -33,10 +34,10 @@ export default function TermsPageEN() {
     <div className="min-h-screen flex flex-col">
       <Header />
       <main className="flex-1 bg-[#FCF2DF]">
-        <div className="container mx-auto px-4 lg:px-8 py-12 max-w-6xl">
-          <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6">Terms of Service</h1>
+        <div className="container mx-auto px-4 lg:px-8 py-12 max-w-10xl">
+          <h1 className="legal-title text-4xl md:text-5xl font-bold text-foreground mb-6">{L.terms.h1}</h1>
 
-          <div className="bg-white rounded-2xl shadow-sm p-8 md:p-12 space-y-8">
+          <div className="legal-content bg-white rounded-2xl shadow-sm p-8 md:p-12 space-y-8">
             <section>
               <h2 className="text-2xl font-bold text-foreground mb-4">1. Agreement to Terms</h2>
               <p className="text-muted-foreground leading-relaxed">

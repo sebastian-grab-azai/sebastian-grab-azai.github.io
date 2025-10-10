@@ -91,6 +91,44 @@ export type HomeDict = {
     ctaInquiry: string
     bullets: { b1: string; b2: string; b3: string }
   }
+  contact: {
+    h1: string
+    lead: string
+    emailLabel: string
+    phoneLabel: string
+    questionNow: string
+    bookLink: string
+    form: {
+      firstName: string
+      lastName: string
+      email: string
+      phone: string
+      phoneOptional: string
+      message: string
+      submit: string
+      sending: string
+      success: string
+      errorRequired: string
+      sendError: string
+      gdpr: string
+      placeholders: {
+        firstName: string
+        lastName: string
+        email: string
+        phone: string
+        message: string
+      }
+    }
+  }
+  privacy: {
+    h1: string
+    labels: { email: string; address: string }
+    sections: { h2: string; p?: string[]; list?: string[] }[]
+  }
+  terms: {
+    h1: string
+    sections: { h2: string; p?: string[]; list?: string[] }[]
+  }
 }
 
 export const de: HomeDict = {
@@ -217,5 +255,203 @@ export const de: HomeDict = {
       b2: "30 Tage kostenlos testen",
       b3: "Einrichtung in wenigen Minuten",
     },
+  },
+  contact: {
+    h1: "Kontakt aufnehmen mit Azai",
+    lead:
+      "Haben Sie Fragen, Feedback oder benötigen Sie Unterstützung? Wir helfen Ihnen gerne weiter. Kontaktieren Sie unser Team – wir melden uns so schnell wie möglich.",
+    emailLabel: "E‑Mail",
+    phoneLabel: "Telefon",
+    questionNow: "Möchten Sie sofort sprechen?",
+    bookLink: "Termin buchen",
+    form: {
+      firstName: "Vorname",
+      lastName: "Nachname",
+      email: "E‑Mail",
+      phone: "Telefon",
+      phoneOptional: "(optional)",
+      message: "Wie können wir Ihnen helfen?",
+      submit: "Anfrage absenden",
+      sending: "Wird gesendet...",
+      success: "Vielen Dank! Ihre Nachricht wurde gesendet.",
+      errorRequired: "Bitte füllen Sie alle Pflichtfelder aus.",
+      sendError:
+        "Entschuldigung, beim Senden ist ein Fehler aufgetreten. Bitte versuchen Sie es erneut.",
+      gdpr:
+        "Mit dem Absenden stimmen Sie der Verarbeitung Ihrer Daten zur Bearbeitung zu.",
+      placeholders: {
+        firstName: "Vorname",
+        lastName: "Nachname",
+        email: "beispiel@email.com",
+        phone: "+123 456 789",
+        message: "Bitte schreiben Sie Ihre Nachricht",
+      },
+    },
+  },
+  privacy: {
+    h1: "Datenschutzerklärung",
+    labels: { email: "E‑Mail:", address: "Adresse:" },
+    sections: [
+      {
+        h2: "1. Einleitung",
+        p: [
+          "Die Azai AG („wir“, „uns“) nimmt den Schutz Ihrer Daten ernst. Diese Datenschutzerklärung erläutert, wie wir personenbezogene Daten erheben, verwenden, offenlegen und schützen, wenn Sie unsere Projektmanagement‑Plattform und damit verbundenen Dienste nutzen."
+        ]
+      },
+      {
+        h2: "2. Welche Daten wir erheben",
+        p: ["Wir verarbeiten Daten, die Sie uns direkt bereitstellen, insbesondere:"],
+        list: [
+          "Kontodaten (Name, E‑Mail‑Adresse, Passwort)",
+          "Profildaten (Funktion, Firmenname, Telefonnummer)",
+          "Projektdaten und Inhalte, die Sie erstellen oder hochladen",
+          "Kommunikationsdaten bei Kontaktaufnahme mit unserem Support",
+          "Zahlungsinformationen zu Abrechnungszwecken"
+        ]
+      },
+      {
+        h2: "3. Wie wir Ihre Daten nutzen",
+        p: ["Wir verwenden die erhobenen Daten, um:"],
+        list: [
+          "unsere Dienste bereitzustellen, zu betreiben und zu verbessern",
+          "Transaktionen abzuwickeln und diesbezügliche Informationen zu versenden",
+          "technische Hinweise, Updates und Support‑Mitteilungen zu versenden",
+          "auf Kommentare und Anfragen zu reagieren",
+          "Nutzungsmuster zu analysieren und die User Experience zu optimieren",
+          "technische Probleme und Sicherheitsbedrohungen zu erkennen, zu verhindern und zu beheben"
+        ]
+      },
+      {
+        h2: "4. Datensicherheit",
+        p: [
+          "Wir setzen geeignete technische und organisatorische Massnahmen ein, um Ihre personenbezogenen Daten vor unbefugtem Zugriff, Veränderung, Offenlegung oder Zerstörung zu schützen, darunter Verschlüsselung, Zugriffskontrollen und regelmässige Sicherheitsüberprüfungen."
+        ]
+      },
+      {
+        h2: "5. Aufbewahrungsdauer",
+        p: [
+          "Wir bewahren personenbezogene Daten so lange auf, wie es zur Erfüllung der in dieser Datenschutzerklärung genannten Zwecke erforderlich ist, sofern nicht gesetzlich eine längere Aufbewahrung vorgeschrieben oder zulässig ist."
+        ]
+      },
+      {
+        h2: "6. Ihre Rechte",
+        p: ["Abhängig von Ihrem Wohnsitz haben Sie ggf. folgende Rechte:"],
+        list: [
+          "Auskunft über die verarbeiteten Daten",
+          "Berichtigung unrichtiger Daten",
+          "Löschung Ihrer personenbezogenen Daten",
+          "Widerspruch gegen bestimmte Verarbeitungen",
+          "Datenübertragbarkeit"
+        ]
+      },
+      {
+        h2: "7. Internationale Datenübermittlungen",
+        p: [
+          "Ihre Daten können in Länder ausserhalb Ihres Wohnsitzstaates übermittelt und dort verarbeitet werden. Wir stellen sicher, dass angemessene Schutzmassnahmen gemäss dieser Datenschutzerklärung getroffen werden."
+        ]
+      },
+      {
+        h2: "8. Änderungen dieser Erklärung",
+        p: [
+          "Wir können diese Datenschutzerklärung gelegentlich aktualisieren. Über wesentliche Änderungen informieren wir durch Veröffentlichung der neuen Fassung auf dieser Seite und Aktualisierung des Datums „Zuletzt aktualisiert“."
+        ]
+      },
+      {
+        h2: "9. Kontakt",
+        p: [
+          "Bei Fragen zu dieser Datenschutzerklärung kontaktieren Sie uns bitte unter:"
+        ]
+      }
+    ]
+  },
+  terms: {
+    h1: "Nutzungsbedingungen",
+    sections: [
+      {
+        h2: "1. Zustimmung zu den Bedingungen",
+        p: [
+          "Durch den Zugriff auf oder die Nutzung der Projektmanagement‑Plattform und Dienste der Azai AG erklären Sie sich mit diesen Nutzungsbedingungen sowie allen anwendbaren Gesetzen und Vorschriften einverstanden. Wenn Sie mit diesen Bedingungen nicht einverstanden sind, ist Ihnen die Nutzung unserer Dienste untersagt."
+        ]
+      },
+      {
+        h2: "2. Nutzungslizenz",
+        p: [
+          "Vorbehaltlich der Einhaltung dieser Bedingungen gewährt Ihnen die Azai AG eine beschränkte, nicht‑exklusive, nicht übertragbare Lizenz, um unsere Dienste für interne Geschäftszwecke zu nutzen. Diese Lizenz umfasst nicht:"
+        ],
+        list: [
+          "das Modifizieren oder Kopieren von Materialien",
+          "die Nutzung der Materialien für kommerzielle Zwecke ausserhalb Ihrer Organisation",
+          "den Versuch, Software zurückzuentwickeln (Reverse Engineering)",
+          "das Entfernen von Urheberrechts‑ oder Eigentumsvermerken",
+          "die Übertragung der Materialien an andere Personen oder Organisationen"
+        ]
+      },
+      {
+        h2: "3. Benutzerkonten",
+        p: [
+          "Sie sind für die Vertraulichkeit Ihrer Zugangsdaten und für alle Aktivitäten verantwortlich, die unter Ihrem Konto stattfinden. Bitte benachrichtigen Sie uns umgehend über jede unbefugte Nutzung. Wir behalten uns das Recht vor, Konten bei Verstoss gegen diese Bedingungen zu sperren oder zu kündigen."
+        ]
+      },
+      {
+        h2: "4. Zulässige Nutzung",
+        p: ["Sie verpflichten sich, Folgendes zu unterlassen:"],
+        list: [
+          "die Nutzung unserer Dienste zu rechtswidrigen Zwecken",
+          "Verstösse gegen geltende Gesetze oder Vorschriften",
+          "Eingriffe in Rechte Dritter",
+          "die Übertragung schädlicher Codes oder Malware",
+          "den Versuch, unbefugten Zugriff auf unsere Systeme zu erlangen",
+          "Störungen der Integrität oder Leistung unserer Dienste"
+        ]
+      },
+      {
+        h2: "5. Geistiges Eigentum",
+        p: [
+          "Sämtliche Inhalte, Funktionen und Funktionalitäten unserer Dienste – einschliesslich, aber nicht beschränkt auf Texte, Grafiken, Logos und Software – sind Eigentum der Azai AG und durch internationale Urheber‑, Marken‑ und andere Schutzrechte geschützt."
+        ]
+      },
+      {
+        h2: "6. Zahlungsbedingungen",
+        p: [
+          "Abonnementgebühren werden im Voraus in regelmässigen Intervallen abgerechnet. Sie ermächtigen uns, Ihr Zahlungsmittel für alle anfallenden Gebühren zu belasten. Gebühren sind nicht erstattungsfähig, es sei denn, dies ist gesetzlich vorgeschrieben oder in Ihrer Vereinbarung ausdrücklich vorgesehen."
+        ]
+      },
+      {
+        h2: "7. Verfügbarkeit der Dienste",
+        p: [
+          "Wir bemühen uns um eine hohe Verfügbarkeit, garantieren jedoch keine unterbrechungsfreie oder fehlerfreie Nutzung. Wir behalten uns vor, Teile der Dienste mit angemessener Vorankündigung zu ändern, auszusetzen oder einzustellen."
+        ]
+      },
+      {
+        h2: "8. Haftungsbeschränkung",
+        p: [
+          "Soweit gesetzlich zulässig, haftet die Azai AG nicht für indirekte, zufällige, besondere, Folge‑ oder Strafschäden, die sich aus der Nutzung oder der Unmöglichkeit der Nutzung unserer Dienste ergeben."
+        ]
+      },
+      {
+        h2: "9. Kündigung",
+        p: [
+          "Wir können Ihren Zugang zu unseren Diensten aus wichtigem Grund und ohne vorherige Ankündigung beenden oder aussetzen, insbesondere bei Verstoss gegen diese Bedingungen. Nach der Kündigung endet Ihr Nutzungsrecht umgehend."
+        ]
+      },
+      {
+        h2: "10. Anwendbares Recht",
+        p: [
+          "Diese Bedingungen unterliegen dem schweizerischen Recht, unter Ausschluss der kollisionsrechtlichen Bestimmungen."
+        ]
+      },
+      {
+        h2: "11. Änderungen der Bedingungen",
+        p: [
+          "Wir behalten uns vor, diese Bedingungen jederzeit zu ändern. Über wesentliche Änderungen informieren wir durch Veröffentlichung der aktualisierten Fassung auf unserer Website. Ihre fortgesetzte Nutzung gilt als Zustimmung zu den geänderten Bedingungen."
+        ]
+      },
+      {
+        h2: "12. Kontakt",
+        p: [
+          "Bei Fragen zu diesen Nutzungsbedingungen kontaktieren Sie uns bitte unter:"
+        ]
+      }
+    ]
   },
 }

@@ -11,6 +11,7 @@ import { Label } from "@/components/ui/label"
 import { Textarea } from "@/components/ui/textarea"
 import { Card, CardContent } from "@/components/ui/card"
 import { ArrowRight } from "lucide-react"
+import { en as L } from "@/lib/i18n/en"
 
 const SERVICE_ID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID as string
 const TEMPLATE_ID = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID as string
@@ -42,7 +43,7 @@ export default function ContactPageENClient() {
     if (trap.trim()) return
 
     if (!formData.firstName || !formData.lastName || !formData.email || !formData.message) {
-      setError("Please fill in all required fields.")
+      setError(L.contact.form.errorRequired)
       return
     }
 
@@ -62,7 +63,7 @@ export default function ContactPageENClient() {
       setSent(true)
       setFormData({ firstName: "", lastName: "", email: "", phone: "", message: "" })
     } catch (err) {
-      setError("Sorry, something went wrong while sending. Please try again.")
+      setError(L.contact.form.sendError)
     } finally {
       setIsSubmitting(false)
     }
@@ -85,32 +86,31 @@ export default function ContactPageENClient() {
             {/* Left Column - Contact Info */}
             <div className="lg:pr-8">
               <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold mb-6 text-balance leading-tight">
-                Get In Touch With Azai
+                {L.contact.h1}
               </h1>
               <p className="text-base lg:text-lg text-gray-700 mb-12 leading-relaxed">
-                Have questions, feedback, or need support? We're here to help. Reach out to our team and we'll
-                respond as quickly as possible.
+                {L.contact.lead}
               </p>
 
               <div className="space-y-8">
                 <div>
-                  <p className="text-sm text-gray-600 mb-1">Email:</p>
+                  <p className="text-sm text-gray-600 mb-1">{L.contact.emailLabel}:</p>
                   <a href="mailto:info@azai.ch" className="text-lg font-bold text-foreground hover:text-accent transition-colors">
                     info@azai.ch
                   </a>
                 </div>
 
                 <div>
-                  <p className="text-sm text-gray-600 mb-1">Phone:</p>
+                  <p className="text-sm text-gray-600 mb-1">{L.contact.phoneLabel}:</p>
                   <a href="tel:+41792187748" className="text-lg font-bold text-foreground hover:text-accent transition-colors">
                     +41 79 218 77 48
                   </a>
                 </div>
 
                 <div className="pt-2">
-                  <p className="text-sm text-gray-600 mb-2">Want to talk right away?</p>
+                  <p className="text-sm text-gray-600 mb-2">{L.contact.questionNow}</p>
                   <a href="/en/#book" className="text-foreground font-semibold underline hover:text-accent transition-colors inline-block">
-                    Book a Meeting
+                    {L.contact.bookLink}
                   </a>
                 </div>
               </div>
@@ -134,12 +134,12 @@ export default function ContactPageENClient() {
                   <div className="grid md:grid-cols-2 gap-4">
                     <div className="space-y-2">
                       <Label htmlFor="firstName" className="text-sm font-semibold text-foreground">
-                        First name <span className="text-red-500">*</span>
+                        {L.contact.form.firstName} <span className="text-red-500">*</span>
                       </Label>
                       <Input
                         id="firstName"
                         name="firstName"
-                        placeholder="First name"
+                        placeholder={L.contact.form.placeholders.firstName}
                         value={formData.firstName}
                         onChange={handleChange}
                         required
@@ -148,12 +148,12 @@ export default function ContactPageENClient() {
                     </div>
                     <div className="space-y-2">
                       <Label htmlFor="lastName" className="text-sm font-semibold text-foreground">
-                        Last name <span className="text-red-500">*</span>
+                        {L.contact.form.lastName} <span className="text-red-500">*</span>
                       </Label>
                       <Input
                         id="lastName"
                         name="lastName"
-                        placeholder="Last name"
+                        placeholder={L.contact.form.placeholders.lastName}
                         value={formData.lastName}
                         onChange={handleChange}
                         required
@@ -164,13 +164,13 @@ export default function ContactPageENClient() {
 
                   <div className="space-y-2">
                     <Label htmlFor="email" className="text-sm font-semibold text-foreground">
-                      Email <span className="text-red-500">*</span>
+                      {L.contact.form.email} <span className="text-red-500">*</span>
                     </Label>
                     <Input
                       id="email"
                       name="email"
                       type="email"
-                      placeholder="example@email.com"
+                      placeholder={L.contact.form.placeholders.email}
                       value={formData.email}
                       onChange={handleChange}
                       required
@@ -180,13 +180,13 @@ export default function ContactPageENClient() {
 
                   <div className="space-y-2">
                     <Label htmlFor="phone" className="text-sm font-semibold text-foreground">
-                      Phone <span className="text-gray-500 font-normal">(optional)</span>
+                      {L.contact.form.phone} <span className="text-gray-500 font-normal">{L.contact.form.phoneOptional}</span>
                     </Label>
                     <Input
                       id="phone"
                       name="phone"
                       type="tel"
-                      placeholder="+123 456 789"
+                      placeholder={L.contact.form.placeholders.phone}
                       value={formData.phone}
                       onChange={handleChange}
                       className="bg-gray-50 border-gray-200 h-11"
@@ -195,12 +195,12 @@ export default function ContactPageENClient() {
 
                   <div className="space-y-2">
                     <Label htmlFor="message" className="text-sm font-semibold text-foreground">
-                      How can we help you? <span className="text-red-500">*</span>
+                      {L.contact.form.message} <span className="text-red-500">*</span>
                     </Label>
                     <Textarea
                       id="message"
                       name="message"
-                      placeholder="Start typing..."
+                      placeholder={L.contact.form.placeholders.message}
                       value={formData.message}
                       onChange={handleChange}
                       required
@@ -210,7 +210,7 @@ export default function ContactPageENClient() {
                   </div>
 
                   {error && <p className="text-sm text-red-600">{error}</p>}
-                  {sent && <p className="text-sm text-green-700">Thanks! Your message has been sent.</p>}
+                  {sent && <p className="text-sm text-green-700">{L.contact.form.success}</p>}
 
                   <div className="flex justify-end pt-2">
                     <Button
@@ -219,14 +219,14 @@ export default function ContactPageENClient() {
                       disabled={isSubmitting}
                       className="bg-primary text-white hover:bg-primary/90 font-semibold disabled:opacity-70"
                     >
-                      {isSubmitting ? "Sending..." : "Submit Inquiry"}
+                      {isSubmitting ? L.contact.form.sending : L.contact.form.submit}
                       <ArrowRight className="ml-2 h-4 w-4" />
                     </Button>
                   </div>
 
                   {/* tiny GDPR hint */}
                   <p className="text-xs text-gray-500 pt-2">
-                    By submitting, you agree that we process your data to handle your request.
+                    {L.contact.form.gdpr}
                   </p>
                 </form>
               </CardContent>

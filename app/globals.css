@@ -100,3 +100,47 @@
     }
   }
 }
+
+/* Legal pages: robust wrapping and tighter mobile padding */
+@layer base {
+  .legal-content {
+    overflow-wrap: anywhere;
+    word-break: break-word;
+    hyphens: auto;
+  }
+
+  /* Balance headings inside legal content for nicer line breaks */
+  .legal-content h1,
+  .legal-content h2,
+  .legal-content h3 {
+    text-wrap: balance;
+  }
+
+  @media (max-width: 1023px) {
+    /* Reduce inner padding on mobile for legal content boxes */
+    .legal-content {
+      padding: 1.25rem !important; /* ~p-5 */
+    }
+  }
+}
+
+/* Legal page titles: allow hyphenation and safe wrapping to avoid overflow on mobile */
+@layer base {
+  .legal-title {
+    overflow-wrap: anywhere;
+    word-break: break-word;
+    hyphens: auto;
+    text-wrap: balance;
+  }
+}
+
+/* Legal titles: responsive sizing to prevent mobile overflow */
+@layer base {
+  @media (max-width: 640px) {
+    .legal-title {
+      font-size: clamp(1.5rem, 6vw + 0.5rem, 1.875rem) !important; /* ~text-3xl max */
+      line-height: 1.2;
+      max-width: 100%;
+    }
+  }
+}

@@ -109,14 +109,13 @@ export default function HomePageEN() {
               <div className="grid lg:grid-cols-2 gap-10 mb-14">
                 <div>
                   <p className="inline-block text-[11px] font-semibold tracking-wide text-foreground/90 px-3 py-1 rounded-full bg-white ring-1 ring-black/5 shadow-sm mb-5">
-                    Solutions
+                    {L.solutions.badge}
                   </p>
-                  <h2 className="text-3xl lg:text-4xl font-bold leading-tight">Advanced Risk Management Module</h2>
+                  <h2 className="text-3xl lg:text-4xl font-bold leading-tight break-words">{L.solutions.title}</h2>
                 </div>
                 <div className="flex items-center">
-                  <p className="text-foreground/70 leading-relaxed">
-                    Harness the power of AI-driven risk assessment and mitigation. Our flagship module transforms how
-                    you identify, analyze, and respond to project risks before they impact your timeline.
+                  <p className="text-foreground/70 leading-relaxed break-words">
+                    {L.solutions.lead}
                   </p>
                 </div>
               </div>
@@ -126,9 +125,9 @@ export default function HomePageEN() {
                   <div className="w-14 h-14 rounded-xl bg-[#fcf2df]/85 flex items-center justify-center mb-5">
                     <Shield className="h-6 w-6 text-[#0A1628]" strokeWidth={1.5} />
                   </div>
-                  <h3 className="text-lg font-bold mb-3">Risk Intelligence</h3>
+                  <h3 className="text-lg font-bold mb-3">{L.solutions.items.riskIntelligence.title}</h3>
                   <p className="text-sm text-foreground/70 leading-relaxed">
-                    AI-powered risk detection that sees problems before they happen.
+                    {L.solutions.items.riskIntelligence.desc}
                   </p>
                 </div>
 
@@ -136,9 +135,9 @@ export default function HomePageEN() {
                   <div className="w-14 h-14 rounded-xl bg-[#fcf2df]/85 flex items-center justify-center mb-5">
                     <BarChart3 className="h-6 w-6 text-[#0A1628]" strokeWidth={1.5} />
                   </div>
-                  <h3 className="text-lg font-bold mb-3">Real-time Analytics</h3>
+                  <h3 className="text-lg font-bold mb-3">{L.solutions.items.realtimeAnalytics.title}</h3>
                   <p className="text-sm text-foreground/70 leading-relaxed">
-                    Live dashboards that keep your finger on the pulse of every project.
+                    {L.solutions.items.realtimeAnalytics.desc}
                   </p>
                 </div>
 
@@ -146,9 +145,9 @@ export default function HomePageEN() {
                   <div className="w-14 h-14 rounded-xl bg-[#fcf2df]/85 flex items-center justify-center mb-5">
                     <Zap className="h-6 w-6 text-[#0A1628]" strokeWidth={1.5} />
                   </div>
-                  <h3 className="text-lg font-bold mb-3">Smart Automation</h3>
+                  <h3 className="text-lg font-bold mb-3">{L.solutions.items.smartAutomation.title}</h3>
                   <p className="text-sm text-foreground/70 leading-relaxed">
-                    Automated workflows that eliminate manual project management overhead.
+                    {L.solutions.items.smartAutomation.desc}
                   </p>
                 </div>
               </div>
@@ -270,12 +269,12 @@ export default function HomePageEN() {
         <section id="features" className="py-16 bg-white scroll-mt-20">
           <div className="container mx-auto px-4 lg:px-8">
           <p className="inline-block text-[11px] font-semibold tracking-wide text-foreground/90 px-3 py-1 rounded-full bg-white ring-1 ring-black/5 shadow-sm mb-5">
-            Features
+            {L.features.badge}
           </p>
           <h2 className="text-3xl lg:text-4xl font-bold mb-12 leading-tight">
-            Revolutionary Project
+            {L.features.titleLine1}
             <br />
-            Management Features
+            {L.features.titleLine2}
           </h2>
 
           <div className="grid lg:grid-cols-2 gap-16 items-start">
@@ -291,20 +290,19 @@ export default function HomePageEN() {
                     </div>
                     <div className="flex-1">
                       <div className="flex items-center gap-3 mb-2 flex-wrap">
-                        <h3 className="text-xl font-bold">Advanced Risk Management Module</h3>
+                        <h3 className="text-xl font-bold">{L.features.item1.title}</h3>
                         <span className="text-[12px] font-bold px-2.5 py-1 rounded-md bg-green-100 text-green-700 whitespace-nowrap">
-                          Available Now
+                          {L.features.item1.badge}
                         </span>
                       </div>
                       <p className="text-sm text-foreground/70 mb-4 leading-relaxed">
-                        Harness the power of AI-driven risk assessment and mitigation. Our flagship module transforms
-                        how you identify, analyze, and respond to project risks before they impact your timeline.
+                        {L.features.item1.lead}
                       </p>
                       <Button
                         size="default"
                         className="bg-[#0A1628] text-white hover:bg-[#0A1628]/90 h-10 px-6 rounded-lg"
                       >
-                        <Link href="/en/contact">Contact Sales</Link>
+                        <Link href="/en/contact">{L.features.item1.ctaContact}</Link>
                       </Button>
                     </div>
                   </div>
@@ -325,13 +323,13 @@ export default function HomePageEN() {
                     </div>
                     <div className="flex-1">
                       <div className="flex items-center gap-3 mb-2 flex-wrap">
-                        <h3 className="text-xl font-bold">Cost Management</h3>
+                        <h3 className="text-xl font-bold">{L.features.item2.title}</h3>
                         <span className="text-[12px] font-bold px-2.5 py-1 rounded-md bg-orange-100 text-orange-700 whitespace-nowrap">
-                          Coming Soon
+                          {L.features.item2.badge}
                         </span>
                       </div>
                       <p className="text-sm text-foreground/70 leading-relaxed">
-                        Advanced budget management with predictive financial modeling and real-time cost analysis.
+                        {L.features.item2.lead}
                       </p>
                     </div>
                   </div>
@@ -352,13 +350,13 @@ export default function HomePageEN() {
                     </div>
                     <div className="flex-1">
                       <div className="flex items-center gap-3 mb-2 flex-wrap">
-                        <h3 className="text-xl font-bold">Time Management</h3>
+                        <h3 className="text-xl font-bold">{L.features.item3.title}</h3>
                         <span className="text-[12px] font-bold px-2.5 py-1 rounded-md bg-orange-100 text-orange-700 whitespace-nowrap">
-                          Coming Soon
+                          {L.features.item3.badge}
                         </span>
                       </div>
                       <p className="text-sm text-foreground/70 leading-relaxed">
-                        Revolutionary time tracking and resource allocation powered by machine learning algorithms.
+                        {L.features.item3.lead}
                       </p>
                     </div>
                   </div>
@@ -371,9 +369,9 @@ export default function HomePageEN() {
                 <div className="bg-white rounded-xl overflow-hidden shadow-lg border border-border/30">
                   <FeatureCarousel
                     images={[
-                      { src: "/assets/risk/RiskManagementDashboard.png", alt: "Project management dashboard with Gantt chart" },
-                      { src: "/assets/risk/RiskManagementMatrix.png", alt: "Project management dashboard with Gantt chart" },
-                      { src: "/assets/risk/RiskManagementMeasures.png", alt: "Project management dashboard with Gantt chart" },
+                      { src: "/assets/risk/RiskManagementDashboard.png", alt: L.features.imageAlt },
+                      { src: "/assets/risk/RiskManagementMatrix.png", alt: L.features.imageAlt },
+                      { src: "/assets/risk/RiskManagementMeasures.png", alt: L.features.imageAlt },
                     ]}
                   />
                 </div>
@@ -445,12 +443,11 @@ export default function HomePageEN() {
             <div className="bg-[#0A1628] text-white py-16 lg:py-20 px-8 lg:px-16 rounded-3xl">
             <div className="text-center mb-14">
               <p className="inline-block text-[11px] font-semibold tracking-wide text-foreground/90 px-3 py-1 rounded-full bg-white ring-1 ring-black/5 shadow-sm mb-5">
-                Benefits
+                {L.benefits.badge}
               </p>
-              <h2 className="text-3xl lg:text-4xl font-bold mb-5">Built for Enterprise Scale</h2>
+              <h2 className="text-3xl lg:text-4xl font-bold mb-5">{L.benefits.title}</h2>
               <p className="text-white/80 max-w-3xl mx-auto leading-relaxed">
-                Modern software architecture engineered for mission-critical performance, bulletproof security, and
-                seamless scalability
+                {L.benefits.lead}
               </p>
             </div>
 
@@ -460,12 +457,11 @@ export default function HomePageEN() {
                   <div className="w-14 h-14 rounded-xl bg-[#FCF2DF] flex items-center justify-center mx-auto mb-4">
                     <Zap className="h-7 w-7 text-[#0A1628]" strokeWidth={2} />
                   </div>
-                  <h3 className="text-xl font-bold mb-5 text-white">Modern Technology Stack</h3>
+                  <h3 className="text-xl font-bold mb-5 text-white">{L.benefits.card1.title}</h3>
                   <div className="space-y-2.5 text-white/80 text-sm leading-relaxed text-center">
-                    <p>React 20 with TypeScript</p>
-                    <p>.NET 9 Backend Applications</p>
-                    <p>PWA Ready & Mobile Optimized</p>
-                    <p>Micro-service Architecture</p>
+                    {L.benefits.card1.bullets.map((b, i) => (
+                      <p key={i}>{b}</p>
+                    ))}
                   </div>
                 </CardContent>
               </Card>
@@ -475,12 +471,11 @@ export default function HomePageEN() {
                   <div className="w-14 h-14 rounded-xl bg-[#FCF2DF] flex items-center justify-center mx-auto mb-4">
                     <Gauge className="h-7 w-7 text-[#0A1628]" strokeWidth={2} />
                   </div>
-                  <h3 className="text-xl font-bold mb-5 text-white">Exceptional Performance</h3>
+                  <h3 className="text-xl font-bold mb-5 text-white">{L.benefits.card2.title}</h3>
                   <div className="space-y-2.5 text-white/80 text-sm leading-relaxed text-center">
-                    <p>Sub-second Load Times</p>
-                    <p>Real-time Data Sync</p>
-                    <p>Message Queue Communication</p>
-                    <p>Edge Computing Optimized</p>
+                    {L.benefits.card2.bullets.map((b, i) => (
+                      <p key={i}>{b}</p>
+                    ))}
                   </div>
                 </CardContent>
               </Card>
@@ -490,11 +485,11 @@ export default function HomePageEN() {
                   <div className="w-14 h-14 rounded-xl bg-[#FCF2DF] flex items-center justify-center mx-auto mb-4">
                     <Lock className="h-7 w-7 text-[#0A1628]" strokeWidth={2} />
                   </div>
-                  <h3 className="text-xl font-bold mb-5 text-white">Enterprise Security</h3>
+                  <h3 className="text-xl font-bold mb-5 text-white">{L.benefits.card3.title}</h3>
                   <div className="space-y-2.5 text-white/80 text-sm leading-relaxed text-center">
-                    <p>Enterprise RBAC</p>
-                    <p>GDPR Compliant</p>
-                    <p>Zero-trust Architecture</p>
+                    {L.benefits.card3.bullets.map((b, i) => (
+                      <p key={i}>{b}</p>
+                    ))}
                   </div>
                 </CardContent>
               </Card>
@@ -511,18 +506,18 @@ export default function HomePageEN() {
           <div className="container mx-auto px-4 lg:px-8">
           <div className="text-center mb-12">
             <p className="inline-block text-[11px] font-semibold tracking-wide text-foreground/90 px-3 py-1 rounded-full bg-white ring-1 ring-black/5 shadow-sm mb-5">
-              The Process
+              {L.process.badge}
             </p>
-            <h2 className="text-3xl lg:text-4xl font-bold mb-3">Get Started in Minutes, Not Months</h2>
+            <h2 className="text-3xl lg:text-4xl font-bold mb-3">{L.process.title}</h2>
             <p className="text-foreground/70 max-w-2xl mx-auto mb-6 leading-relaxed">
-              Our proven implementation process gets you value from day one
+              {L.process.lead}
             </p>
             <Button
               size="lg"
               variant="secondary"
               className="bg-[#F3F4F6] text-foreground hover:bg-[#E5E7EB] h-11 px-6 rounded-lg"
             >
-              <Link href="/en/contact">Let's Get in Touch</Link>
+              <Link href="/en/contact">{L.process.button}</Link>
             </Button>
           </div>
 
@@ -533,9 +528,9 @@ export default function HomePageEN() {
                 1
               </div>
               <div className="relative pt-16">
-                <h3 className="text-lg font-bold mb-3">Connect Your Data</h3>
+                <h3 className="text-lg font-bold mb-3">{L.process.steps.s1.title}</h3>
                 <p className="text-sm text-foreground/70 leading-relaxed">
-                  Seamlessly integrate with your existing tools and data sources in under 30 minutes.
+                  {L.process.steps.s1.desc}
                 </p>
               </div>
             </div>
@@ -546,9 +541,9 @@ export default function HomePageEN() {
                 2
               </div>
               <div className="relative pt-16">
-                <h3 className="text-lg font-bold mb-3">Configure Your Workspace</h3>
+                <h3 className="text-lg font-bold mb-3">{L.process.steps.s2.title}</h3>
                 <p className="text-sm text-foreground/70 leading-relaxed">
-                  Customize dashboards and alerts to match your specific project management needs.
+                  {L.process.steps.s2.desc}
                 </p>
               </div>
             </div>
@@ -559,9 +554,9 @@ export default function HomePageEN() {
                 3
               </div>
               <div className="relative pt-16">
-                <h3 className="text-lg font-bold mb-3">Start Managing</h3>
+                <h3 className="text-lg font-bold mb-3">{L.process.steps.s3.title}</h3>
                 <p className="text-sm text-foreground/70 leading-relaxed">
-                  Begin tracking risks, monitoring progress, and making data-driven decisions immediately.
+                  {L.process.steps.s3.desc}
                 </p>
               </div>
             </div>
@@ -572,9 +567,9 @@ export default function HomePageEN() {
                 4
               </div>
               <div className="relative pt-16">
-                <h3 className="text-lg font-bold mb-3">Scale & Optimize</h3>
+                <h3 className="text-lg font-bold mb-3">{L.process.steps.s4.title}</h3>
                 <p className="text-sm text-foreground/70 leading-relaxed">
-                  Expand across your organization with enterprise-grade security and performance.
+                  {L.process.steps.s4.desc}
                 </p>
               </div>
             </div>
@@ -586,21 +581,21 @@ export default function HomePageEN() {
         <div className="relative -mt-20 pt-20" aria-hidden="true" />
         <section className="bg-[#0A1628] text-white py-20 lg:py-24">
           <div className="container mx-auto px-4 lg:px-8 text-center">
-            <h2 className="text-4xl lg:text-5xl font-bold mb-5">Ready to Transform Your Projects?</h2>
+            <h2 className="text-4xl lg:text-5xl font-bold mb-5">{L.finalCta.title}</h2>
             <p className="text-white/80 max-w-2xl mx-auto mb-10 text-lg leading-relaxed">
-              Join the numerous project leaders who've already discovered the power of AI-driven project management.
+              {L.finalCta.lead}
             </p>
 
             <div className="flex flex-wrap gap-4 justify-center mb-10">
               <Button size="lg" className="bg-white text-[#0A1628] hover:bg-white/90 h-12 px-8 rounded-lg font-medium">
-                <Link href="/en/contact">Contact Sales</Link>
+                <Link href="/en/contact">{L.finalCta.ctaSales}</Link>
               </Button>
               <Button
                 size="lg"
                 variant="outline"
                 className="border-2 border-white text-white hover:bg-white/10 bg-transparent h-12 px-8 rounded-lg font-medium"
               >
-                <Link href="mailto:info@azai.ch?subject=Inquiry Request - Azai Elevate&body=Dear Azai Team,">Request Inquiry</Link>
+                <Link href="mailto:info@azai.ch?subject=Inquiry Request - Azai Elevate&body=Dear Azai Team,">{L.finalCta.ctaInquiry}</Link>
               </Button>
             </div>
 
@@ -609,19 +604,19 @@ export default function HomePageEN() {
                 <div className="w-5 h-5 rounded-full bg-white/20 flex items-center justify-center flex-shrink-0">
                   <Check className="h-3 w-3 text-white" strokeWidth={3} />
                 </div>
-                <span>No credit card required</span>
+                <span>{L.finalCta.bullets.b1}</span>
               </div>
               <div className="flex items-center gap-2.5">
                 <div className="w-5 h-5 rounded-full bg-white/20 flex items-center justify-center flex-shrink-0">
                   <Check className="h-3 w-3 text-white" strokeWidth={3} />
                 </div>
-                <span>30-day free trial</span>
+                <span>{L.finalCta.bullets.b2}</span>
               </div>
               <div className="flex items-center gap-2.5">
                 <div className="w-5 h-5 rounded-full bg-white/20 flex items-center justify-center flex-shrink-0">
                   <Check className="h-3 w-3 text-white" strokeWidth={3} />
                 </div>
-                <span>Setup in minutes</span>
+                <span>{L.finalCta.bullets.b3}</span>
               </div>
             </div>
           </div>

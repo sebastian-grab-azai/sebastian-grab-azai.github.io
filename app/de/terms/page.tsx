@@ -3,7 +3,7 @@ import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 
 export const metadata: Metadata = {
-  title: "Nutzungsbedingungen | Azai AG – Elevate",
+  title: "Nutzungsbedingungen | Azai – Elevate",
   description:
     "Lesen Sie die Bedingungen für die Nutzung der Projektmanagement-Plattform und Dienste der Azai AG.",
   alternates: {
@@ -15,14 +15,14 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "Nutzungsbedingungen | Azai AG – Elevate",
+    title: "Nutzungsbedingungen | Azai – Elevate",
     description:
       "Bedingungen für die Nutzung der Projektmanagement-Plattform und Dienste der Azai AG.",
     url: "/de/terms/",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Nutzungsbedingungen | Azai AG – Elevate",
+    title: "Nutzungsbedingungen | Azai – Elevate",
     description:
       "Bedingungen für die Nutzung der Projektmanagement-Plattform und Dienste der Azai AG.",
   },

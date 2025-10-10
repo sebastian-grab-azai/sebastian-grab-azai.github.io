@@ -3,7 +3,7 @@ import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 
 export const metadata: Metadata = {
-  title: "Terms of Service | Azai AG – Elevate",
+  title: "Terms of Service | Azai – Elevate",
   description:
     "Review the terms and conditions for using Azai AG's project management platform and services.",
   alternates: {
@@ -15,14 +15,14 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "Terms of Service | Azai AG – Elevate",
+    title: "Terms of Service | Azai – Elevate",
     description:
       "Review the terms and conditions for using Azai AG's project management platform and services.",
     url: "/en/terms/",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Terms of Service | Azai AG – Elevate",
+    title: "Terms of Service | Azai – Elevate",
     description:
       "Review the terms and conditions for using Azai AG's project management platform and services.",
   },

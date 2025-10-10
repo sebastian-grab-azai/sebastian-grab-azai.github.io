@@ -10,7 +10,7 @@ import LocalizedLink from "@/components/localized-link"
 import { de as L } from "@/lib/i18n/de"
 
 export const metadata: Metadata = {
-  title: "Azai AG – Elevate | Revolutionäre Projektmanagement-Plattform für Unternehmen",
+  title: "Azai – Elevate | Revolutionäre Projektmanagement-Plattform für Unternehmen",
   description:
     "KI-gestütztes Risikomanagement, Echtzeit-Analysen und Automatisierung. Entwickelt für Enterprise-Teams, die Präzision, Intelligenz und Ergebnisse im grossen Massstab verlangen.",
   alternates: {
@@ -22,14 +22,14 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "Azai AG – Elevate | Revolutionäre Projektmanagement-Plattform für Unternehmen",
+    title: "Azai – Elevate | Revolutionäre Projektmanagement-Plattform für Unternehmen",
     description:
       "KI-gestütztes Risikomanagement, Echtzeit-Analysen und Automatisierung für Enterprise-Teams.",
     url: "/de/",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Azai AG – Elevate | Revolutionäre Projektmanagement-Plattform für Unternehmen",
+    title: "Azai – Elevate | Revolutionäre Projektmanagement-Plattform für Unternehmen",
     description:
       "KI-gestütztes Risikomanagement, Echtzeit-Analysen und Automatisierung für Enterprise-Teams.",
   },

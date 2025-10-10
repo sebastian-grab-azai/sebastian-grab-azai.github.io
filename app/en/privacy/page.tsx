@@ -3,7 +3,7 @@ import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 
 export const metadata: Metadata = {
-  title: "Privacy Policy | Azai AG – Elevate",
+  title: "Privacy Policy | Azai – Elevate",
   description:
     "Learn how Azai AG collects, uses, and protects your personal data when using our platform and services.",
   alternates: {
@@ -15,14 +15,14 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "Privacy Policy | Azai AG – Elevate",
+    title: "Privacy Policy | Azai – Elevate",
     description:
       "Learn how Azai AG collects, uses, and protects your personal data when using our platform and services.",
     url: "/en/privacy/",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Privacy Policy | Azai AG – Elevate",
+    title: "Privacy Policy | Azai – Elevate",
     description:
       "Learn how Azai AG collects, uses, and protects your personal data when using our platform and services.",
   },

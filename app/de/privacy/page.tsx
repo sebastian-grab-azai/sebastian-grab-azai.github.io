@@ -3,7 +3,7 @@ import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 
 export const metadata: Metadata = {
-  title: "Datenschutzerklärung | Azai AG – Elevate",
+  title: "Datenschutzerklärung | Azai – Elevate",
   description:
     "Erfahren Sie, wie die Azai AG Ihre personenbezogenen Daten bei der Nutzung unserer Plattform und Dienste erhebt, verwendet und schützt.",
   alternates: {
@@ -15,14 +15,14 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "Datenschutzerklärung | Azai AG – Elevate",
+    title: "Datenschutzerklärung | Azai – Elevate",
     description:
       "Informationen zur Erhebung, Nutzung und zum Schutz Ihrer personenbezogenen Daten durch die Azai AG.",
     url: "/de/privacy/",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Datenschutzerklärung | Azai AG – Elevate",
+    title: "Datenschutzerklärung | Azai – Elevate",
     description:
       "Informationen zur Erhebung, Nutzung und zum Schutz Ihrer personenbezogenen Daten durch die Azai AG.",
   },

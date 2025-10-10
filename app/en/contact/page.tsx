@@ -2,7 +2,7 @@ import type { Metadata } from "next"
 import ContactPageENClient from "./ContactClient"
 
 export const metadata: Metadata = {
-  title: "Contact | Azai AG – Elevate",
+  title: "Contact | Azai – Elevate",
   description: "Get in touch with our team for questions, feedback, and sales inquiries about Azai Elevate.",
   alternates: {
     canonical: "/en/contact/",
@@ -13,13 +13,13 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "Contact | Azai AG – Elevate",
+    title: "Contact | Azai – Elevate",
     description: "Get in touch with our team for questions, feedback, and sales inquiries about Azai Elevate.",
     url: "/en/contact/",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Contact | Azai AG – Elevate",
+    title: "Contact | Azai – Elevate",
     description: "Get in touch with our team for questions, feedback, and sales inquiries about Azai Elevate.",
   },
 }

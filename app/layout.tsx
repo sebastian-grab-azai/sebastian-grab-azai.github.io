@@ -9,7 +9,7 @@ import { CalendlyHandler } from "@/components/calendly-handler"
 import { HtmlLangSetter } from "@/components/html-lang-setter"
 
 export const metadata: Metadata = {
-  title: "Azai AG - Elevate",
+  title: "Azai – Elevate",
   description:
     "Revolutionary project management platform engineered for enterprise teams who demand precision, intelligence, and results at scale.",
 }

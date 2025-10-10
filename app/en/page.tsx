@@ -9,7 +9,7 @@ import Link from "next/link"
 import Image from "next/image"
 
 export const metadata: Metadata = {
-  title: "Azai AG – Elevate | The Future of Project Excellence",
+  title: "Azai – Elevate | The Future of Project Excellence",
   description:
     "AI-driven risk management, real-time analytics, and smart automation for enterprise teams demanding precision, intelligence, and results at scale.",
   alternates: {
@@ -21,14 +21,14 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "Azai AG – Elevate | The Future of Project Excellence",
+    title: "Azai – Elevate | The Future of Project Excellence",
     description:
       "AI-driven risk management, real-time analytics, and smart automation for enterprise teams.",
     url: "/en/",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Azai AG – Elevate | The Future of Project Excellence",
+    title: "Azai – Elevate | The Future of Project Excellence",
     description:
       "AI-driven risk management, real-time analytics, and smart automation for enterprise teams.",
   },

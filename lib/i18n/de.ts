@@ -100,7 +100,7 @@ export const de: HomeDict = {
     tagline: "smart steuern – lead with intelligence",
     lead1: "Revolutionäre Projektmanagement‑Plattform, entwickelt für Enterprise‑Teams, die",
     lead2a: "Präzision, Intelligenz",
-    lead2b: "und Ergebnisse im grossen Massstab",
+    lead2b: "und Ergebnisse im grossen Massstab benötigen",
     ctaBook: "Termin buchen",
     ctaContact: "Kontakt aufnehmen",
     imageAlt: "Teamarbeit in einem modernen Büro",

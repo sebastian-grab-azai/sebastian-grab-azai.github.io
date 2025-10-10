@@ -18,18 +18,42 @@ type Props = {
 export function CalendlyHandler({ url }: Props) {
   const pendingOpenRef = useRef(false)
 
-  const calendlyUrl =
-    (url ?? process.env.NEXT_PUBLIC_CALENDLY_URL ?? "").trim()
-
+  const getLang = () => {
+    try {
+      const htmlLang = typeof document !== "undefined" ? document.documentElement.lang : ""
+      if (htmlLang?.toLowerCase().startsWith("en")) return "en"
+      if (typeof window !== "undefined" && window.location?.pathname?.startsWith("/en")) return "en"
+    } catch {}
+    return "de"
+  }
+  
+  const buildCalendlyUrl = () => {
+    const lang = getLang()
+    const baseEN = (process.env.NEXT_PUBLIC_CALENDLY_URL_EN ?? "").trim()
+    const baseDE = (process.env.NEXT_PUBLIC_CALENDLY_URL_DE ?? "").trim()
+    const fallback = (process.env.NEXT_PUBLIC_CALENDLY_URL ?? "").trim()
+    const base = (url ?? (lang === "en" ? (baseEN || fallback) : (baseDE || fallback))).trim()
+    if (!base) return ""
+    try {
+      const u = new URL(base)
+      u.searchParams.set("locale", lang)
+      return u.toString()
+    } catch {
+      const sep = base.includes("?") ? "&" : "?"
+      return `${base}${sep}locale=${lang}`
+    }
+  }
+  
   const open = () => {
-    if (!calendlyUrl) {
+    const finalUrl = buildCalendlyUrl()
+    if (!finalUrl) {
       console.warn(
-        "Calendly: Kein Link gesetzt. Lege NEXT_PUBLIC_CALENDLY_URL in deiner .env fest oder übergib <CalendlyHandler url='...'>."
+        "Calendly: Kein Link gesetzt. Konfiguriere NEXT_PUBLIC_CALENDLY_URL oder sprachspezifisch NEXT_PUBLIC_CALENDLY_URL_DE / NEXT_PUBLIC_CALENDLY_URL_EN oder übergib <CalendlyHandler url='…'>."
       )
       return
     }
     if (window.Calendly?.initPopupWidget) {
-      window.Calendly.initPopupWidget({ url: calendlyUrl })
+      window.Calendly.initPopupWidget({ url: finalUrl })
     }
   }
 

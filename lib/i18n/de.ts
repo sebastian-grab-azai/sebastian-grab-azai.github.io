@@ -20,6 +20,13 @@ export type HomeDict = {
       smartAutomation: { title: string; desc: string }
     }
   }
+  purpose: {
+    badge: string
+    title: string
+    subtitle: string
+    pain: { title: string; items: string[] }
+    selling: { title: string; items: string[] }
+  }
   facts: {
     badge: string
     title: string
@@ -163,6 +170,27 @@ export const de: HomeDict = {
       },
     },
   },
+  purpose: {
+    badge: "Warum Azai?",
+    title: "Die Herausforderung verstehen",
+    subtitle: "Traditionelles Projektmanagement stösst an seine Grenzen – wir bieten die Lösung",
+    pain: {
+      title: "Pain Points",
+      items: [
+        "Budget-, Termin- und Qualitätsrisiken durch Scope Creep",
+        "Fehlende Datenkonsistenz & Transparenz",
+        "Verzögerte Management‑Entscheidungen"
+      ]
+    },
+    selling: {
+      title: "Unser Ansatz",
+      items: [
+        "Benchmarking und KI‑Frühwarnsystem",
+        "Ein zentrales, intelligentes System – Interkonnektivität",
+        "Automatisierte Integration, kein Zusatzaufwand"
+      ]
+    }
+  },
   facts: {
     badge: "Fakten und Zahlen",
     title: "Mehrwert durch Transparenz",
@@ -230,7 +258,7 @@ export const de: HomeDict = {
     },
     card3: {
       title: "Enterprise‑Sicherheit",
-      bullets: ["Enterprise RBAC", "DSGVO‑konform", "Zero‑Trust‑Architektur", "Schweizer Rechenzentren"],
+      bullets: ["Rollenbasierte Zugriffskontrolle", "DSGVO‑konform", "Zero‑Trust‑Architektur", "Schweizer Rechenzentren"],
     },
   },
   process: {

@@ -33,6 +33,27 @@ export const en: HomeDict = {
       },
     },
   },
+  purpose: {
+    badge: "Purpose",
+    title: "Understanding the challenge",
+    subtitle: "Traditional project management is reaching its limits – we offer the solution",
+    pain: {
+      title: "Pain Points",
+      items: [
+        "Budget, schedule and quality risks due to scope creep",
+        "Lack of data consistency & transparency",
+        "Delayed management decisions"
+      ]
+    },
+    selling: {
+      title: "Our Solution",
+      items: [
+        "Benchmarking and AI early-warning system",
+        "One central, intelligent system — interconnectivity",
+        "Automated integration, no additional effort"
+      ]
+    }
+  },
   facts: {
     badge: "Facts and Figures",
     title: "Returning Value through Transparency",
@@ -110,7 +131,7 @@ export const en: HomeDict = {
     },
     card3: {
       title: "Enterprise Security",
-      bullets: ["Enterprise RBAC", "GDPR Compliant", "Zero-trust Architecture", "Swiss data centers"],
+      bullets: ["Role-Based Access Control", "GDPR Compliant", "Zero-trust Architecture", "Swiss data centers"],
     },
   },
   process: {

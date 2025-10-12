@@ -86,7 +86,7 @@ export default function HomePageEN() {
               <div className="rounded-3xl overflow-hidden shadow-2xl ring-1 ring-black/5">
                 <Image
                   // src="/modern-office-meeting-room-with-team-collaboration.jpg"
-                  src="/assets/office.png"
+                  src="/assets/MacBook.png"
                   alt={L.hero.imageAlt}
                   width={800}
                   height={600}
@@ -371,6 +371,7 @@ export default function HomePageEN() {
                     images={[
                       { src: "/assets/risk/RiskManagementDashboard.png", alt: L.features.imageAlt },
                       { src: "/assets/risk/RiskManagementMatrix.png", alt: L.features.imageAlt },
+                      { src: "/assets/risk/RiskManagementRegister.png", alt: L.features.imageAlt },
                       { src: "/assets/risk/RiskManagementMeasures.png", alt: L.features.imageAlt },
                     ]}
                   />
@@ -586,20 +587,13 @@ export default function HomePageEN() {
               {L.finalCta.lead}
             </p>
 
-            <div className="flex flex-wrap gap-4 justify-center mb-10">
+            <div className="flex flex-wrap gap-4 justify-center">
               <Button size="lg" className="bg-white text-[#0A1628] hover:bg-white/90 h-12 px-8 rounded-lg font-medium">
                 <Link href="/en/contact">{L.finalCta.ctaSales}</Link>
               </Button>
-              <Button
-                size="lg"
-                variant="outline"
-                className="border-2 border-white text-white hover:bg-white/10 bg-transparent h-12 px-8 rounded-lg font-medium"
-              >
-                <Link href="mailto:info@azai.ch?subject=Inquiry Request - Azai Elevate&body=Dear Azai Team,">{L.finalCta.ctaInquiry}</Link>
-              </Button>
             </div>
 
-            <div className="flex flex-wrap gap-8 justify-center text-base text-white">
+            {/* <div className="flex flex-wrap gap-8 justify-center text-base text-white">
               <div className="flex items-center gap-2.5">
                 <div className="w-5 h-5 rounded-full bg-white/20 flex items-center justify-center flex-shrink-0">
                   <Check className="h-3 w-3 text-white" strokeWidth={3} />
@@ -618,7 +612,7 @@ export default function HomePageEN() {
                 </div>
                 <span>{L.finalCta.bullets.b3}</span>
               </div>
-            </div>
+            </div> */}
           </div>
         </section>
       </main>

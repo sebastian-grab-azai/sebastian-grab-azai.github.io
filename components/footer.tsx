@@ -24,7 +24,7 @@ export function Footer() {
     companyBlurb:
       lang === "de"
         ? "Azai ist die KI-gestützte Projektmanagement-Plattform, mit der Enterprise-Teams Projekte termingerecht, im Budget und mit voller Sicherheit liefern."
-        : "Azai is the AI-powered project management platform that helps enterprise teams deliver projects on time, on budget, and with complete confidence.",
+        : "Azai helps project teams make faster, smarter, and more confident decisions — through one connected platform that turns data into direction.",
     rights: lang === "de" ? "Alle Rechte vorbehalten." : "All rights reserved.",
     privacy: lang === "de" ? "Datenschutzerklärung" : "Privacy Policy",
     terms: lang === "de" ? "Nutzungsbedingungen" : "Terms of Service",

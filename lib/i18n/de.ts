@@ -209,7 +209,8 @@ export const de: HomeDict = {
       "Priorisierter Onboarding‑Support",
       "Direkter Einfluss auf Roadmap & Features",
       "Bevorzugte Konditionen während der Pilotphase",
-      "Garantierte Migrationsunterstützung"
+      "Garantierte Migrationsunterstützung",
+      "Zugang zu neue Modulen im Mock-up Stadium"
     ],
     ctaPrimary: "Frühzugang anfragen",
     ctaSecondary: "Termin buchen"
@@ -229,7 +230,7 @@ export const de: HomeDict = {
     },
     card3: {
       title: "Enterprise‑Sicherheit",
-      bullets: ["Enterprise RBAC", "DSGVO‑konform", "Zero‑Trust‑Architektur"],
+      bullets: ["Enterprise RBAC", "DSGVO‑konform", "Zero‑Trust‑Architektur", "Schweizer Rechenzentren"],
     },
   },
   process: {
@@ -238,7 +239,7 @@ export const de: HomeDict = {
     lead: "Unser bewährter Implementierungsprozess liefert Mehrwert ab Tag eins.",
     button: "Kontakt aufnehmen",
     steps: {
-      s1: { title: "Daten verbinden", desc: "Binden Sie bestehende Tools und Datenquellen in unter 30 Minuten an." },
+      s1: { title: "Daten verbinden", desc: "Binden Sie bestehende Tools und Datenquellen an." },
       s2: { title: "Arbeitsumgebung konfigurieren", desc: "Passen Sie Dashboards und Alarme an Ihre Anforderungen an." },
       s3: { title: "Loslegen", desc: "Risiken verfolgen, Fortschritt überwachen, datenbasiert entscheiden." },
       s4: { title: "Skalieren und optimieren", desc: "Organisationweit ausrollen – mit Enterprise‑Sicherheit und Performance." },

@@ -79,7 +79,8 @@ export const en: HomeDict = {
       "Priority onboarding support",
       "Direct influence on roadmap & features",
       "Preferential pilot pricing",
-      "Guaranteed migration assistance"
+      "Guaranteed migration assistance",
+      "Access to new modules in the mock-up stage"
     ],
     ctaPrimary: "Request Early Access",
     ctaSecondary: "Book a Call"
@@ -109,7 +110,7 @@ export const en: HomeDict = {
     },
     card3: {
       title: "Enterprise Security",
-      bullets: ["Enterprise RBAC", "GDPR Compliant", "Zero-trust Architecture"],
+      bullets: ["Enterprise RBAC", "GDPR Compliant", "Zero-trust Architecture", "Swiss data centers"],
     },
   },
   process: {
@@ -121,7 +122,7 @@ export const en: HomeDict = {
       s1: {
         title: "Connect Your Data",
         desc:
-          "Seamlessly integrate with your existing tools and data sources in under 30 minutes.",
+          "Seamlessly integrate with your existing tools and data sources.",
       },
       s2: {
         title: "Configure Your Workspace",
@@ -143,7 +144,7 @@ export const en: HomeDict = {
   finalCta: {
     title: "Ready to Transform Your Projects?",
     lead:
-      "Join the numerous project leaders who've already discovered the power of AI-driven project management.",
+      "Join project leaders who bring all their project data together, benchmark across portfolios, and shape a platform built for better decisions.",
     ctaSales: "Contact Sales",
     ctaInquiry: "Request Inquiry",
     bullets: {

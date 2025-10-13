@@ -186,7 +186,7 @@ export const de: HomeDict = {
       title: "Unser Ansatz",
       items: [
         "Benchmarking und KI‑Frühwarnsystem",
-        "Ein zentrales, intelligentes System – Interkonnektivität",
+        "Ein zentrales, intelligentes System - Interkonnektivität",
         "Automatisierte Integration, kein Zusatzaufwand"
       ]
     }

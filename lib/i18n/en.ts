@@ -49,7 +49,7 @@ export const en: HomeDict = {
       title: "Our Approach",
       items: [
         "Benchmarking and AI early-warning system",
-        "One central, intelligent system — interconnectivity",
+        "One central, intelligent system - interconnectivity",
         "Automated integration, no additional effort"
       ]
     }

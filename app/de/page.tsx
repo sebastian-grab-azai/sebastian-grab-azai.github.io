@@ -5,7 +5,7 @@ import { Footer } from "@/components/footer"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { FeatureCarousel } from "@/components/feature-carousel"
-import { Shield, BarChart3, Zap, Gauge, Lock, Check, AlertTriangle, Target } from "lucide-react"
+import { Shield, BarChart3, Zap, Gauge, Lock, Check, AlertTriangle, Lightbulb } from "lucide-react"
 import LocalizedLink from "@/components/localized-link"
 import { de as L } from "@/lib/i18n/de"
 
@@ -95,67 +95,6 @@ export default function HomePageDE() {
           </div>
         </section>
 
-        {/* Purpose Section – on-brand, i18n, clean */}
-        <section id="purpose" className="container mx-auto px-4 lg:px-8 py-16 lg:py-20">
-          <div className="text-center mb-10">
-            <p className="inline-block text-[11px] font-semibold tracking-wide text-foreground/90 px-3 py-1 rounded-full bg-white ring-1 ring-black/5 shadow-sm mb-4">
-              {L.purpose.badge}
-            </p>
-            <h2 className="text-3xl lg:text-4xl font-bold mb-3 leading-tight break-words">
-              {L.purpose.title}
-            </h2>
-            {L.purpose.subtitle ? (
-              <p className="text-foreground/70 max-w-2xl mx-auto leading-relaxed">
-                {L.purpose.subtitle}
-              </p>
-            ) : null}
-          </div>
-
-          <div className="grid lg:grid-cols-2 gap-8 max-w-8xl mx-auto">
-            {/* Pain Points */}
-            <Card className="bg-white border-0 ring-1 ring-black/5 shadow-xl rounded-3xl">
-              <CardContent className="p-8 lg:p-10 ml-6">
-                <div className="flex items-center gap-3 mb-6">
-                  <div className="w-10 h-10 rounded-xl bg-red-50 flex items-center justify-center">
-                    <AlertTriangle className="h-5 w-5 text-red-600" strokeWidth={2} />
-                  </div>
-                  <h3 className="text-xl font-bold text-foreground">{L.purpose.pain.title}</h3>
-                </div>
-
-                <ul className="space-y-4">
-                  {L.purpose.pain.items.map((t: string, i: number) => (
-                    <li key={i} className="flex items-start gap-3">
-                      <span className="mt-2 block w-1.5 h-1.5 rounded-full bg-red-500" />
-                      <p className="text-md text-foreground/80 leading-relaxed">{t}</p>
-                    </li>
-                  ))}
-                </ul>
-              </CardContent>
-            </Card>
-
-            {/* Selling Points */}
-            <Card className="bg-white border-0 ring-1 ring-black/5 shadow-xl rounded-3xl">
-              <CardContent className="p-8 lg:p-10 ml-6">
-                <div className="flex items-center gap-3 mb-6">
-                  <div className="w-10 h-10 rounded-xl bg-[#0A1628]/10 flex items-center justify-center">
-                    <Target className="h-5 w-5 text-[#0A1628]" strokeWidth={2} />
-                  </div>
-                  <h3 className="text-xl font-bold text-foreground">{L.purpose.selling.title}</h3>
-                </div>
-
-                <ul className="space-y-4">
-                  {L.purpose.selling.items.map((t: string, i: number) => (
-                    <li key={i} className="flex items-start gap-3">
-                      <span className="mt-2 block w-1.5 h-1.5 rounded-full bg-green-500" />
-                      <p className="text-md text-foreground/85 leading-relaxed">{t}</p>
-                    </li>
-                  ))}
-                </ul>
-              </CardContent>
-            </Card>
-          </div>
-        </section>
-
         {/* Solutions / Advanced Risk Management Module */}
         <section className="relative py-12 lg:py-16">
           <div className="pointer-events-none absolute inset-0 -z-10">
@@ -212,6 +151,63 @@ export default function HomePageDE() {
               </CardContent>
             </Card>
           </div>
+        </section>
+
+        {/* Purpose Section – on-brand, i18n, clean */}
+        <section id="purpose" className="py-16 lg:py-20 bg-white">
+          <div className="container mx-auto px-4 lg:px-8">
+            <div className="text-center mb-10">
+              <p className="inline-block text-[11px] font-semibold tracking-wide text-foreground/90 px-3 py-1 rounded-full bg-white ring-1 ring-black/5 shadow-sm mb-4">
+                {L.purpose.badge}
+              </p>
+              <h2 className="text-3xl lg:text-4xl font-bold mb-3 leading-tight break-words">
+                {L.purpose.title}
+              </h2>
+              {L.purpose.subtitle ? (
+                <p className="text-foreground/70 max-w-2xl mx-auto leading-relaxed">
+                  {L.purpose.subtitle}
+                </p>
+              ) : null}
+            </div>
+
+          <div className="grid lg:grid-cols-2 gap-8 max-w-8xl mx-auto">
+            {/* Pain Points */}
+            <Card className="bg-[#F3F4F6] border-0 ring-1 ring-black/5 shadow-sm rounded-3xl">
+              <CardContent className="p-8 lg:p-10">
+                <div className="text-center mb-6">
+                  <div className="w-12 h-12 rounded-lg bg-white ring-1 ring-black/5 shadow-sm flex items-center justify-center mx-auto mb-3">
+                    <AlertTriangle className="h-6 w-6 text-red-600" strokeWidth={2} />
+                  </div>
+                  <h3 className="text-xl font-bold text-foreground">{L.purpose.pain.title}</h3>
+                </div>
+
+                <ul className="list-disc list-inside space-y-2 text-foreground/80 text-center max-w-xl mx-auto">
+                  {L.purpose.pain.items.map((t: string, i: number) => (
+                    <li key={i} className="leading-relaxed">{t}</li>
+                  ))}
+                </ul>
+              </CardContent>
+            </Card>
+
+            {/* Selling Points */}
+            <Card className="bg-[#F3F4F6] border-0 ring-1 ring-black/5 shadow-sm rounded-3xl">
+              <CardContent className="p-8 lg:p-10">
+                <div className="text-center mb-6">
+                  <div className="w-12 h-12 rounded-lg bg-white ring-1 ring-black/5 shadow-sm flex items-center justify-center mx-auto mb-3">
+                    <Lightbulb className="h-6 w-6 text-yellow-500" strokeWidth={2} />
+                  </div>
+                  <h3 className="text-xl font-bold text-foreground">{L.purpose.selling.title}</h3>
+                </div>
+
+                <ul className="list-disc list-inside space-y-2 text-foreground/85 text-center max-w-xl mx-auto">
+                  {L.purpose.selling.items.map((t: string, i: number) => (
+                    <li key={i} className="leading-relaxed">{t}</li>
+                  ))}
+                </ul>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
         </section>
 
         {/* Facts and Figures Section */}

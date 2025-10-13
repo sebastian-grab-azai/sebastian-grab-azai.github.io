@@ -46,7 +46,7 @@ export const en: HomeDict = {
       ]
     },
     selling: {
-      title: "Our Solution",
+      title: "Our Approach",
       items: [
         "Benchmarking and AI early-warning system",
         "One central, intelligent system — interconnectivity",

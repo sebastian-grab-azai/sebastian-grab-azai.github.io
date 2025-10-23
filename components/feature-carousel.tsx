@@ -1,10 +1,12 @@
 "use client"
 
-import React, { useCallback, useState } from "react"
+import React, { useCallback, useEffect, useState } from "react"
 import Image from "next/image"
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel"
 import { AspectRatio } from "@/components/ui/aspect-ratio"
 import { Dialog, DialogContent, DialogTitle, DialogDescription } from "@/components/ui/dialog"
+import { Button } from "@/components/ui/button"
+import { ArrowLeft, ArrowRight } from "lucide-react"
 import { cn } from "@/lib/utils"
 
 export type FeatureCarouselImage = { src: string; alt: string }
@@ -17,6 +19,29 @@ export function FeatureCarousel({ images, className }: { images: FeatureCarousel
     setActiveIndex(idx)
     setLightboxOpen(true)
   }, [])
+
+  const showPrev = useCallback(() => {
+    setActiveIndex((i) => (i - 1 + images.length) % images.length)
+  }, [images.length])
+
+  const showNext = useCallback(() => {
+    setActiveIndex((i) => (i + 1) % images.length)
+  }, [images.length])
+
+  useEffect(() => {
+    if (!lightboxOpen) return
+    const onKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "ArrowLeft") {
+        e.preventDefault()
+        showPrev()
+      } else if (e.key === "ArrowRight") {
+        e.preventDefault()
+        showNext()
+      }
+    }
+    window.addEventListener("keydown", onKeyDown)
+    return () => window.removeEventListener("keydown", onKeyDown)
+  }, [lightboxOpen, showPrev, showNext])
 
   if (!images?.length) return null
 
@@ -64,7 +89,48 @@ export function FeatureCarousel({ images, className }: { images: FeatureCarousel
               fill
               sizes="100vw"
               className="object-contain bg-white"
+              priority
             />
+
+            {/* Klickflächen für Navigation (unsichtbar) */}
+            <button
+              type="button"
+              aria-label="Vorheriges Bild"
+              onClick={showPrev}
+              className="absolute inset-y-2 left-2 w-1/3 rounded md:inset-y-4 md:left-4 md:w-1/2 cursor-pointer bg-transparent focus:outline-none"
+              style={{ background: 'transparent' }}
+            />
+            <button
+              type="button"
+              aria-label="Nächstes Bild"
+              onClick={showNext}
+              className="absolute inset-y-2 right-2 w-1/3 rounded md:inset-y-4 md:right-4 md:w-1/2 cursor-pointer bg-transparent focus:outline-none"
+              style={{ background: 'transparent' }}
+            />
+
+            {/* Sichtbare Pfeil-Buttons */}
+            <div className="pointer-events-none">
+              <Button
+                type="button"
+                variant="outline"
+                size="icon"
+                className="pointer-events-auto absolute top-1/2 left-4 -translate-y-1/2 size-9 rounded-full bg-background/80 hover:bg-primary"
+                onClick={showPrev}
+                aria-label="Vorheriges Bild"
+              >
+                <ArrowLeft />
+              </Button>
+              <Button
+                type="button"
+                variant="outline"
+                size="icon"
+                className="pointer-events-auto absolute top-1/2 right-4 -translate-y-1/2 size-9 rounded-full bg-background/80 hover:bg-primary"
+                onClick={showNext}
+                aria-label="Nächstes Bild"
+              >
+                <ArrowRight />
+              </Button>
+            </div>
           </div>
         </DialogContent>
       </Dialog>

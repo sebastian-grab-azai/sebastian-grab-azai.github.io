@@ -175,11 +175,11 @@ export default function HomePageEN() {
 
           <div className="grid lg:grid-cols-2 gap-8 max-w-8xl mx-auto">
             {/* Pain Points */}
-            <Card className="bg-[#F3F4F6] border-0 ring-1 ring-black/5 shadow-sm rounded-3xl">
+            <Card className="bg-[#FFFFFF] border-0 ring-1 ring-black/5 shadow-xl rounded-3xl">
               <CardContent className="p-8 lg:p-10">
-                <div className="text-center mb-6">
-                  <div className="w-12 h-12 rounded-lg bg-white ring-1 ring-black/5 shadow-sm flex items-center justify-center mx-auto mb-3">
-                    <AlertTriangle className="h-6 w-6 text-red-600" strokeWidth={2} />
+                <div className="text-center mb-3">
+                  <div className="w-16 h-16 rounded-sm bg-white shadow-md ring-1 ring-black/5 flex items-center justify-center mx-auto mb-10">
+                    <AlertTriangle className="h-7 w-7 text-red-600" strokeWidth={2} />
                   </div>
                   <h3 className="text-xl font-bold text-foreground">{L.purpose.pain.title}</h3>
                 </div>
@@ -193,11 +193,11 @@ export default function HomePageEN() {
             </Card>
 
             {/* Selling Points */}
-            <Card className="bg-[#F3F4F6] border-0 ring-1 ring-black/5 shadow-sm rounded-3xl">
+            <Card className="bg-[#FFFFFF] border-0 ring-1 ring-black/5 shadow-xl rounded-3xl">
               <CardContent className="p-8 lg:p-10">
-                <div className="text-center mb-6">
-                  <div className="w-12 h-12 rounded-lg bg-white ring-1 ring-black/5 shadow-sm flex items-center justify-center mx-auto mb-3">
-                    <Lightbulb className="h-6 w-6 text-yellow-500" strokeWidth={2} />
+                <div className="text-center mb-3">
+                  <div className="w-16 h-16 rounded-sm bg-white shadow-md ring-1 ring-black/5 flex items-center justify-center mx-auto mb-10">
+                    <Lightbulb className="h-7 w-7 text-green-500" strokeWidth={2} />
                   </div>
                   <h3 className="text-xl font-bold text-foreground">{L.purpose.selling.title}</h3>
                 </div>
@@ -442,81 +442,78 @@ export default function HomePageEN() {
         {/* Early Access / Pilot */}
         <section id="early-access" className="py-16 bg-white scroll-mt-20">
           <div className="container mx-auto px-4 lg:px-8">
-            <div className="grid lg:grid-cols-2 gap-10 items-start">
-              {/* Copy side */}
-              <div>
-                <p className="inline-block text-[11px] font-semibold tracking-wide text-foreground/90 px-3 py-1 rounded-full bg-white ring-1 ring-black/5 shadow-sm mb-5">
-                  {L.earlyAccess.badge}
-                </p>
-                <h2 className="text-3xl lg:text-4xl font-bold mb-4">{L.earlyAccess.title}</h2>
-                <p className="text-foreground/70 mb-6 leading-relaxed">
-                  {L.earlyAccess.lead}
-                </p>
+            <div className="bg-[#0A1628] text-white rounded-3xl px-6 sm:px-8 lg:px-12 py-10 sm:py-12 lg:py-14">
+              <div className="grid lg:grid-cols-5 gap-10 lg:gap-16 items-start lg:divide-x lg:divide-white/10">
+                {/* Copy side */}
+                <div className="lg:pr-12 lg:col-span-3">
+                  <p className="inline-block text-[11px] font-semibold tracking-wide text-white px-3 py-1 rounded-full bg-white/10 ring-1 ring-white/10 shadow-sm mb-5">
+                    {L.earlyAccess.badge}
+                  </p>
+                  <h2 className="text-3xl lg:text-4xl font-bold mb-3">{L.earlyAccess.title}</h2>
+                  <p className="text-white/80 mb-6 leading-relaxed">
+                    {L.earlyAccess.lead}
+                  </p>
 
-                <div className="flex flex-wrap gap-4">
-                  <Button
-                    size="lg"
-                    asChild
-                    className="bg-primary text-primary-foreground hover:bg-primary/90 h-11 px-6"
-                  >
-                    <Link href="/en/contact">{L.earlyAccess.ctaPrimary}</Link>
-                  </Button>
-                  <Button
-                    size="lg"
-                    variant="outline"
-                    asChild
-                    className="border-2 border-foreground/20 bg-transparent h-11 px-6 hover:bg-foreground/5 hover:text-foreground"
-                  >
-                    <a href="#book" className="text-foreground font-semibold inline-block">
-                      {L.earlyAccess.ctaSecondary}
-                    </a>
-                  </Button>
+                  <div className="flex flex-wrap gap-4">
+                    <Button
+                      size="lg"
+                      asChild
+                      className="bg-white text-[#0A1628] hover:bg-white/90 h-11 px-6 rounded-lg"
+                    >
+                      <Link href="/en/contact">{L.earlyAccess.ctaPrimary}</Link>
+                    </Button>
+                    <Button
+                      size="lg"
+                      variant="outline"
+                      asChild
+                      className="border-2 border-white/25 text-white bg-transparent h-11 px-6 hover:bg-white/10 hover:text-white rounded-lg"
+                    >
+                      <a href="#book" className="font-semibold inline-block">
+                        {L.earlyAccess.ctaSecondary}
+                      </a>
+                    </Button>
+                  </div>
                 </div>
-              </div>
 
-              {/* Bullets side */}
-              <div>
-                <Card className="bg-white border-0 shadow-xl rounded-2xl">
-                  <CardContent className="p-6 md:p-8">
-                    <div className="space-y-4">
-                      {L.earlyAccess.bullets.map((b, i) => (
-                        <div key={i} className="flex items-start gap-3">
-                          <div className="w-5 h-5 rounded-full bg-[#0A1628]/10 flex items-center justify-center flex-shrink-0">
-                            <Check className="h-3.5 w-3.5 text-[#0A1628]" strokeWidth={3} />
-                          </div>
-                          <p className="text-sm text-foreground/80">{b}</p>
-                        </div>
-                      ))}
-                    </div>
-                  </CardContent>
-                </Card>
+                {/* Bullets side */}
+                <div className="mt-6 lg:mt-0 lg:pl-12 lg:col-span-2">
+                  <ul className="space-y-3 sm:space-y-4">
+                    {L.earlyAccess.bullets.map((b, i) => (
+                      <li key={i} className="flex items-start gap-2.5 sm:gap-3">
+                        <span className="mt-0.5 inline-flex items-center justify-center w-4 h-4 sm:w-5 sm:h-5 rounded-full bg-white ring-1 ring-white/30">
+                          <Check className="h-2.5 w-2.5 sm:h-3 sm:w-3 text-[#0A1628]" strokeWidth={2.5} />
+                        </span>
+                        <p className="text-sm text-white/90 text-left">{b}</p>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
         </section>
 
         {/* Enterprise Scale Section */}
-        <section className="py-12 lg:py-16 bg-white">
+        <section className="py-16 lg:py-20 bg-white">
           <div className="container mx-auto px-4 lg:px-8">
-            <div className="bg-[#0A1628] text-white py-16 lg:py-20 px-8 lg:px-16 rounded-3xl">
             <div className="text-center mb-14">
               <p className="inline-block text-[11px] font-semibold tracking-wide text-foreground/90 px-3 py-1 rounded-full bg-white ring-1 ring-black/5 shadow-sm mb-5">
                 {L.benefits.badge}
               </p>
-              <h2 className="text-3xl lg:text-4xl font-bold mb-5">{L.benefits.title}</h2>
-              <p className="text-white/80 max-w-3xl mx-auto leading-relaxed">
+              <h2 className="text-3xl lg:text-4xl font-bold mb-4">{L.benefits.title}</h2>
+              <p className="text-foreground/70 max-w-3xl mx-auto leading-relaxed">
                 {L.benefits.lead}
               </p>
             </div>
 
-            <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
-              <Card className="bg-[#1A2942] border-0 shadow-lg rounded-2xl">
-                <CardContent className="p-8 text-center">
-                  <div className="w-14 h-14 rounded-xl bg-[#FCF2DF] flex items-center justify-center mx-auto mb-4">
-                    <Zap className="h-7 w-7 text-[#0A1628]" strokeWidth={2} />
+            <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+              <Card className="bg-[#F3F4F6] border-0 shadow-sm rounded-2xl">
+                <CardContent className="p-10 text-center">
+                  <div className="w-12 h-12 rounded-lg bg-white ring-1 ring-black/5 flex items-center justify-center mx-auto mb-8">
+                    <Zap className="h-5 w-5 text-[#0A1628]" strokeWidth={2} />
                   </div>
-                  <h3 className="text-xl font-bold mb-5 text-white">{L.benefits.card1.title}</h3>
-                  <div className="space-y-2.5 text-white/80 text-sm leading-relaxed text-center">
+                  <h3 className="text-lg font-bold mb-4 text-[#0A1628]">{L.benefits.card1.title}</h3>
+                  <div className="space-y-2.5 text-foreground/80 text-sm leading-relaxed text-center">
                     {L.benefits.card1.bullets.map((b, i) => (
                       <p key={i}>{b}</p>
                     ))}
@@ -524,13 +521,13 @@ export default function HomePageEN() {
                 </CardContent>
               </Card>
 
-              <Card className="bg-[#1A2942] border-0 shadow-lg rounded-2xl">
-                <CardContent className="p-8 text-center">
-                  <div className="w-14 h-14 rounded-xl bg-[#FCF2DF] flex items-center justify-center mx-auto mb-4">
-                    <Gauge className="h-7 w-7 text-[#0A1628]" strokeWidth={2} />
+              <Card className="bg-[#F3F4F6] border-0 shadow-sm rounded-2xl">
+                <CardContent className="p-10 text-center">
+                  <div className="w-12 h-12 rounded-lg bg-white ring-1 ring-black/5 flex items-center justify-center mx-auto mb-8">
+                    <Gauge className="h-5 w-5 text-[#0A1628]" strokeWidth={2} />
                   </div>
-                  <h3 className="text-xl font-bold mb-5 text-white">{L.benefits.card2.title}</h3>
-                  <div className="space-y-2.5 text-white/80 text-sm leading-relaxed text-center">
+                  <h3 className="text-lg font-bold mb-4 text-[#0A1628]">{L.benefits.card2.title}</h3>
+                  <div className="space-y-2.5 text-foreground/80 text-sm leading-relaxed text-center">
                     {L.benefits.card2.bullets.map((b, i) => (
                       <p key={i}>{b}</p>
                     ))}
@@ -538,13 +535,13 @@ export default function HomePageEN() {
                 </CardContent>
               </Card>
 
-              <Card className="bg-[#1A2942] border-0 shadow-lg rounded-2xl">
-                <CardContent className="p-8 text-center">
-                  <div className="w-14 h-14 rounded-xl bg-[#FCF2DF] flex items-center justify-center mx-auto mb-4">
-                    <Lock className="h-7 w-7 text-[#0A1628]" strokeWidth={2} />
+              <Card className="bg-[#F3F4F6] border-0 shadow-sm rounded-2xl">
+                <CardContent className="p-10 text-center">
+                  <div className="w-12 h-12 rounded-lg bg-white ring-1 ring-black/5 flex items-center justify-center mx-auto mb-8">
+                    <Lock className="h-5 w-5 text-[#0A1628]" strokeWidth={2} />
                   </div>
-                  <h3 className="text-xl font-bold mb-5 text-white">{L.benefits.card3.title}</h3>
-                  <div className="space-y-2.5 text-white/80 text-sm leading-relaxed text-center">
+                  <h3 className="text-lg font-bold mb-4 text-[#0A1628]">{L.benefits.card3.title}</h3>
+                  <div className="space-y-2.5 text-foreground/80 text-sm leading-relaxed text-center">
                     {L.benefits.card3.bullets.map((b, i) => (
                       <p key={i}>{b}</p>
                     ))}
@@ -553,7 +550,6 @@ export default function HomePageEN() {
               </Card>
             </div>
           </div>
-        </div>
         </section>
 
         {/* Testimonials Section */}

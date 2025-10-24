@@ -13,7 +13,7 @@ export default function ModernLoader({ message = "Laden …", className }: Moder
   return (
     <div
       className={cn(
-        "min-h-screen grid place-items-center bg-white",
+        "min-h-screen grid place-items-center bg-background",
         className,
       )}
       role="status"

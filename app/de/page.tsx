@@ -476,7 +476,7 @@ export default function HomePageDE() {
                 </div>
 
                 {/* Bullets side */}
-                <div className="mt-6 lg:mt-0 lg:pl-12 lg:col-span-2">
+                <div className="mt-6 lg:mt-0 lg:pl-12 lg:col-span-2 lg:self-center">
                   <ul className="space-y-3 sm:space-y-4">
                     {L.earlyAccess.bullets.map((b, i) => (
                       <li key={i} className="flex items-start gap-2.5 sm:gap-3 lg:items-start lg:justify-start">

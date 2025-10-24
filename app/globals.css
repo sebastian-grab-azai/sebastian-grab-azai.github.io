@@ -144,3 +144,49 @@
     }
   }
 }
+
+/* Global Container: konsistente Maximalbreite, immer sichtbare Außenränder (außer Mobile) */
+@layer components {
+  :root {
+    --container-max-w: 80rem; /* 1280px Obergrenze */
+    --container-gutter-mobile: 0rem; /* mobil darf vollflächig sein */
+    --container-gutter-desktop: 2rem; /* ab lg je Seite ~32px Außenrand */
+  }
+
+  /* Hohe Spezifität + !important: überschreibt Tailwind .container width:100% zuverlässig */
+  header > .container,
+  header .container,
+  main > .container,
+  main .container,
+  footer > .container,
+  footer .container,
+  section.container,
+  .container {
+    /* Sichtbarer Rand auch dann, wenn der Viewport kleiner als die Max-Breite ist */
+    width: min(
+      var(--container-max-w),
+      calc(100% - var(--container-gutter-mobile) * 2)
+    ) !important;
+    max-width: var(--container-max-w) !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    box-sizing: border-box;
+  }
+
+  /* Ab lg: Außenrand aktivieren/vergrößern */
+  @media (min-width: 1024px) {
+    header > .container,
+    header .container,
+    main > .container,
+    main .container,
+    footer > .container,
+    footer .container,
+    section.container,
+    .container {
+      width: min(
+        var(--container-max-w),
+        calc(100% - var(--container-gutter-desktop) * 2)
+      ) !important;
+    }
+  }
+}

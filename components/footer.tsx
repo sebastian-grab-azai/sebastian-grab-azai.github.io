@@ -28,6 +28,7 @@ export function Footer() {
     rights: lang === "de" ? "Alle Rechte vorbehalten." : "All rights reserved.",
     privacy: lang === "de" ? "Datenschutzerklärung" : "Privacy Policy",
     terms: lang === "de" ? "Nutzungsbedingungen" : "Terms of Service",
+    imprint: lang === "de" ? "Impressum" : "Legal Notice",
     companyName: "Azai AG",
     street: "Wisentalstrasse 7a",
     city: "8185 Winkel",
@@ -39,6 +40,7 @@ export function Footer() {
   const privacyHref = `${base}/privacy`
   const termsHref = `${base}/terms`
   const bookingHref = `${base}/#book`
+  const imprintHref = `${base}/legal-notice`
 
   return (
     <footer className="bg-[#0A1628] text-white">
@@ -116,6 +118,9 @@ export function Footer() {
             </Link>
             <Link href={termsHref} className="text-white/60 hover:text-white text-sm transition-colors">
               {L.terms}
+            </Link>
+            <Link href={imprintHref} className="text-white/60 hover:text-white text-sm transition-colors">
+              {L.imprint}
             </Link>
           </div>
         </div>

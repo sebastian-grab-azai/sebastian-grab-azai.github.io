@@ -112,14 +112,17 @@ export function Footer() {
 
         <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-white/60 text-sm">© 2025 {L.companyName}. {L.rights}</p>
-          <div className="flex gap-6">
+          <div className="flex flex-wrap gap-6 md:flex-nowrap justify-center md:justify-start w-full md:w-auto">
             <Link href={privacyHref} className="text-white/60 hover:text-white text-sm transition-colors">
               {L.privacy}
             </Link>
             <Link href={termsHref} className="text-white/60 hover:text-white text-sm transition-colors">
               {L.terms}
             </Link>
-            <Link href={imprintHref} className="text-white/60 hover:text-white text-sm transition-colors">
+            <Link
+              href={imprintHref}
+              className="text-white/60 hover:text-white text-sm transition-colors w-full text-center md:w-auto md:text-left"
+            >
               {L.imprint}
             </Link>
           </div>

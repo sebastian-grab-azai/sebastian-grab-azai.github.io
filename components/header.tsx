@@ -60,7 +60,7 @@ export function Header() {
 
           <div className="hidden md:flex items-center gap-4">
             <Button asChild className="bg-primary/0 text-foreground hover:text-white hover:bg-primary">
-              <Link href="https://dev.azai.ch" target="_blank" rel="noopener noreferrer">{L.clientLogin}</Link>
+              <Link href="https://app.azai.ch" target="_blank" rel="noopener noreferrer">{L.clientLogin}</Link>
             </Button>
             <Button asChild className="bg-primary text-white hover:text-white hover:bg-primary">
               <Link href={contactHref}>{L.contact}</Link>
@@ -95,7 +95,7 @@ export function Header() {
                 </nav>
                 <div className="mt-6 grid gap-2">
                   <Button asChild variant="outline" className="justify-start hover:bg-primary ml-4 mr-4">
-                    <Link href="https://dev.azai.ch" target="_blank" rel="noopener noreferrer">{L.clientLogin}</Link>
+                    <Link href="https://app.azai.ch" target="_blank" rel="noopener noreferrer">{L.clientLogin}</Link>
                   </Button>
                   <Button asChild className="justify-start hover:bg-primary ml-4 mr-4">
                     <Link href={contactHref}>{L.contact}</Link>

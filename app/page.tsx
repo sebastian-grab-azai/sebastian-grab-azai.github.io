@@ -2,7 +2,7 @@
 
 import { useEffect } from "react"
 import { useRouter } from "next/navigation"
-import ModernLoader from "@/components/modern-loader"
+import { LoadingLogo } from "@/components/loading-logo"
 
 export default function RootRedirect() {
   const router = useRouter()
@@ -13,7 +13,15 @@ export default function RootRedirect() {
 
   return (
     <>
-      <ModernLoader message="Daten werden geladen …" />
+      <div
+        className="min-h-screen flex items-center justify-center bg-background"
+        role="status"
+        aria-label="Loading"
+      >
+        <div className="w-[240px] max-sm:w-[160px]">
+          <LoadingLogo width={240} color="#011526" iterations={2} />
+        </div>
+      </div>
       <noscript>
         <main className="min-h-screen flex items-center justify-center p-8">
           <div className="text-center text-sm text-foreground/70">

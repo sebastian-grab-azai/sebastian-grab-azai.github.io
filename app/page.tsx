@@ -10,7 +10,7 @@ export default function RootRedirect() {
   useEffect(() => {
     const timer = setTimeout(() => {
       router.replace("/de/")
-    }, 3000)
+    }, 1500)
     return () => clearTimeout(timer)
   }, [router])
 
@@ -21,7 +21,7 @@ export default function RootRedirect() {
         role="status"
         aria-label="Loading"
       >
-        <div className="w-[240px] max-sm:w-[160px]">
+        <div className="w-[240px] max-sm:w-[160px] [&_svg]:w-full [&_svg]:h-auto">
           <LoadingLogo width={240} color="#011526" iterations={2} />
         </div>
       </div>

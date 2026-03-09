@@ -2,6 +2,7 @@ import type { Metadata } from "next"
 import Image from "next/image"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
+import { SplashOverlay } from "@/components/splash-overlay"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { FeatureCarousel } from "@/components/feature-carousel"
@@ -38,6 +39,20 @@ export const metadata: Metadata = {
 export default function HomePageDE() {
   return (
     <div className="min-h-screen flex flex-col">
+      <div
+        id="splash-initial"
+        aria-hidden="true"
+        style={{
+          position: "fixed",
+          top: 0,
+          left: 0,
+          width: "100vw",
+          height: "100vh",
+          zIndex: 1999,
+          backgroundColor: "var(--background, #fcf2df)",
+        }}
+      />
+      <SplashOverlay />
       <Header />
 
       <main className="flex-1">

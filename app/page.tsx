@@ -2,16 +2,12 @@
 
 import { useEffect } from "react"
 import { useRouter } from "next/navigation"
-import { LoadingLogo } from "@/components/loading-logo"
 
 export default function RootRedirect() {
   const router = useRouter()
 
   useEffect(() => {
-    const timer = setTimeout(() => {
-      router.replace("/de/")
-    }, 1500)
-    return () => clearTimeout(timer)
+    router.replace("/de/")
   }, [router])
 
   return (
@@ -19,12 +15,8 @@ export default function RootRedirect() {
       <div
         className="min-h-screen flex items-center justify-center bg-background"
         role="status"
-        aria-label="Loading"
-      >
-        <div className="w-[240px] max-sm:w-[160px] [&_svg]:w-full [&_svg]:h-auto">
-          <LoadingLogo width={240} color="#011526" iterations={2} />
-        </div>
-      </div>
+        aria-label="Redirecting"
+      />
       <noscript>
         <main className="min-h-screen flex items-center justify-center p-8">
           <div className="text-center text-sm text-foreground/70">

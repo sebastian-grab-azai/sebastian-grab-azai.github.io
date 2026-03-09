@@ -8,10 +8,9 @@ export default function RootRedirect() {
   const router = useRouter()
 
   useEffect(() => {
-    // Wait for 2 shine iterations (2 × 1.5s = 3s) before redirecting
     const timer = setTimeout(() => {
       router.replace("/de/")
-    }, 1500)
+    }, 3000)
     return () => clearTimeout(timer)
   }, [router])
 

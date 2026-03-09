@@ -111,7 +111,7 @@ export function Footer() {
         </div>
 
         <div className="border-t border-white/90 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-white/70 text-sm">© 2025 {L.companyName}. {L.rights}</p>
+          <p className="text-white/70 text-sm">© {new Date().getFullYear()} {L.companyName}. {L.rights}</p>
           <div className="flex flex-wrap gap-6 md:flex-nowrap justify-center md:justify-start w-full md:w-auto">
             <Link href={privacyHref} className="text-white/70 hover:text-white text-sm transition-colors">
               {L.privacy}

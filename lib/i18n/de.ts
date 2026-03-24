@@ -59,6 +59,7 @@ export type HomeDict = {
       title: string
       badge: string
       lead: string
+      ctaContact?: string
     }
     imageAlt: string
   }
@@ -209,7 +210,7 @@ export const de: HomeDict = {
     titleLine1: "Revolutionäre",
     titleLine2: "Funktionen für das Projektmanagement",
     item1: {
-      title: "Erweitertes Risikomanagement‑Modul",
+      title: "Risikomanagement",
       badge: "Ab sofort verfügbar",
       lead:
         "Nutzen Sie die Kraft KI‑gestützter Risikoerkennung und ‑minderung. Unser Flaggschiffmodul verändert, wie Sie Risiken identifizieren, analysieren und adressieren, bevor sie Ihren Zeitplan beeinflussen.",
@@ -223,9 +224,10 @@ export const de: HomeDict = {
     },
     item3: {
       title: "Zeitmanagement",
-      badge: "Demnächst verfügbar",
+      badge: "Ab sofort verfügbar",
       lead:
-        "Revolutionäres Zeiterfassen und Ressourcenallokation, unterstützt durch Machine‑Learning‑Algorithmen.",
+        "Revolutionäres Zeitermanagement zur Ressourcenplanung, unterstützt durch intelligente Analysen.",
+      ctaContact: "Vertrieb kontaktieren",
     },
     imageAlt: "Projektmanagement‑Dashboard mit Gantt‑Diagramm",
   },

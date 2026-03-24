@@ -6,6 +6,7 @@ import { SplashOverlay } from "@/components/splash-overlay"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { FeatureCarousel } from "@/components/feature-carousel"
+import { FeaturesSection } from "@/components/features-section"
 import { Shield, BarChart3, Zap, Gauge, Lock, Check, AlertTriangle, Lightbulb } from "lucide-react"
 import LocalizedLink from "@/components/localized-link"
 import { de as L } from "@/lib/i18n/de"
@@ -333,122 +334,7 @@ export default function HomePageDE() {
         </section> */}
 
         {/* Features Section */}
-        <section id="features" className="py-16 bg-white scroll-mt-20">
-          <div className="container mx-auto px-4 lg:px-8">
-            <p className="inline-block text-[11px] font-semibold tracking-wide text-foreground/90 px-3 py-1 rounded-full bg-white ring-1 ring-black/5 shadow-sm mb-5">
-              {L.features.badge}
-            </p>
-            <h2 className="text-3xl lg:text-4xl font-bold mb-12 leading-tight">
-              {L.features.titleLine1}
-              <br />
-              {L.features.titleLine2}
-            </h2>
-
-            <div className="grid lg:grid-cols-2 gap-16 items-start">
-              <div className="relative">
-                <div className="absolute left-0 top-0 bottom-0 w-1 bg-foreground/10" />
-                <div className="pl-8 space-y-12">
-                  {/* Feature 1 */}
-                  <div className="relative">
-                    <div className="absolute -left-8 top-0 bottom-0 w-1 bg-[#0A1628]" />
-                    <div className="flex items-start gap-4 mb-3">
-                      <div className="w-10 h-10 rounded-lg bg-[#0A1628]/10 flex items-center justify-center flex-shrink-0">
-                        <Shield className="w-5 h-5 text-[#0A1628]" strokeWidth={2} />
-                      </div>
-                      <div className="flex-1">
-                        <div className="flex items-center gap-3 mb-2 flex-wrap">
-                          <h3 className="text-xl font-bold">{L.features.item1.title}</h3>
-                          <span className="text-[12px] font-bold px-2.5 py-1 rounded-md bg-green-100 text-green-700 whitespace-nowrap">
-                            {L.features.item1.badge}
-                          </span>
-                        </div>
-                        <p className="text-sm text-foreground/70 mb-4 leading-relaxed">
-                          {L.features.item1.lead}
-                        </p>
-                        <Button
-                          size="default"
-                          className="bg-[#0A1628] text-white hover:bg-[#0A1628]/90 h-10 px-6 rounded-lg"
-                        >
-                          <LocalizedLink href="/contact">{L.features.item1.ctaContact}</LocalizedLink>
-                        </Button>
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Feature 2 */}
-                  <div>
-                    <div className="flex items-start gap-4 mb-3">
-                      <div className="w-10 h-10 rounded-lg bg-foreground/5 flex items-center justify-center flex-shrink-0">
-                        <svg className="w-5 h-5 text-foreground/40" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth={2}
-                            d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-                          />
-                        </svg>
-                      </div>
-                      <div className="flex-1">
-                        <div className="flex items-center gap-3 mb-2 flex-wrap">
-                          <h3 className="text-xl font-bold">{L.features.item2.title}</h3>
-                          <span className="text-[12px] font-bold px-2.5 py-1 rounded-md bg-orange-100 text-orange-700 whitespace-nowrap">
-                            {L.features.item2.badge}
-                          </span>
-                        </div>
-                        <p className="text-sm text-foreground/70 leading-relaxed">
-                          {L.features.item2.lead}
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Feature 3 */}
-                  <div>
-                    <div className="flex items-start gap-4 mb-3">
-                      <div className="w-10 h-10 rounded-lg bg-foreground/5 flex items-center justify-center flex-shrink-0">
-                        <svg className="w-5 h-5 text-foreground/40" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth={2}
-                            d="M7 12l3-3 3 3 4-4M8 21l4-4 4 4M3 4h18M4 4h16v12a1 1 0 01-1 1H5a1 1 0 01-1-1V4z"
-                          />
-                        </svg>
-                      </div>
-                      <div className="flex-1">
-                        <div className="flex items-center gap-3 mb-2 flex-wrap">
-                          <h3 className="text-xl font-bold">{L.features.item3.title}</h3>
-                          <span className="text-[12px] font-bold px-2.5 py-1 rounded-md bg-orange-100 text-orange-700 whitespace-nowrap">
-                            {L.features.item3.badge}
-                          </span>
-                        </div>
-                        <p className="text-sm text-foreground/70 leading-relaxed">
-                          {L.features.item3.lead}
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              {/* Image side */}
-              <div className="relative">
-                <div className="bg-[#FEF7ED] rounded-2xl p-6 md:p-8">
-                  <div className="bg-white rounded-xl overflow-hidden shadow-lg border border-border/30">
-                    <FeatureCarousel
-                      images={[
-                        { src: "/assets/risk/RiskManagementDashboard.png", alt: L.features.imageAlt },
-                        { src: "/assets/risk/RiskManagementMatrix.png", alt: L.features.imageAlt },
-                        { src: "/assets/risk/RiskManagementRegister.png", alt: L.features.imageAlt },
-                        { src: "/assets/risk/RiskManagementMeasures.png", alt: L.features.imageAlt },
-                      ]}
-                    />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
+        <FeaturesSection data={L.features} />
 
         {/* Early Access / Pilot */}
         <section id="early-access" className="py-16 bg-white scroll-mt-20">

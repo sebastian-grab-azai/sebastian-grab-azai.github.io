@@ -72,7 +72,7 @@ export const en: HomeDict = {
     titleLine1: "Revolutionary Project",
     titleLine2: "Management Features",
     item1: {
-      title: "Advanced Risk Management Module",
+      title: "Risk Management",
       badge: "Available Now",
       lead:
         "Harness the power of AI-driven risk assessment and mitigation. Our flagship module transforms how you identify, analyze, and respond to project risks before they impact your timeline.",
@@ -86,9 +86,10 @@ export const en: HomeDict = {
     },
     item3: {
       title: "Time Management",
-      badge: "Coming Soon",
+      badge: "Available Now",
       lead:
         "Revolutionary time tracking and resource allocation powered by machine learning algorithms.",
+      ctaContact: "Contact Sales",
     },
     imageAlt: "Project management dashboard with Gantt chart",
   },

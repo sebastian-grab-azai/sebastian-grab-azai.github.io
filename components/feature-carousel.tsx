@@ -59,15 +59,17 @@ export function FeatureCarousel({ images, className }: { images: FeatureCarousel
                 aria-label="Open image in full view"
               >
                 {/* 7:5 entspricht 700x500 – Bild wird vollständig via object-contain gezeigt */}
-                <AspectRatio ratio={7 / 5} className="relative bg-white">
-                  <Image
-                    src={img.src}
-                    alt={img.alt}
-                    fill
-                    sizes="(min-width: 1024px) 700px, 100vw"
-                    className="object-contain"
-                    priority={idx === 0}
-                  />
+                <AspectRatio ratio={7 / 5} className="relative bg-slate-50/50">
+                  <div className="absolute inset-2 sm:inset-6">
+                    <Image
+                      src={img.src}
+                      alt={img.alt}
+                      fill
+                      sizes="(min-width: 1024px) 700px, 100vw"
+                      className="object-contain drop-shadow-md"
+                      priority={idx === 0}
+                    />
+                  </div>
                 </AspectRatio>
               </button>
             </CarouselItem>

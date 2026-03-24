@@ -27,6 +27,7 @@ export function Footer() {
         : "Azai helps project teams make faster, smarter, and more confident decisions — through one connected platform that turns data into direction.",
     rights: lang === "de" ? "Alle Rechte vorbehalten." : "All rights reserved.",
     privacy: lang === "de" ? "Datenschutzerklärung" : "Privacy Policy",
+    dpa: lang === "de" ? "AVV" : "DPA",
     terms: lang === "de" ? "Nutzungsbedingungen" : "Terms of Service",
     imprint: lang === "de" ? "Impressum" : "Legal Notice",
     companyName: "Azai AG",
@@ -38,6 +39,7 @@ export function Footer() {
   const homeHref = `${base}/`
   const contactHref = `${base}/contact`
   const privacyHref = `${base}/privacy`
+  const dpaHref = `${base}/dpa`
   const termsHref = `${base}/terms`
   const bookingHref = `${base}/#book`
   const imprintHref = `${base}/legal-notice`
@@ -115,6 +117,9 @@ export function Footer() {
           <div className="flex flex-wrap gap-6 md:flex-nowrap justify-center md:justify-start w-full md:w-auto">
             <Link href={privacyHref} className="text-white/70 hover:text-white text-sm transition-colors">
               {L.privacy}
+            </Link>
+            <Link href={dpaHref} className="text-white/70 hover:text-white text-sm transition-colors">
+              {L.dpa}
             </Link>
             <Link href={termsHref} className="text-white/70 hover:text-white text-sm transition-colors">
               {L.terms}

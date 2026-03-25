@@ -16,6 +16,7 @@ export function Header() {
     home: lang === "de" ? "Startseite" : "Home",
     features: lang === "de" ? "Funktionen" : "Features",
     earlyAccess: lang === "de" ? "Frühzugang" : "Early Access",
+    blog: lang === "de" ? "Blog" : "Blog",
     booking: lang === "de" ? "Termin buchen" : "Calendar Booking",
     clientLogin: lang === "de" ? "Kunden-Login" : "Client Login",
     contact: lang === "de" ? "Vertrieb kontaktieren" : "Contact Sales",
@@ -26,6 +27,7 @@ export function Header() {
   const homeHref = `${base}/`
   const featuresHref = `${base}/#features`
   const earlyHref = `${base}/#early-access`
+  const blogHref = `${base}/blog`
   const bookHref = `${base}/#book`
   const contactHref = `${base}/contact`
 
@@ -37,21 +39,24 @@ export function Header() {
             <Image src="/logo_dark.png" alt="Azai Logo" width={60} height={32} priority />
           </Link>
 
-          <nav className="hidden md:flex items-center gap-8">
+          <nav className="hidden md:flex items-center gap-10">
             <Link href={homeHref} className="text-sm font-medium text-foreground hover:text-foreground/70 transition-colors">
               {L.home}
             </Link>
-            <Link
+            {/* <Link
               href={featuresHref}
               className="text-sm font-medium text-foreground hover:text-foreground/70 transition-colors"
             >
               {L.features}
-            </Link>
+            </Link> */}
             <Link
               href={earlyHref}
               className="text-sm font-medium text-foreground hover:text-foreground/70 transition-colors"
             >
               {L.earlyAccess}
+            </Link>
+            <Link href={blogHref} className="text-sm font-medium text-foreground hover:text-foreground/70 transition-colors">
+              {L.blog}
             </Link>
             <Link href={bookHref} data-open-calendly="true" className="text-sm font-medium text-foreground hover:text-foreground/70 transition-colors">
               {L.booking}
@@ -88,6 +93,9 @@ export function Header() {
                   </Link>
                   <Link href={earlyHref} className="py-2 text-base font-medium text-foreground hover:text-foreground/70 ml-4">
                     {L.earlyAccess}
+                  </Link>
+                  <Link href={blogHref} className="py-2 text-base font-medium text-foreground hover:text-foreground/70 ml-4">
+                    {L.blog}
                   </Link>
                   <Link href={bookHref} data-open-calendly="true" className="py-2 text-base font-medium text-foreground hover:text-foreground/70 ml-4">
                     {L.booking}

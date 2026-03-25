@@ -13,6 +13,7 @@ export function Footer() {
   const L = {
     links: lang === "de" ? "Links" : "Links",
     home: lang === "de" ? "Startseite" : "Home",
+    blog: lang === "de" ? "Blog" : "Blog",
     contact: lang === "de" ? "Kontakt" : "Contact Us",
     booking: lang === "de" ? "Termin buchen" : "Calendar Booking",
     contactSection: lang === "de" ? "Kontakt" : "Contact",
@@ -37,6 +38,7 @@ export function Footer() {
   }
 
   const homeHref = `${base}/`
+  const blogHref = `${base}/blog`
   const contactHref = `${base}/contact`
   const privacyHref = `${base}/privacy`
   const dpaHref = `${base}/dpa`
@@ -68,6 +70,11 @@ export function Footer() {
               <li>
                 <Link href={contactHref} className="text-white/70 hover:text-white transition-colors">
                   {L.contact}
+                </Link>
+              </li>
+              <li>
+                <Link href={blogHref} className="text-white/70 hover:text-white transition-colors">
+                  {L.blog}
                 </Link>
               </li>
               <li>

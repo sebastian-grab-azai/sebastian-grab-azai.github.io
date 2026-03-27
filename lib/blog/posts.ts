@@ -52,7 +52,85 @@ export type BlogPost = {
 }
 
 export const blogPosts: BlogPost[] = [
-  {
+    {
+      slug: "azai-structure",
+      date: "2026-03-27",
+      title: {
+        de: "Komplexe Projekte brauchen klare Strukturen.",
+        en: "Complex projects require clear structures.",
+      },
+      intro: {
+        de: "Mit Azai bilden Unternehmen ihre Projektlandschaft genau so ab, wie sie in der Realität funktioniert. Von der Mandantenebene über optionale Programme bis hin zu den einzelnen Projekten: Azai schafft eine flexible Hierarchie, die sich an Ihre Organisation anpasst — nicht umgekehrt.",
+        en: "With Azai, companies can map their project landscape exactly as it operates in reality. From the client level to optional programs and down to individual projects, Azai creates a flexible hierarchy that adapts to your organization—not the other way around.",
+      },
+      sections: [
+        {
+          heading: {
+            de: "Was das bedeutet?",
+            en: "What does that mean?",
+          },
+          paragraphs: [
+            {
+              de: "Ein Nutzer kann mehreren Unternehmen zugeordnet sein. Programme können mehrere Projekte bündeln - Und wenn keine Programme benötigt werden, wird diese Ebene einfach ausgeblendet.",
+              en: "A user can be assigned to multiple companies. Programs can group multiple projects—and if no programs are needed, this level is simply hidden.",
+            },
+          ],
+          bullets: [
+            {
+              de: "Programmebene: Hier lassen sich alle Projektdaten in einem übergeordneten Dashboard aggregiert auswerten.",
+              en: "Program level: Here, all project data can be aggregated and analyzed in a high-level dashboard.",
+            },
+            {
+              de: "Projektebene: Der Ort, an dem alle Projektinformationen zusammenkommen.",
+              en: "Project level: The place where all project information comes together.",
+            },
+            {
+              de: "Rechteverwaltung: Nicht jeder muss alles sehen. Zugriffe können gezielt auf Projekt-, Programm- oder Mandantenebene vergeben werden.",
+              en: "Access Management: Not everyone needs to see everything. Access can be granted specifically at the project, program, or client level.",
+            },
+          ],
+        },
+        {
+          heading: {
+            de: "Ihr Vorteil",
+            en: "Your benefit",
+          },
+          paragraphs: [
+            {
+              de: "Mehr Übersicht. Mehr Kontrolle. Mehr Skalierbarkeit. Für Unternehmen, die nicht nur Projekte verwalten, sondern komplexe Strukturen professionell steuern wollen.",
+              en: "Greater clarity. Greater control. Greater scalability. For companies that want to do more than just manage projects—they want to professionally manage complex structures.",
+            },
+          ],
+        },
+      ],
+      media: [
+        {
+          type: "image",
+          src: "https://media.licdn.com/dms/image/v2/D4D22AQHQyU_oTYhO9g/feedshare-shrink_800/B4DZ0utmC0GUAc-/0/1774605197816?e=1776297600&v=beta&t=BisrqU9YL39eDVAuRJF_FoltXOkiKmLACBJ5frvOQgw",
+          alt: {
+            de: "Die Azai Projektstruktur - relevante Insights für alle Stakeholder.",
+            en: "The Azai Project Structure – Relevant Insights for All Stakeholders.",
+          },
+          caption: {
+            de: "Die Azai Projektstruktur - relevante Insights für alle Stakeholder.",
+            en: "The Azai Project Structure – Relevant Insights for All Stakeholders.",
+          },
+        },
+        {
+          type: "externalLink",
+          url: "https://www.linkedin.com/feed/update/urn:li:activity:7443233686281510912",
+          title: {
+            de: "LinkedIn-Beitrag öffnen",
+            en: "Open LinkedIn post",
+          },
+          description: {
+            de: "Komplexe Projekte brauchen klare Strukturen.",
+            en: "Complex projects require clear structures.",
+          },
+        },
+      ],
+    },
+    {
     slug: "azai-risk-management",
     date: "2026-03-19",
     title: {
@@ -130,88 +208,6 @@ export const blogPosts: BlogPost[] = [
       },
     ],
   },
-/*   {
-    slug: "ai-risk-insights",
-    date: "2026-03-24",
-    title: {
-      de: "Wie KI Risiko- und Projekttransparenz in Führungsteams verbessert",
-      en: "How AI improves risk and project transparency for leadership teams",
-    },
-    intro: {
-      de: "Ein strukturierter Überblick darüber, wie Teams operative Risiken früher erkennen, Projekte sauber priorisieren und schneller fundierte Entscheidungen treffen können.",
-      en: "A structured look at how teams can identify operational risks earlier, prioritize projects more clearly, and make better decisions faster.",
-    },
-    sections: [
-      {
-        heading: {
-          de: "Warum dieses Thema wichtig ist",
-          en: "Why this matters",
-        },
-        paragraphs: [
-          {
-            de: "Viele Organisationen arbeiten heute mit einer hohen Anzahl paralleler Initiativen. Ohne ein konsistentes Bild über Status, Risiken und Prioritäten entsteht schnell Unsicherheit im Management.",
-            en: "Many organizations run a large number of initiatives in parallel. Without a consistent view of status, risk, and priorities, uncertainty builds quickly at the leadership level.",
-          },
-          {
-            de: "Ein datengetriebener Ansatz hilft dabei, kritische Entwicklungen früher sichtbar zu machen und Entscheidungen nicht nur auf Gefühl, sondern auf belastbare Signale zu stützen.",
-            en: "A data-driven approach helps surface critical developments earlier and supports decisions based on reliable signals instead of instinct alone.",
-          },
-        ],
-        bullets: [
-          {
-            de: "Frühere Identifikation von Abweichungen und Eskalationen",
-            en: "Earlier identification of deviations and escalation risks",
-          },
-          {
-            de: "Bessere Priorisierung über mehrere Programme hinweg",
-            en: "Better prioritization across multiple programs",
-          },
-          {
-            de: "Einheitliche Entscheidungsgrundlagen für Führungsteams",
-            en: "Shared decision-making foundations for leadership teams",
-          },
-        ],
-      },
-      {
-        heading: {
-          de: "Was ein guter Beitrag zeigen sollte",
-          en: "What a strong post should highlight",
-        },
-        paragraphs: [
-          {
-            de: "Diese Blog-Struktur ist bewusst so aufgebaut, dass Sie zukünftige Beiträge sehr einfach ergänzen können: Titel, Datum, deutsche und englische Inhalte sowie beliebig viele Medienblöcke pro Beitrag.",
-            en: "This blog structure is intentionally designed so future posts are easy to add: title, date, German and English content, plus any number of media blocks per post.",
-          },
-        ],
-      },
-    ],
-    media: [
-      {
-        type: "image",
-        src: "/assets/risk/RiskManagementDashboard.png",
-        alt: {
-          de: "Dashboard für Risikomanagement und Projekttransparenz",
-          en: "Dashboard for risk management and project transparency",
-        },
-        caption: {
-          de: "Beispielhafte Visualisierung für Risiko- und Projektstatus.",
-          en: "Example visualization for risk and project status.",
-        },
-      },
-      {
-        type: "image",
-        src: "/assets/risk/RiskManagementMatrix.png",
-        alt: {
-          de: "Risikomatrix mit priorisierten Handlungsfeldern",
-          en: "Risk matrix with prioritized action areas",
-        },
-        caption: {
-          de: "Mehrere Medien pro Beitrag werden automatisch untereinander dargestellt.",
-          en: "Multiple media items per post are displayed in a vertical stack automatically.",
-        },
-      },
-    ],
-  }, */
   {
     slug: "azai-launch",
     date: "2025-12-05",

@@ -53,6 +53,93 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
     {
+      slug: "azai-partnership",
+      date: "2026-04-02",
+      title: {
+        de: "Strategische Partnerschaft mit Azai",
+        en: "Strategic Partnership with Azai",
+      },
+      intro: {
+        de: "Mit einer strategischen Partnerschaft mit Azai profitieren Sie nicht nur von einem bereits funktionierenden Produkt, sondern gestalten dessen Weiterentwicklung aktiv mit.",
+        en: "By entering into a strategic partnership with Azai, you not only benefit from a proven product, but also play an active role in shaping its future development.",
+      },
+      sections: [
+        {
+          heading: {
+            de: "Was das bedeutet?",
+            en: "What does that mean?",
+          },
+          paragraphs: [
+            {
+              de: "Sie erhalten Ihre Projektdaten managementgerecht aufbereitet, schaffen früh Transparenz in Ihrer Organisation und sichern sich gleichzeitig:",
+              en: "You’ll receive your project data in a format tailored for management, establish transparency within your organization early on, and at the same time ensure:",
+            },
+          ],
+          bullets: [
+            {
+              de: "direkten Einfluss auf Roadmap & Features",
+              en: "direct influence on the roadmap and features",
+            },
+            {
+              de: "bevorzugte Konditionen in der Pilotphase",
+              en: "preferential terms during the pilot phase",
+            },
+            {
+              de: "garantierte Migrationsunterstützung",
+              en: "guaranteed migration support",
+            },
+            {
+              de: "Zugang zu neuen Modulen bereits im Mock-up-Stadium",
+              en: "access to new modules as early as the mock-up stage",
+            },
+          ],
+        },
+        {
+          heading: {
+            de: "Warum?",
+            en: "Why?",
+          },
+          paragraphs: [
+            {
+              de: "So entsteht eine Lösung, die sich nicht nur in der Praxis bewährt, sondern auch gezielt an Ihre Anforderungen anpasst. Für individuelle Erweiterungen und Features, die speziell für Ihre Organisation entwickelt werden, setzen wir auf eine partnerschaftliche Beteiligung an den Entwicklungskosten. Früh einsteigen heißt: sofort profitieren und die Zukunft der Plattform mitgestalten.",
+              en: "The result is a solution that not only proves its worth in practice but is also tailored specifically to your needs. For custom extensions and features developed specifically for your organization, we rely on a partnership-based approach to sharing development costs. Getting on board early means reaping immediate benefits and helping to shape the platform’s future.",
+            },
+          ],
+        },
+      ],
+      media: [
+        {
+          type: "image",
+          src: "https://media.licdn.com/dms/image/v2/D4D22AQHQyU_oTYhO9g/feedshare-shrink_800/B4DZ0utmC0GUAc-/0/1774605197816?e=1776297600&v=beta&t=BisrqU9YL39eDVAuRJF_FoltXOkiKmLACBJ5frvOQgw",
+          alt: {
+            de: "Das Azai Partnership Programm",
+            en: "The Azai Partnership Program",
+          },
+          caption: {
+            de: "Das Azai Partnership Programm",
+            en: "The Azai Partnership Program",
+          },
+        },
+        {
+          type: "externalLink",
+          url: "https://www.linkedin.com/feed/update/urn:li:activity:7443233686281510912",
+          title: {
+            de: "LinkedIn-Beitrag öffnen",
+            en: "Open LinkedIn post",
+          },
+          description: {
+            de: "Strategische Partnerschaft mit Azai",
+            en: "Strategic Partnership with Azai",
+          },
+        },
+      ],
+    },
+
+
+
+
+
+    {
       slug: "azai-structure",
       date: "2026-03-27",
       title: {

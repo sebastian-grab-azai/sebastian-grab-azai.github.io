@@ -110,7 +110,7 @@ export const blogPosts: BlogPost[] = [
       media: [
         {
           type: "image",
-          src: "https://media.licdn.com/dms/image/v2/D4D22AQHQyU_oTYhO9g/feedshare-shrink_800/B4DZ0utmC0GUAc-/0/1774605197816?e=1776297600&v=beta&t=BisrqU9YL39eDVAuRJF_FoltXOkiKmLACBJ5frvOQgw",
+          src: "https://media.licdn.com/dms/image/v2/D4E22AQG9mX0pvnDStg/feedshare-shrink_800/B4EZ1Ok8AXIEAg-/0/1775139799428?e=1776902400&v=beta&t=9JfDMslRMmGYk14o5NcKA7xGywzJgk6hZaQ7z2fflXU",
           alt: {
             de: "Das Azai Partnership Programm",
             en: "The Azai Partnership Program",
@@ -122,7 +122,7 @@ export const blogPosts: BlogPost[] = [
         },
         {
           type: "externalLink",
-          url: "https://www.linkedin.com/feed/update/urn:li:activity:7443233686281510912",
+          url: "https://www.linkedin.com/feed/update/urn:li:activity:7445475968003153920",
           title: {
             de: "LinkedIn-Beitrag öffnen",
             en: "Open LinkedIn post",

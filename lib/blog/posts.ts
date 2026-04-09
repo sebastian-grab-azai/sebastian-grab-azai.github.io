@@ -52,172 +52,225 @@ export type BlogPost = {
 }
 
 export const blogPosts: BlogPost[] = [
-    {
-      slug: "azai-partnership",
-      date: "2026-04-02",
-      title: {
-        de: "Strategische Partnerschaft mit Azai",
-        en: "Strategic Partnership with Azai",
-      },
-      intro: {
-        de: "Mit einer strategischen Partnerschaft mit Azai profitieren Sie nicht nur von einem bereits funktionierenden Produkt, sondern gestalten dessen Weiterentwicklung aktiv mit.",
-        en: "By entering into a strategic partnership with Azai, you not only benefit from a proven product, but also play an active role in shaping its future development.",
-      },
-      sections: [
-        {
-          heading: {
-            de: "Was das bedeutet?",
-            en: "What does that mean?",
-          },
-          paragraphs: [
-            {
-              de: "Sie erhalten Ihre Projektdaten managementgerecht aufbereitet, schaffen früh Transparenz in Ihrer Organisation und sichern sich gleichzeitig:",
-              en: "You’ll receive your project data in a format tailored for management, establish transparency within your organization early on, and at the same time ensure:",
-            },
-          ],
-          bullets: [
-            {
-              de: "direkten Einfluss auf Roadmap & Features",
-              en: "direct influence on the roadmap and features",
-            },
-            {
-              de: "bevorzugte Konditionen in der Pilotphase",
-              en: "preferential terms during the pilot phase",
-            },
-            {
-              de: "garantierte Migrationsunterstützung",
-              en: "guaranteed migration support",
-            },
-            {
-              de: "Zugang zu neuen Modulen bereits im Mock-up-Stadium",
-              en: "access to new modules as early as the mock-up stage",
-            },
-          ],
-        },
-        {
-          heading: {
-            de: "Warum?",
-            en: "Why?",
-          },
-          paragraphs: [
-            {
-              de: "So entsteht eine Lösung, die sich nicht nur in der Praxis bewährt, sondern auch gezielt an Ihre Anforderungen anpasst. Für individuelle Erweiterungen und Features, die speziell für Ihre Organisation entwickelt werden, setzen wir auf eine partnerschaftliche Beteiligung an den Entwicklungskosten. Früh einsteigen heißt: sofort profitieren und die Zukunft der Plattform mitgestalten.",
-              en: "The result is a solution that not only proves its worth in practice but is also tailored specifically to your needs. For custom extensions and features developed specifically for your organization, we rely on a partnership-based approach to sharing development costs. Getting on board early means reaping immediate benefits and helping to shape the platform’s future.",
-            },
-          ],
-        },
-      ],
-      media: [
-        {
-          type: "image",
-          src: "https://media.licdn.com/dms/image/v2/D4E22AQG9mX0pvnDStg/feedshare-shrink_800/B4EZ1Ok8AXIEAg-/0/1775139799428?e=1776902400&v=beta&t=9JfDMslRMmGYk14o5NcKA7xGywzJgk6hZaQ7z2fflXU",
-          alt: {
-            de: "Das Azai Partnership Programm",
-            en: "The Azai Partnership Program",
-          },
-          caption: {
-            de: "Das Azai Partnership Programm",
-            en: "The Azai Partnership Program",
-          },
-        },
-        {
-          type: "externalLink",
-          url: "https://www.linkedin.com/feed/update/urn:li:activity:7445475968003153920",
-          title: {
-            de: "LinkedIn-Beitrag öffnen",
-            en: "Open LinkedIn post",
-          },
-          description: {
-            de: "Strategische Partnerschaft mit Azai",
-            en: "Strategic Partnership with Azai",
-          },
-        },
-      ],
+  {
+    slug: "azai-user-management",
+    date: "2026-04-09",
+    title: {
+      de: "Azai - Benutzermanagement",
+      en: "Azai - User Management",
     },
-
-
-
-
-
-    {
-      slug: "azai-structure",
-      date: "2026-03-27",
-      title: {
-        de: "Komplexe Projekte brauchen klare Strukturen.",
-        en: "Complex projects require clear structures.",
-      },
-      intro: {
-        de: "Mit Azai bilden Unternehmen ihre Projektlandschaft genau so ab, wie sie in der Realität funktioniert. Von der Mandantenebene über optionale Programme bis hin zu den einzelnen Projekten: Azai schafft eine flexible Hierarchie, die sich an Ihre Organisation anpasst — nicht umgekehrt.",
-        en: "With Azai, companies can map their project landscape exactly as it operates in reality. From the client level to optional programs and down to individual projects, Azai creates a flexible hierarchy that adapts to your organization—not the other way around.",
-      },
-      sections: [
-        {
-          heading: {
-            de: "Was das bedeutet?",
-            en: "What does that mean?",
-          },
-          paragraphs: [
-            {
-              de: "Ein Nutzer kann mehreren Unternehmen zugeordnet sein. Programme können mehrere Projekte bündeln - Und wenn keine Programme benötigt werden, wird diese Ebene einfach ausgeblendet.",
-              en: "A user can be assigned to multiple companies. Programs can group multiple projects—and if no programs are needed, this level is simply hidden.",
-            },
-          ],
-          bullets: [
-            {
-              de: "Programmebene: Hier lassen sich alle Projektdaten in einem übergeordneten Dashboard aggregiert auswerten.",
-              en: "Program level: Here, all project data can be aggregated and analyzed in a high-level dashboard.",
-            },
-            {
-              de: "Projektebene: Der Ort, an dem alle Projektinformationen zusammenkommen.",
-              en: "Project level: The place where all project information comes together.",
-            },
-            {
-              de: "Rechteverwaltung: Nicht jeder muss alles sehen. Zugriffe können gezielt auf Projekt-, Programm- oder Mandantenebene vergeben werden.",
-              en: "Access Management: Not everyone needs to see everything. Access can be granted specifically at the project, program, or client level.",
-            },
-          ],
-        },
-        {
-          heading: {
-            de: "Ihr Vorteil",
-            en: "Your benefit",
-          },
-          paragraphs: [
-            {
-              de: "Mehr Übersicht. Mehr Kontrolle. Mehr Skalierbarkeit. Für Unternehmen, die nicht nur Projekte verwalten, sondern komplexe Strukturen professionell steuern wollen.",
-              en: "Greater clarity. Greater control. Greater scalability. For companies that want to do more than just manage projects—they want to professionally manage complex structures.",
-            },
-          ],
-        },
-      ],
-      media: [
-        {
-          type: "image",
-          src: "https://media.licdn.com/dms/image/v2/D4D22AQHQyU_oTYhO9g/feedshare-shrink_800/B4DZ0utmC0GUAc-/0/1774605197816?e=1776297600&v=beta&t=BisrqU9YL39eDVAuRJF_FoltXOkiKmLACBJ5frvOQgw",
-          alt: {
-            de: "Die Azai Projektstruktur - relevante Insights für alle Stakeholder.",
-            en: "The Azai Project Structure – Relevant Insights for All Stakeholders.",
-          },
-          caption: {
-            de: "Die Azai Projektstruktur - relevante Insights für alle Stakeholder.",
-            en: "The Azai Project Structure – Relevant Insights for All Stakeholders.",
-          },
-        },
-        {
-          type: "externalLink",
-          url: "https://www.linkedin.com/feed/update/urn:li:activity:7443233686281510912",
-          title: {
-            de: "LinkedIn-Beitrag öffnen",
-            en: "Open LinkedIn post",
-          },
-          description: {
-            de: "Komplexe Projekte brauchen klare Strukturen.",
-            en: "Complex projects require clear structures.",
-          },
-        },
-      ],
+    intro: {
+      de: "Mit Azai schaffen wir ein Benutzermanagement, das nicht nur sicher, sondern auch wirklich praxistauglich ist.",
+      en: "With Azai, user management is not only secure but also built for real-world project structures.",
     },
-    {
+    sections: [
+      {
+        heading: {
+          de: "Unser mehrstufiges Berechtigungsmodell",
+          en: "Our multi-level permission model",
+        },
+        paragraphs: [
+          {
+            de: "...sorgt dafür, dass jede Person genau die Zugriffe erhält, die sie braucht. Mandantentrennung, Programmrollen für den Gesamtüberblick, Projektrollen für Administration, Bearbeitung oder Leserechte – und als besonderer Vorteil: modulgenaue Freigaben innerhalb eines Projekts.",
+            en: "...ensures that every user gets exactly the access they need. Tenant separation, program-level roles for overarching visibility, project-level roles for administration, editing, or read-only access — and, as a special advantage, module-specific permissions within each project.",
+          },
+        ],
+        bullets: [
+          {
+            de: "Mitarbeitende können z. B. im selben Projekt das Zeitmodul bearbeiten, ohne automatisch Zugriff auf das Kostenmodul zu erhalten.",
+            en: "In practice, this means a team member can, for example, manage schedules in the time module without automatically being allowed to edit the cost module in the same project.",
+          },
+          {
+            de: "So wird Zusammenarbeit über Organisationen, Programme und Projekte hinweg flexibel steuerbar, transparent und sicher.",
+            en: "This makes collaboration across organizations, programs, and projects flexible, transparent, and secure.",
+          },
+        ],
+      },
+    ],
+    media: [
+      {
+        type: "video",
+        src: "https://dms.licdn.com/playlist/vid/v2/D5605AQHCsTG_p3RMLQ/mp4-720p-30fp-crf28/B56Z1xun3WGgCE-/0/1775729543403?e=1776340800&v=beta&t=EsRLOmcMZmxc8WFvmpIo7lGVhqeSCeWtp8Imu8Xu3ek",
+        title: {
+          de: "Azai Benutzermanagement",
+          en: "Azai User Management",
+        },
+      },
+      {
+        type: "externalLink",
+        url: "https://www.linkedin.com/feed/update/urn:li:activity:7447949555230408705",
+        title: {
+          de: "LinkedIn-Beitrag öffnen",
+          en: "Open LinkedIn post",
+        },
+        description: {
+          de: "Azai - Benutzermanagement",
+          en: "Azai - User Management",
+        },
+      },
+    ],
+},
+  {
+    slug: "azai-partnership",
+    date: "2026-04-02",
+    title: {
+      de: "Strategische Partnerschaft mit Azai",
+      en: "Strategic Partnership with Azai",
+    },
+    intro: {
+      de: "Mit einer strategischen Partnerschaft mit Azai profitieren Sie nicht nur von einem bereits funktionierenden Produkt, sondern gestalten dessen Weiterentwicklung aktiv mit.",
+      en: "By entering into a strategic partnership with Azai, you not only benefit from a proven product, but also play an active role in shaping its future development.",
+    },
+    sections: [
+      {
+        heading: {
+          de: "Was das bedeutet?",
+          en: "What does that mean?",
+        },
+        paragraphs: [
+          {
+            de: "Sie erhalten Ihre Projektdaten managementgerecht aufbereitet, schaffen früh Transparenz in Ihrer Organisation und sichern sich gleichzeitig:",
+            en: "You’ll receive your project data in a format tailored for management, establish transparency within your organization early on, and at the same time ensure:",
+          },
+        ],
+        bullets: [
+          {
+            de: "direkten Einfluss auf Roadmap & Features",
+            en: "direct influence on the roadmap and features",
+          },
+          {
+            de: "bevorzugte Konditionen in der Pilotphase",
+            en: "preferential terms during the pilot phase",
+          },
+          {
+            de: "garantierte Migrationsunterstützung",
+            en: "guaranteed migration support",
+          },
+          {
+            de: "Zugang zu neuen Modulen bereits im Mock-up-Stadium",
+            en: "access to new modules as early as the mock-up stage",
+          },
+        ],
+      },
+      {
+        heading: {
+          de: "Warum?",
+          en: "Why?",
+        },
+        paragraphs: [
+          {
+            de: "So entsteht eine Lösung, die sich nicht nur in der Praxis bewährt, sondern auch gezielt an Ihre Anforderungen anpasst. Für individuelle Erweiterungen und Features, die speziell für Ihre Organisation entwickelt werden, setzen wir auf eine partnerschaftliche Beteiligung an den Entwicklungskosten. Früh einsteigen heißt: sofort profitieren und die Zukunft der Plattform mitgestalten.",
+            en: "The result is a solution that not only proves its worth in practice but is also tailored specifically to your needs. For custom extensions and features developed specifically for your organization, we rely on a partnership-based approach to sharing development costs. Getting on board early means reaping immediate benefits and helping to shape the platform’s future.",
+          },
+        ],
+      },
+    ],
+    media: [
+      {
+        type: "image",
+        src: "https://media.licdn.com/dms/image/v2/D4E22AQG9mX0pvnDStg/feedshare-shrink_800/B4EZ1Ok8AXIEAg-/0/1775139799428?e=1776902400&v=beta&t=9JfDMslRMmGYk14o5NcKA7xGywzJgk6hZaQ7z2fflXU",
+        alt: {
+          de: "Das Azai Partnership Programm",
+          en: "The Azai Partnership Program",
+        },
+        caption: {
+          de: "Das Azai Partnership Programm",
+          en: "The Azai Partnership Program",
+        },
+      },
+      {
+        type: "externalLink",
+        url: "https://www.linkedin.com/feed/update/urn:li:activity:7445475968003153920",
+        title: {
+          de: "LinkedIn-Beitrag öffnen",
+          en: "Open LinkedIn post",
+        },
+        description: {
+          de: "Strategische Partnerschaft mit Azai",
+          en: "Strategic Partnership with Azai",
+        },
+      },
+    ],
+  },
+  {
+    slug: "azai-structure",
+    date: "2026-03-27",
+    title: {
+      de: "Komplexe Projekte brauchen klare Strukturen.",
+      en: "Complex projects require clear structures.",
+    },
+    intro: {
+      de: "Mit Azai bilden Unternehmen ihre Projektlandschaft genau so ab, wie sie in der Realität funktioniert. Von der Mandantenebene über optionale Programme bis hin zu den einzelnen Projekten: Azai schafft eine flexible Hierarchie, die sich an Ihre Organisation anpasst — nicht umgekehrt.",
+      en: "With Azai, companies can map their project landscape exactly as it operates in reality. From the client level to optional programs and down to individual projects, Azai creates a flexible hierarchy that adapts to your organization—not the other way around.",
+    },
+    sections: [
+      {
+        heading: {
+          de: "Was das bedeutet?",
+          en: "What does that mean?",
+        },
+        paragraphs: [
+          {
+            de: "Ein Nutzer kann mehreren Unternehmen zugeordnet sein. Programme können mehrere Projekte bündeln - Und wenn keine Programme benötigt werden, wird diese Ebene einfach ausgeblendet.",
+            en: "A user can be assigned to multiple companies. Programs can group multiple projects—and if no programs are needed, this level is simply hidden.",
+          },
+        ],
+        bullets: [
+          {
+            de: "Programmebene: Hier lassen sich alle Projektdaten in einem übergeordneten Dashboard aggregiert auswerten.",
+            en: "Program level: Here, all project data can be aggregated and analyzed in a high-level dashboard.",
+          },
+          {
+            de: "Projektebene: Der Ort, an dem alle Projektinformationen zusammenkommen.",
+            en: "Project level: The place where all project information comes together.",
+          },
+          {
+            de: "Rechteverwaltung: Nicht jeder muss alles sehen. Zugriffe können gezielt auf Projekt-, Programm- oder Mandantenebene vergeben werden.",
+            en: "Access Management: Not everyone needs to see everything. Access can be granted specifically at the project, program, or client level.",
+          },
+        ],
+      },
+      {
+        heading: {
+          de: "Ihr Vorteil",
+          en: "Your benefit",
+        },
+        paragraphs: [
+          {
+            de: "Mehr Übersicht. Mehr Kontrolle. Mehr Skalierbarkeit. Für Unternehmen, die nicht nur Projekte verwalten, sondern komplexe Strukturen professionell steuern wollen.",
+            en: "Greater clarity. Greater control. Greater scalability. For companies that want to do more than just manage projects—they want to professionally manage complex structures.",
+          },
+        ],
+      },
+    ],
+    media: [
+      {
+        type: "image",
+        src: "https://media.licdn.com/dms/image/v2/D4D22AQHQyU_oTYhO9g/feedshare-shrink_800/B4DZ0utmC0GUAc-/0/1774605197816?e=1776297600&v=beta&t=BisrqU9YL39eDVAuRJF_FoltXOkiKmLACBJ5frvOQgw",
+        alt: {
+          de: "Die Azai Projektstruktur - relevante Insights für alle Stakeholder.",
+          en: "The Azai Project Structure – Relevant Insights for All Stakeholders.",
+        },
+        caption: {
+          de: "Die Azai Projektstruktur - relevante Insights für alle Stakeholder.",
+          en: "The Azai Project Structure – Relevant Insights for All Stakeholders.",
+        },
+      },
+      {
+        type: "externalLink",
+        url: "https://www.linkedin.com/feed/update/urn:li:activity:7443233686281510912",
+        title: {
+          de: "LinkedIn-Beitrag öffnen",
+          en: "Open LinkedIn post",
+        },
+        description: {
+          de: "Komplexe Projekte brauchen klare Strukturen.",
+          en: "Complex projects require clear structures.",
+        },
+      },
+    ],
+  },
+  {
     slug: "azai-risk-management",
     date: "2026-03-19",
     title: {

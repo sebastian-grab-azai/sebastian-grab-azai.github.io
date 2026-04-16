@@ -53,6 +53,91 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "azai-time-management",
+    date: "2026-04-16",
+    title: {
+      de: "Das neue Azai Terminmodul",
+      en: "The new Azai Time Module",
+    },
+    intro: {
+      de: "Gerade in der Bau- und Immobilienbranche reicht es nicht, Termine nur zu erfassen — entscheidend ist, Abhängigkeiten, Verzögerungen und Auswirkungen frühzeitig sichtbar zu machen.",
+      en: "Especially in the construction and real estate industries, it’s not enough to simply track deadlines—what matters most is identifying dependencies, delays, and their consequences early on.",
+    },
+    sections: [
+      {
+        heading: {
+          de: "Warum Azai Terminmanagement?",
+          en: "Why Azai time management?",
+        },
+        paragraphs: [
+          {
+            de: "Mit dem neuen Terminmodul in Azai können Teams:",
+            en: "With the new scheduling module in Azai, teams can:",
+          },
+        ],
+        bullets: [
+          {
+            de: "Termine und Abhängigkeiten strukturiert abbilden",
+            en: "Map schedules and dependencies in a structured way",
+          },
+          {
+            de: "Abläufe direkt im interaktiven Gantt-Diagramm bearbeiten",
+            en: "Edit workflows directly in the interactive Gantt chart",
+          },
+          {
+            de: "den kritischen Pfad analysieren",
+            en: "Analyze the critical path",
+          },
+          {
+            de: "Änderungen und Verzögerungen über die Historie nachvollziehen",
+            en: "Track changes and delays via the history",
+          },
+          {
+            de: "den Ist-/Soll-Fortschritt bewerten und gezielt Maßnahmen definieren",
+            en: "Evaluate actual vs. target progress and define targeted measures",
+          },
+          {
+            de: "über ein umfangreiches Dashboard eine saubere Gesamtübersicht erhalten.",
+            en: "Get a clear overview via a comprehensive dashboard.",
+          },
+        ],
+      },
+      {
+        paragraphs: [
+          {
+            de: "So wird Terminmanagement nicht nur dokumentiert, sondern aktiv zur Steuerung von Projekten genutzt.",
+            en: "In this way, schedule management is not only documented but also actively used to manage projects.",
+          },
+        ],
+      },
+    ],
+    media: [
+      {
+        type: "video",
+        src: "https://dms.licdn.com/playlist/vid/v2/D5605AQEY-IWZs2uevQ/mp4-720p-30fp-crf28/B56Z2VHJQgKkCI-/0/1776323174306?e=1776931200&v=beta&t=fOfHp8KRTYDkJ0Og6lPGWtbnLF9ScptWucBMtgaXI8M",
+        title: {
+          de: "Azai Terminmanagement",
+          en: "Azai time management",
+        },
+      },
+      {
+        type: "externalLink",
+        url: "https://www.linkedin.com/feed/update/urn:li:activity:7450439413123186688",
+        title: {
+          de: "LinkedIn-Beitrag öffnen",
+          en: "Open LinkedIn post",
+        },
+        description: {
+          de: "Termine im Bauprojekt managen – um auf Abhängigkeiten zu reagieren.",
+          en: "Managing deadlines in a construction project – to address dependencies.",
+        },
+      },
+    ],
+  },
+
+
+
+  {
     slug: "azai-user-management",
     date: "2026-04-09",
     title: {

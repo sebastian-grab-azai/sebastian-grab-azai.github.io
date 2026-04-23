@@ -53,6 +53,80 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "azai-benchmarking",
+    date: "2026-04-23",
+    title: {
+      de: "Diese Woche bei Azai",
+      en: "This week at Azai",
+    },
+    intro: {
+      de: "Neben unserem Risikomanagement ist jetzt auch das Terminmanagement live. Damit werden Projekte nicht nur transparenter, sondern auch deutlich besser steuerbar. Und das ist erst der nächste Schritt.",
+      en: "In addition to our risk management system, our schedule management system is now live as well. This not only makes projects more transparent, but also significantly easier to manage. And that’s just the next step.",
+    },
+    sections: [
+      {
+        heading: {
+          de: "Bald kommt unser Benchmarking-Modul.",
+          en: "Our benchmarking module will be available soon.",
+        },
+        paragraphs: [
+          {
+            de: "Bauunternehmen können ihre Projekte mit hunderten Vergleichsprojekten aus der Schweiz, Deutschland und Österreich abgleichen – nach Kriterien wie Kosten, Region, Budget, Fläche - direkt für denselben Bautyp. So wird schnell sichtbar:",
+            en: "Construction companies can compare their projects with hundreds of similar projects from Switzerland, Germany, and Austria—based on criteria such as cost, region, budget, and floor area—all for the same type of building. This quickly reveals:",
+          },
+        ],
+        bullets: [
+          {
+            de: "Sind meine Annahmen realistisch?",
+            en: "Are my assumptions realistic?",
+          },
+          {
+            de: "Welche Kosten und welche Projektdauer sind vergleichbar?",
+            en: "What are the comparable costs and project durations?",
+          },
+        ],
+      },
+      {
+        heading: {
+          de: "Besonders spannend",
+          en: "Especially exciting",
+        },
+        paragraphs: [
+          {
+            de: "In Azai lassen sich künftig auch eigene Projekte direkt miteinander vergleichen – für noch präzisere Referenzwerte und die wirklich passende Vergleichsgruppe. Natürlich übersichtlich und grafisch aufbereitet in der Plattform. Mehr Transparenz. Bessere Entscheidungen. Weniger Bauchgefühl.",
+            en: "In Azai, you’ll soon be able to directly compare your own projects with one another—for even more precise benchmarks and the perfect peer group. All presented clearly and visually within the platform. More transparency. Better decisions. Less guesswork.",
+          },
+        ],
+      },
+    ],
+    media: [
+      {
+        type: "image",
+        src: "https://media.licdn.com/dms/image/v2/D5622AQHf56FxhNxxWA/feedshare-shrink_800/B56Z25PUObKwAc-/0/1776929293445?e=1778716800&v=beta&t=j0OKlnGUV5fHFMQVL7k1BNcI-6jg5a5Vo1YsB5zLPxg",
+        alt: {
+          de: "Das Azai Benchmarking-Modul",
+          en: "The Azai Benchmarking Module",
+        },
+        caption: {
+          de: "Das Azai Benchmarking-Modul",
+          en: "The Azai Benchmarking Module",
+        },
+      },
+      {
+        type: "externalLink",
+        url: "https://www.linkedin.com/feed/update/urn:li:activity:7452981646787575808",
+        title: {
+          de: "LinkedIn-Beitrag öffnen",
+          en: "Open LinkedIn post",
+        },
+        description: {
+          de: "Azai Benchmarking-Modul",
+          en: "Azai Benchmarking Module",
+        },
+      },
+    ],
+  },
+  {
     slug: "azai-time-management",
     date: "2026-04-16",
     title: {
@@ -134,9 +208,6 @@ export const blogPosts: BlogPost[] = [
       },
     ],
   },
-
-
-
   {
     slug: "azai-user-management",
     date: "2026-04-09",
@@ -173,14 +244,6 @@ export const blogPosts: BlogPost[] = [
       },
     ],
     media: [
-      {
-        type: "video",
-        src: "https://dms.licdn.com/playlist/vid/v2/D5605AQHCsTG_p3RMLQ/mp4-720p-30fp-crf28/B56Z1xun3WGgCE-/0/1775729543403?e=1776340800&v=beta&t=EsRLOmcMZmxc8WFvmpIo7lGVhqeSCeWtp8Imu8Xu3ek",
-        title: {
-          de: "Azai Benutzermanagement",
-          en: "Azai User Management",
-        },
-      },
       {
         type: "externalLink",
         url: "https://www.linkedin.com/feed/update/urn:li:activity:7447949555230408705",
@@ -253,7 +316,7 @@ export const blogPosts: BlogPost[] = [
     media: [
       {
         type: "image",
-        src: "https://media.licdn.com/dms/image/v2/D4E22AQG9mX0pvnDStg/feedshare-shrink_800/B4EZ1Ok8AXIEAg-/0/1775139799428?e=1776902400&v=beta&t=9JfDMslRMmGYk14o5NcKA7xGywzJgk6hZaQ7z2fflXU",
+        src: "https://media.licdn.com/dms/image/v2/D4E22AQG9mX0pvnDStg/feedshare-shrink_800/B4EZ1Ok8AXIEAg-/0/1775139799428?e=1778716800&v=beta&t=8zHcQHs2HF2-XagvU-pJno9JDpyaiMdwSf3f1GTc5eA",
         alt: {
           de: "Das Azai Partnership Programm",
           en: "The Azai Partnership Program",
@@ -331,7 +394,7 @@ export const blogPosts: BlogPost[] = [
     media: [
       {
         type: "image",
-        src: "https://media.licdn.com/dms/image/v2/D4D22AQHQyU_oTYhO9g/feedshare-shrink_800/B4DZ0utmC0GUAc-/0/1774605197816?e=1776297600&v=beta&t=BisrqU9YL39eDVAuRJF_FoltXOkiKmLACBJ5frvOQgw",
+        src: "https://media.licdn.com/dms/image/v2/D4D22AQHQyU_oTYhO9g/feedshare-shrink_800/B4DZ0utmC0GUAc-/0/1774605197816?e=1778716800&v=beta&t=uD_B3AT82ozqmUEOOSYLYtQ_jFC08iSkbnaUjqQMbJ0",
         alt: {
           de: "Die Azai Projektstruktur - relevante Insights für alle Stakeholder.",
           en: "The Azai Project Structure – Relevant Insights for All Stakeholders.",

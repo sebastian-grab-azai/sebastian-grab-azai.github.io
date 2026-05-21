@@ -53,6 +53,130 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "azai-program-overview",
+    date: "2026-05-21",
+    title: {
+      de: "Azai macht Projektdaten managementtauglich",
+      en: "Azai makes project data management-ready",
+    },
+    intro: {
+      de: "Viele Projektmanagement-Tools zeigen Projektdaten. Azai macht sie managementtauglich. Der Fokus von Azai war von Beginn an klar: Transparenz auf Programmebene schaffen – für Entscheider, Programmleitungen und Management-Teams.",
+      en: "Many project management tools display project data. Azai makes it management-ready. Azai’s focus has been clear from the start: creating transparency at the program level—for decision-makers, program leads, and management teams.",
+    },
+    sections: [
+      {
+        heading: {
+          de: "Eine noch stärkere Programmübersicht",
+          en: "An even stronger program overview",
+        },
+        paragraphs: [
+          {
+            de: "Mit den neuesten Verbesserungen wird genau diese Übersicht noch stärker: Auf Programmebene können nun Projektphasen individuell angelegt werden. Jedes Projekt zeigt jederzeit seine aktuelle Phase. Zusätzlich erhält jedes Projekt ein Ampelsystem für: Gesamtstatus, Risiken & Termine",
+            en: "With the latest improvements, this overview becomes even stronger: project phases can now be defined individually at the program level. Every project shows its current phase at any time. In addition, each project gets a traffic-light system for: Overall status, risks & schedules",
+          },
+        ],
+      },
+      {
+        heading: {
+          de: "Eine zentrale Programmübersicht",
+          en: "A central program overview",
+        },
+        paragraphs: [
+          {
+            de: "So entsteht eine zentrale Programmübersicht, die auf einen Blick zeigt:",
+            en: "This creates a central program overview that shows at a glance:",
+          },
+        ],
+        bullets: [
+          {
+            de: "Welche Projekte sind kritisch?",
+            en: "Which projects are critical?",
+          },
+          {
+            de: "Wo bestehen kritische Risiken?",
+            en: "Where do critical risks exist?",
+          },
+          {
+            de: "Welche Terminabläufe geraten unter Druck?",
+            en: "Which schedules are coming under pressure?",
+          },
+          {
+            de: "Und in welcher Phase befindet sich jedes Projekt?",
+            en: "And which phase is each project in?",
+          },
+        ],
+      },
+      {
+        heading: {
+          de: "Weiterentwickelte Dashboards",
+          en: "Enhanced dashboards",
+        },
+        paragraphs: [
+          {
+            de: "Auch die Dashboards wurden weiterentwickelt:",
+            en: "The dashboards have been further developed as well:",
+          },
+        ],
+        bullets: [
+          {
+            de: "Verbessertes Frontend",
+            en: "Improved frontend",
+          },
+          {
+            de: "Neue Meilensteinanalyse",
+            en: "New milestone analysis",
+          },
+          {
+            de: "Optimierte Filterfunktionen",
+            en: "Optimized filter functions",
+          },
+          {
+            de: "Flexiblere Anordnung der Analysen",
+            en: "More flexible arrangement of analyses",
+          },
+          {
+            de: "Stärkere Individualisierung der Dashboards",
+            en: "Greater customization of dashboards",
+          },
+        ],
+      },
+      {
+        paragraphs: [
+          {
+            de: "Demnächst folgen außerdem eigene Analysen und Kommentarfelder direkt im Dashboard. Azai hilft dabei, komplexe Projektlandschaften nicht nur zu verwalten, sondern aktiv zu steuern.",
+            en: "Coming soon: custom analyses and comment fields directly in the dashboard. Azai helps you not just manage complex project landscapes, but actively steer them.",
+          },
+        ],
+      },
+    ],
+    media: [
+      {
+        type: "image",
+        src: "/blog/21-05-2026.jpeg",
+        alt: {
+          de: "Die zentrale Azai Programmübersicht mit Ampelsystem und Projektphasen",
+          en: "The central Azai program overview with traffic-light system and project phases",
+        },
+        caption: {
+          de: "Die zentrale Azai Programmübersicht",
+          en: "The central Azai program overview",
+        },
+      },
+      {
+        type: "externalLink",
+        url: "https://www.linkedin.com/feed/update/urn:li:activity:7463115851362185216",
+        title: {
+          de: "LinkedIn-Beitrag öffnen",
+          en: "Open LinkedIn post",
+        },
+        description: {
+          de: "Azai macht Projektdaten managementtauglich.",
+          en: "Azai makes project data management-ready.",
+        },
+      },
+    ],
+  },
+  {
     slug: "azai-benchmarking",
     date: "2026-04-23",
     title: {
@@ -102,7 +226,7 @@ export const blogPosts: BlogPost[] = [
     media: [
       {
         type: "image",
-        src: "https://media.licdn.com/dms/image/v2/D5622AQHf56FxhNxxWA/feedshare-shrink_800/B56Z25PUObKwAc-/0/1776929293445?e=1778716800&v=beta&t=j0OKlnGUV5fHFMQVL7k1BNcI-6jg5a5Vo1YsB5zLPxg",
+        src: "/blog/23-04-2026.jpeg",
         alt: {
           de: "Das Azai Benchmarking-Modul",
           en: "The Azai Benchmarking Module",
@@ -186,14 +310,6 @@ export const blogPosts: BlogPost[] = [
       },
     ],
     media: [
-      {
-        type: "video",
-        src: "https://dms.licdn.com/playlist/vid/v2/D5605AQEY-IWZs2uevQ/mp4-720p-30fp-crf28/B56Z2VHJQgKkCI-/0/1776323174306?e=1776931200&v=beta&t=fOfHp8KRTYDkJ0Og6lPGWtbnLF9ScptWucBMtgaXI8M",
-        title: {
-          de: "Azai Terminmanagement",
-          en: "Azai time management",
-        },
-      },
       {
         type: "externalLink",
         url: "https://www.linkedin.com/feed/update/urn:li:activity:7450439413123186688",
@@ -316,7 +432,7 @@ export const blogPosts: BlogPost[] = [
     media: [
       {
         type: "image",
-        src: "https://media.licdn.com/dms/image/v2/D4E22AQG9mX0pvnDStg/feedshare-shrink_800/B4EZ1Ok8AXIEAg-/0/1775139799428?e=1778716800&v=beta&t=8zHcQHs2HF2-XagvU-pJno9JDpyaiMdwSf3f1GTc5eA",
+        src: "/blog/02-04-2026.jpeg",
         alt: {
           de: "Das Azai Partnership Programm",
           en: "The Azai Partnership Program",
@@ -394,7 +510,7 @@ export const blogPosts: BlogPost[] = [
     media: [
       {
         type: "image",
-        src: "https://media.licdn.com/dms/image/v2/D4D22AQHQyU_oTYhO9g/feedshare-shrink_800/B4DZ0utmC0GUAc-/0/1774605197816?e=1778716800&v=beta&t=uD_B3AT82ozqmUEOOSYLYtQ_jFC08iSkbnaUjqQMbJ0",
+        src: "/blog/27-03-2026.jpeg",
         alt: {
           de: "Die Azai Projektstruktur - relevante Insights für alle Stakeholder.",
           en: "The Azai Project Structure – Relevant Insights for All Stakeholders.",
@@ -475,14 +591,6 @@ export const blogPosts: BlogPost[] = [
     ],
     media: [
       {
-        type: "video",
-        src: "https://dms.licdn.com/playlist/vid/v2/D4D05AQHFzH9DwdAOzg/mp4-720p-30fp-crf28/B4DZ0GHUcdH4CI-/0/1773924078277?e=2147483647&v=beta&t=2AbGTDlSykLThaXpGZLOCkShggzOp0dzgnk3ChfXNx0",
-        title: {
-          de: "Azai Risikomanagement",
-          en: "Azai risk management",
-        },
-      },
-      {
         type: "externalLink",
         url: "https://www.linkedin.com/feed/update/urn:li:activity:7440376889212452864",
         title: {
@@ -536,7 +644,7 @@ export const blogPosts: BlogPost[] = [
     media: [
       {
         type: "image",
-        src: "/assets/risk/RiskManagementDashboard.png",
+        src: "/blog/05-12-2025-1.jpeg",
         alt: {
           de: "Risiko Management Übersicht",
           en: "Risk management overview",
@@ -544,7 +652,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: "image",
-        src: "/assets/risk/RiskManagementRegister.png",
+        src: "/blog/05-12-2025-2.jpeg",
         alt: {
           de: "Risiko Management",
           en: "Risk management",

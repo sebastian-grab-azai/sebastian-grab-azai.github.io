@@ -1,5 +1,5 @@
 import type { Metadata } from "next"
-import ContactPageDEClient from "./ContactClient"
+import ContactPageDEClient from "./ContactClient.de"
 
 export const metadata: Metadata = {
   title: "Kontakt | Azai – Elevate",

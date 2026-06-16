@@ -4,7 +4,7 @@ import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 
 export const metadata: Metadata = {
-  title: "Datenschutzerklärung | Azai – Elevate",
+  title: "Datenschutzerklärung",
   description:
     "Informationen zur Verarbeitung personenbezogener Daten bei der Nutzung der Azai-Plattform, zu Rechtsgrundlagen, Sicherheitsmaßnahmen und Betroffenenrechten.",
   alternates: {
@@ -16,12 +16,18 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
+    type: "website",
+    siteName: "Azai – Elevate",
+    locale: "de_CH",
+    alternateLocale: ["en"],
+    images: [{ url: "/og-image.png", width: 1920, height: 999, alt: "Azai – Elevate" }],
     title: "Datenschutzerklärung | Azai – Elevate",
     description:
       "Informationen zur Verarbeitung personenbezogener Daten bei der Nutzung der Azai-Plattform, zu Rechtsgrundlagen, Sicherheitsmaßnahmen und Betroffenenrechten.",
     url: "/de/privacy/",
   },
   twitter: {
+    images: ["/og-image.png"],
     card: "summary_large_image",
     title: "Datenschutzerklärung | Azai – Elevate",
     description:

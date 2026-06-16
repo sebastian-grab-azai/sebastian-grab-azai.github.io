@@ -48,7 +48,7 @@ const subprocessors = [
 ]
 
 export const metadata: Metadata = {
-  title: "Liste der Subunternehmer | Azai – Elevate",
+  title: "Liste der Subunternehmer",
   description:
     "Übersicht über die von Azai eingesetzten Subunternehmer, deren Leistungen, Verarbeitungszwecke und Datenschutzmechanismen.",
   alternates: {
@@ -60,12 +60,18 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
+    type: "website",
+    siteName: "Azai – Elevate",
+    locale: "de_CH",
+    alternateLocale: ["en"],
+    images: [{ url: "/og-image.png", width: 1920, height: 999, alt: "Azai – Elevate" }],
     title: "Liste der Subunternehmer | Azai – Elevate",
     description:
       "Übersicht über die von Azai eingesetzten Subunternehmer, deren Leistungen, Verarbeitungszwecke und Datenschutzmechanismen.",
     url: "/de/subprocessors/",
   },
   twitter: {
+    images: ["/og-image.png"],
     card: "summary_large_image",
     title: "Liste der Subunternehmer | Azai – Elevate",
     description:

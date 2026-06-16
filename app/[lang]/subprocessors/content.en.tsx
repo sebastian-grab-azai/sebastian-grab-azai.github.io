@@ -48,7 +48,7 @@ const subprocessors = [
 ]
 
 export const metadata: Metadata = {
-  title: "Subprocessor List | Azai – Elevate",
+  title: "Subprocessor List",
   description:
     "Overview of subprocessors engaged by Azai, including their services, processing purposes, data locations, and privacy safeguards.",
   alternates: {
@@ -60,12 +60,18 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
+    type: "website",
+    siteName: "Azai – Elevate",
+    locale: "en",
+    alternateLocale: ["de_CH"],
+    images: [{ url: "/og-image.png", width: 1920, height: 999, alt: "Azai – Elevate" }],
     title: "Subprocessor List | Azai – Elevate",
     description:
       "Overview of subprocessors engaged by Azai, including their services, processing purposes, data locations, and privacy safeguards.",
     url: "/en/subprocessors/",
   },
   twitter: {
+    images: ["/og-image.png"],
     card: "summary_large_image",
     title: "Subprocessor List | Azai – Elevate",
     description:

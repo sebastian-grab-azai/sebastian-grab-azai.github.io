@@ -4,7 +4,7 @@ import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 
 export const metadata: Metadata = {
-  title: "Auftragsverarbeitungsvereinbarung (AVV) | Azai – Elevate",
+  title: "Auftragsverarbeitungsvereinbarung (AVV)",
   description:
     "Auftragsverarbeitungsvereinbarung zwischen dem Kunden als Verantwortlichem und Azai AG als Auftragsverarbeiter für die Nutzung der Azai-Elevate-Plattform.",
   alternates: {
@@ -16,12 +16,18 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
+    type: "website",
+    siteName: "Azai – Elevate",
+    locale: "de_CH",
+    alternateLocale: ["en"],
+    images: [{ url: "/og-image.png", width: 1920, height: 999, alt: "Azai – Elevate" }],
     title: "Auftragsverarbeitungsvereinbarung (AVV) | Azai – Elevate",
     description:
       "Auftragsverarbeitungsvereinbarung zwischen dem Kunden als Verantwortlichem und Azai AG als Auftragsverarbeiter für die Nutzung der Azai-Elevate-Plattform.",
     url: "/de/dpa/",
   },
   twitter: {
+    images: ["/og-image.png"],
     card: "summary_large_image",
     title: "Auftragsverarbeitungsvereinbarung (AVV) | Azai – Elevate",
     description:

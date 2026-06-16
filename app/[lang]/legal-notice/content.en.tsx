@@ -3,7 +3,7 @@ import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 
 export const metadata: Metadata = {
-  title: "Legal Notice | Azai – Elevate",
+  title: "Legal Notice",
   description:
     "Provider identification (Switzerland) of Azai AG including contact details and legal notices (liability, copyright).",
   alternates: {
@@ -15,12 +15,18 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
+    type: "website",
+    siteName: "Azai – Elevate",
+    locale: "en",
+    alternateLocale: ["de_CH"],
+    images: [{ url: "/og-image.png", width: 1920, height: 999, alt: "Azai – Elevate" }],
     title: "Legal Notice | Azai – Elevate",
     description:
       "Provider identification (Switzerland) of Azai AG including contact details and legal notices (liability, copyright).",
     url: "/en/legal-notice/",
   },
   twitter: {
+    images: ["/og-image.png"],
     card: "summary_large_image",
     title: "Legal Notice | Azai – Elevate",
     description:

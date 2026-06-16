@@ -8,10 +8,12 @@ import { FeaturesSection } from "@/components/features-section"
 import { Shield, BarChart3, Zap, Gauge, Lock, Star, Check, ArrowRight, AlertTriangle, Lightbulb } from "lucide-react"
 import Link from "next/link"
 import Image from "next/image"
+import { JsonLd } from "@/components/json-ld"
+import { organizationSchema, webSiteSchema } from "@/lib/seo"
 import { en as L } from "@/lib/i18n/en"
 
 export const metadata: Metadata = {
-  title: "Azai – Elevate | The Future of Project Excellence",
+  title: { absolute: "Azai – Elevate | The Future of Project Excellence" },
   description:
     "AI-driven risk management, real-time analytics, and smart automation for enterprise teams demanding precision, intelligence, and results at scale.",
   alternates: {
@@ -23,12 +25,18 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
+    type: "website",
+    siteName: "Azai – Elevate",
+    locale: "en",
+    alternateLocale: ["de_CH"],
+    images: [{ url: "/og-image.png", width: 1920, height: 999, alt: "Azai – Elevate" }],
     title: "Azai – Elevate | The Future of Project Excellence",
     description:
       "AI-driven risk management, real-time analytics, and smart automation for enterprise teams.",
     url: "/en/",
   },
   twitter: {
+    images: ["/og-image.png"],
     card: "summary_large_image",
     title: "Azai – Elevate | The Future of Project Excellence",
     description:
@@ -39,6 +47,7 @@ export const metadata: Metadata = {
 export default function HomePageEN() {
   return (
     <div className="min-h-screen flex flex-col">
+      <JsonLd data={[organizationSchema(), webSiteSchema("en")]} />
       <Header />
 
       <main className="flex-1">
@@ -87,7 +96,7 @@ export default function HomePageEN() {
               <div className="rounded-3xl overflow-hidden shadow-2xl ring-1 ring-black/5">
                 <Image
                   // src="/modern-office-meeting-room-with-team-collaboration.jpg"
-                  src="/assets/MacBook.png"
+                  src="/assets/MacBook.webp"
                   alt={L.hero.imageAlt}
                   width={800}
                   height={600}

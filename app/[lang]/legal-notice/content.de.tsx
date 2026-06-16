@@ -3,7 +3,7 @@ import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 
 export const metadata: Metadata = {
-  title: "Impressum | Azai – Elevate",
+  title: "Impressum",
   description:
     "Anbieterkennzeichnung (Schweiz) der Azai AG inkl. Kontaktangaben sowie rechtliche Hinweise (Haftung, Urheberrecht).",
   alternates: {
@@ -15,12 +15,18 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
+    type: "website",
+    siteName: "Azai – Elevate",
+    locale: "de_CH",
+    alternateLocale: ["en"],
+    images: [{ url: "/og-image.png", width: 1920, height: 999, alt: "Azai – Elevate" }],
     title: "Impressum | Azai – Elevate",
     description:
       "Anbieterkennzeichnung (Schweiz) der Azai AG inkl. Kontaktangaben sowie rechtliche Hinweise (Haftung, Urheberrecht).",
     url: "/de/legal-notice/",
   },
   twitter: {
+    images: ["/og-image.png"],
     card: "summary_large_image",
     title: "Impressum | Azai – Elevate",
     description:

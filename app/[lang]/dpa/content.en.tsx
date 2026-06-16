@@ -4,7 +4,7 @@ import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 
 export const metadata: Metadata = {
-  title: "Data Processing Agreement (DPA) | Azai – Elevate",
+  title: "Data Processing Agreement (DPA)",
   description:
     "Data Processing Agreement between the customer as controller and Azai AG as processor for use of the Azai Elevate platform.",
   alternates: {
@@ -16,12 +16,18 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
+    type: "website",
+    siteName: "Azai – Elevate",
+    locale: "en",
+    alternateLocale: ["de_CH"],
+    images: [{ url: "/og-image.png", width: 1920, height: 999, alt: "Azai – Elevate" }],
     title: "Data Processing Agreement (DPA) | Azai – Elevate",
     description:
       "Data Processing Agreement between the customer as controller and Azai AG as processor for use of the Azai Elevate platform.",
     url: "/en/dpa/",
   },
   twitter: {
+    images: ["/og-image.png"],
     card: "summary_large_image",
     title: "Data Processing Agreement (DPA) | Azai – Elevate",
     description:

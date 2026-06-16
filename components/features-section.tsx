@@ -35,16 +35,16 @@ export function FeaturesSection({ data }: { data: FeaturesData }) {
   const [activeModule, setActiveModule] = useState<"risk" | "time">("risk")
 
   const riskImages = [
-    { src: "/assets/risk/RiskManagementDashboard.png", alt: data.imageAlt },
-    { src: "/assets/risk/RiskManagementMatrix.png", alt: data.imageAlt },
-    { src: "/assets/risk/RiskManagementRegister.png", alt: data.imageAlt },
-    { src: "/assets/risk/RiskManagementMeasures.png", alt: data.imageAlt },
+    { src: "/assets/risk/RiskManagementDashboard.webp", alt: data.imageAlt },
+    { src: "/assets/risk/RiskManagementMatrix.webp", alt: data.imageAlt },
+    { src: "/assets/risk/RiskManagementRegister.webp", alt: data.imageAlt },
+    { src: "/assets/risk/RiskManagementMeasures.webp", alt: data.imageAlt },
   ]
 
   const timeImages = [
-    { src: "/assets/time/TimeManagementTimeline.png", alt: data.imageAlt },
-    { src: "/assets/time/TimeManagementRegister.png", alt: data.imageAlt },
-    { src: "/assets/time/TimeManagementAssessment.png", alt: data.imageAlt },
+    { src: "/assets/time/TimeManagementTimeline.webp", alt: data.imageAlt },
+    { src: "/assets/time/TimeManagementRegister.webp", alt: data.imageAlt },
+    { src: "/assets/time/TimeManagementAssessment.webp", alt: data.imageAlt },
   ]
 
   return (

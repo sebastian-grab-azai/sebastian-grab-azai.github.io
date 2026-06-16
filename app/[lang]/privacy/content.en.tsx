@@ -4,7 +4,7 @@ import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 
 export const metadata: Metadata = {
-  title: "Privacy Policy | Azai – Elevate",
+  title: "Privacy Policy",
   description:
     "Information about the processing of personal data when using the Azai platform, including legal bases, security measures, and data subject rights.",
   alternates: {
@@ -16,12 +16,18 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
+    type: "website",
+    siteName: "Azai – Elevate",
+    locale: "en",
+    alternateLocale: ["de_CH"],
+    images: [{ url: "/og-image.png", width: 1920, height: 999, alt: "Azai – Elevate" }],
     title: "Privacy Policy | Azai – Elevate",
     description:
       "Information about the processing of personal data when using the Azai platform, including legal bases, security measures, and data subject rights.",
     url: "/en/privacy/",
   },
   twitter: {
+    images: ["/og-image.png"],
     card: "summary_large_image",
     title: "Privacy Policy | Azai – Elevate",
     description:

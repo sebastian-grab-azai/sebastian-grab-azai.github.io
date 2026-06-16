@@ -4,7 +4,7 @@ import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 
 export const metadata: Metadata = {
-  title: "Nutzungsbedingungen | Azai – Elevate",
+  title: "Nutzungsbedingungen",
   description:
     "Rechtliche Bedingungen für die Nutzung der Azai-Elevate-Plattform, einschließlich Lizenz, Verfügbarkeit, Support, Haftung und Vertragslaufzeit.",
   alternates: {
@@ -16,12 +16,18 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
+    type: "website",
+    siteName: "Azai – Elevate",
+    locale: "de_CH",
+    alternateLocale: ["en"],
+    images: [{ url: "/og-image.png", width: 1920, height: 999, alt: "Azai – Elevate" }],
     title: "Nutzungsbedingungen | Azai – Elevate",
     description:
       "Rechtliche Bedingungen für die Nutzung der Azai-Elevate-Plattform, einschließlich Lizenz, Verfügbarkeit, Support, Haftung und Vertragslaufzeit.",
     url: "/de/terms/",
   },
   twitter: {
+    images: ["/og-image.png"],
     card: "summary_large_image",
     title: "Nutzungsbedingungen | Azai – Elevate",
     description:

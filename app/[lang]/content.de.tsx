@@ -9,10 +9,12 @@ import { FeatureCarousel } from "@/components/feature-carousel"
 import { FeaturesSection } from "@/components/features-section"
 import { Shield, BarChart3, Zap, Gauge, Lock, Check, AlertTriangle, Lightbulb } from "lucide-react"
 import LocalizedLink from "@/components/localized-link"
+import { JsonLd } from "@/components/json-ld"
+import { organizationSchema, webSiteSchema } from "@/lib/seo"
 import { de as L } from "@/lib/i18n/de"
 
 export const metadata: Metadata = {
-  title: "Azai – Elevate | Revolutionäre Projektmanagement-Plattform für Unternehmen",
+  title: { absolute: "Azai – Elevate | Revolutionäre Projektmanagement-Plattform für Unternehmen" },
   description:
     "KI-gestütztes Risikomanagement, Echtzeit-Analysen und Automatisierung. Entwickelt für Enterprise-Teams, die Präzision, Intelligenz und Ergebnisse im grossen Massstab verlangen.",
   alternates: {
@@ -24,12 +26,18 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
+    type: "website",
+    siteName: "Azai – Elevate",
+    locale: "de_CH",
+    alternateLocale: ["en"],
+    images: [{ url: "/og-image.png", width: 1920, height: 999, alt: "Azai – Elevate" }],
     title: "Azai – Elevate | Revolutionäre Projektmanagement-Plattform für Unternehmen",
     description:
       "KI-gestütztes Risikomanagement, Echtzeit-Analysen und Automatisierung für Enterprise-Teams.",
     url: "/de/",
   },
   twitter: {
+    images: ["/og-image.png"],
     card: "summary_large_image",
     title: "Azai – Elevate | Revolutionäre Projektmanagement-Plattform für Unternehmen",
     description:
@@ -40,6 +48,7 @@ export const metadata: Metadata = {
 export default function HomePageDE() {
   return (
     <div className="min-h-screen flex flex-col">
+      <JsonLd data={[organizationSchema(), webSiteSchema("de")]} />
       <div
         id="splash-initial"
         aria-hidden="true"
@@ -99,7 +108,7 @@ export default function HomePageDE() {
               <div className="rounded-3xl overflow-hidden shadow-2xl ring-1 ring-black/5">
                 <Image
                   // src="/modern-office-meeting-room-with-team-collaboration.jpg"
-                  src="/assets/MacBook.png"
+                  src="/assets/MacBook.webp"
                   alt={L.hero.imageAlt}
                   width={800}
                   height={600}

@@ -4,7 +4,7 @@ import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 
 export const metadata: Metadata = {
-  title: "Terms of Service | Azai – Elevate",
+  title: "Terms of Service",
   description:
     "Legal terms governing the use of the Azai Elevate platform, including license rights, availability, support, liability, and contract duration.",
   alternates: {
@@ -16,12 +16,18 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
+    type: "website",
+    siteName: "Azai – Elevate",
+    locale: "en",
+    alternateLocale: ["de_CH"],
+    images: [{ url: "/og-image.png", width: 1920, height: 999, alt: "Azai – Elevate" }],
     title: "Terms of Service | Azai – Elevate",
     description:
       "Legal terms governing the use of the Azai Elevate platform, including license rights, availability, support, liability, and contract duration.",
     url: "/en/terms/",
   },
   twitter: {
+    images: ["/og-image.png"],
     card: "summary_large_image",
     title: "Terms of Service | Azai – Elevate",
     description:
